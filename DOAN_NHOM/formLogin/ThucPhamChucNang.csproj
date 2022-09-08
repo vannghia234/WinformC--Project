@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8893D171-5DF0-4452-AB90-BFCD57A07862}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>formLogin</RootNamespace>
+    <AssemblyName>formLogin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassProvider\DataProvider.cs" />
+    <Compile Include="form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form.Designer.cs">
+      <DependentUpon>form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLoginMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLoginMain.Designer.cs">
+      <DependentUpon>formLoginMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formStaff.Designer.cs">
+      <DependentUpon>formStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ftableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ftableManager.Designer.cs">
+      <DependentUpon>ftableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManager.Designer.cs">
+      <DependentUpon>formManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form.resx">
+      <DependentUpon>form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLoginMain.resx">
+      <DependentUpon>formLoginMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formStaff.resx">
+      <DependentUpon>formStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ftableManager.resx">
+      <DependentUpon>ftableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManager.resx">
+      <DependentUpon>formManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wcp22-shapeBlue2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slack %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\satisfaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slack %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cleaning-staff %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cleaning-staff %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16691578_5778883.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cleaning-staff %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%293.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
