@@ -1,0 +1,22 @@
+SET IDENTITY_INSERT LOAITAIKHOAN OFF
+Insert Into LOAITAIKHOAN(TENLOAI) values
+('QUANLY'),
+('NHANVIEN')
+--
+Insert Into TAIKHOAN(TAIKHOAN,MATKHAU,TENTAIKHOAN,MALOAI) values
+('admin','admin1234',N'Văn Nghĩa','1'),
+('hiennuong','02359865b',N'Hiền Nương','2'),
+('hienmai', '01657854b', N'Hiền Mai','2'),
+('hongkhoi', '04567854b', N'Hồng Khôi','2'),
+('huongmai', '12347854b', N'Hương Mai','2'),
+('haiduyen', '01456854b', N'Hải Duyên','2'),
+('hongmai', '01678854b', N'Hồng Mai','2'),
+('hongngan', '01457854b', N'Hồng Ngân','2'),
+('hanhvi', '01227854b', N'Hạnh Vi','2'),
+('hoangcuc', '01337854b', N'Hoàng Cúc','2'),
+('khanhtrang', '01667854b', N'Khánh Trang','2'),
+('khanhvi', '01227854b', N'Khánh Vi','2'),
+('kieuhanh', '01157854b', N'Kiều Hạnh','2'),
+('kieuthu', '11517854b', N'Kiều Thu','2'),
+('kiemthoa', '21657854b', N'Kiêm Thoa','2'),
+('kiemthu', '31657854b', N'Kiêm Thư','2')
