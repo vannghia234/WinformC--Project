@@ -1,0 +1,148 @@
+-- DANH MỤC
+INSERT INTO dbo.DANHMUC
+(
+    MADM,
+    TENDANHMUC
+)
+VALUES
+	(   'DM01', -- MADM - varchar(10)
+    N'Tăng cường miễn dịch' -- TENDANHMUC - nvarchar(100)
+    ),
+	(   'DM02', -- MADM - varchar(10)
+    N'Giảm đau hạ sốt' -- TENDANHMUC - nvarchar(100)
+    ),
+	(   'DM03', -- MADM - varchar(10)
+    N'Vitamin tổng hợp' -- TENDANHMUC - nvarchar(100)
+    ),
+	(   'DM04', -- MADM - varchar(10)
+    N'Làm đẹp từ bên trong' -- TENDANHMUC - nvarchar(100)
+    ),
+	(   'DM05', -- MADM - varchar(10)
+    N'Bổ mắt' -- TENDANHMUC - nvarchar(100)
+    ),
+	(   'DM06', -- MADM - varchar(10)
+    N'Xương khớp' -- TENDANHMUC - nvarchar(100)
+    ),
+	(   'DM07', -- MADM - varchar(10)
+    N'Giảm cân' -- TENDANHMUC - nvarchar(100)
+	)
+	-- LOẠI SẢN PHẨM
+INSERT INTO dbo.LOAISANPHAM
+(
+    MALOAI,
+    TENLOAI,
+    MADM
+)
+VALUES
+	(   'ML01',  -- MALOAI - varchar(10)
+    N'Vitamin C', -- TENLOAI - nvarchar(50)
+    'DM01'   -- MADM - varchar(10)
+    ),
+	(   'ML02',  -- MALOAI - varchar(10)
+    N'Zinc', -- TENLOAI - nvarchar(50)
+    'DM01'   -- MADM - varchar(10)
+    ),
+	(   'ML03',  -- MALOAI - varchar(10)
+    N'Immune C', -- TENLOAI - nvarchar(50)
+    'DM01'   -- MADM - varchar(10)
+    ),
+	--Giảm đau hạ sốt
+--Tylenol
+--Advil
+--Aspirin
+
+	(   'ML04',  -- MALOAI - varchar(10)
+    N'Tylenol', -- TENLOAI - nvarchar(50)
+    'DM02'   -- MADM - varchar(10)
+    ),
+	(   'ML05',  -- MALOAI - varchar(10)
+    N'Advil', -- TENLOAI - nvarchar(50)
+    'DM02'   -- MADM - varchar(10)
+    ),
+	(   'ML06',  -- MALOAI - varchar(10)
+    N'Aspirin', -- TENLOAI - nvarchar(50)
+    'DM02'   -- MADM - varchar(10)
+    ),
+
+	-- Vitamin tổng hợp
+--Mẹ bầu
+--Trẻ em
+--Women multivitamin
+	--
+	(   'ML07',  -- MALOAI - varchar(10)
+    N'Mẹ bầu', -- TENLOAI - nvarchar(50)
+    'DM03'   -- MADM - varchar(10)
+    ),
+	(   'ML08',  -- MALOAI - varchar(10)
+    N'Trẻ em', -- TENLOAI - nvarchar(50)
+    'DM03'   -- MADM - varchar(10)
+    ),
+	(   'ML09',  -- MALOAI - varchar(10)
+    N'Women multivitamin', -- TENLOAI - nvarchar(50)
+    'DM03'   -- MADM - varchar(10)
+    ),
+
+	--Trắng da
+--Collagen
+--Biotin
+
+		(   'ML10',  -- MALOAI - varchar(10)
+    N'Trắng da', -- TENLOAI - nvarchar(50)
+    'DM04'   -- MADM - varchar(10)
+    ),
+	(   'ML11',  -- MALOAI - varchar(10)
+    N'Collagen', -- TENLOAI - nvarchar(50)
+    'DM04'   -- MADM - varchar(10)
+    ),
+	(   'ML12',  -- MALOAI - varchar(10)
+    N'Biotin', -- TENLOAI - nvarchar(50)
+    'DM04'   -- MADM - varchar(10)
+    ),
+
+--
+	(   'ML13',  -- MALOAI - varchar(10)
+    N'Trắng da', -- TENLOAI - nvarchar(50)
+    'DM05'   -- MADM - varchar(10)
+    ),
+	(   'ML14',  -- MALOAI - varchar(10)
+    N'Collagen', -- TENLOAI - nvarchar(50)
+    'DM05'   -- MADM - varchar(10)
+    ),
+	(   'ML15',  -- MALOAI - varchar(10)
+    N'Biotin', -- TENLOAI - nvarchar(50)
+    'DM05'   -- MADM - varchar(10)
+    ),
+
+	--DM06
+--	Glucosamine
+--Collagen Type II
+--Sụn vi cá mập
+	(   'ML16',  -- MALOAI - varchar(10)
+    N'Glucosamine', -- TENLOAI - nvarchar(50)
+    'DM06'   -- MADM - varchar(10)
+    ),
+	(   'ML17',  -- MALOAI - varchar(10)
+    N'Collagen Type II', -- TENLOAI - nvarchar(50)
+    'DM06'   -- MADM - varchar(10)
+    ),
+	(   'ML18',  -- MALOAI - varchar(10)
+    N'Sụn vi cá mập', -- TENLOAI - nvarchar(50)
+    'DM06'   -- MADM - varchar(10)
+    ),
+
+	-- giảm cân
+--Giấm táo
+--Green tea
+--Tan mỡ
+		(   'ML19',  -- MALOAI - varchar(10)
+    N'Giấm táo', -- TENLOAI - nvarchar(50)
+    'DM07'   -- MADM - varchar(10)
+    ),
+	(   'ML20',  -- MALOAI - varchar(10)
+    N'Green tea', -- TENLOAI - nvarchar(50)
+    'DM07'   -- MADM - varchar(10)
+    ),
+	(   'ML21',  -- MALOAI - varchar(10)
+    N'Tan mỡ', -- TENLOAI - nvarchar(50)
+    'DM07'   -- MADM - varchar(10)
+    )
