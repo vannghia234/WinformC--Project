@@ -146,6 +146,7 @@ VALUES
     N'Tan mỡ', -- TENLOAI - nvarchar(50)
     'DM07'   -- MADM - varchar(10)
     )
+//VuTrungNghia
 --
 Insert Into KHACHHANG(MAKH,TENKH,SDT,DIACHI) values
 ('KH01',N'An Nhiên','0366578947',N'Số 85-87 Trần Hưng Đạo, Hoàn Kiếm, TP. Hà Nội'),
@@ -198,7 +199,6 @@ Insert Into HOADON(MAHD,MANV,MAKH,NGAYLAP,THANHTIEN,TRANGTHAI) values
 ('HD14','NV14','KH14','2020-8-15','880000',null),
 ('HD15','NV15','KH15','2020-12-6','580000',null)
 --
-SET IDENTITY_INSERT LOAITAIKHOAN OFF
 Insert Into LOAITAIKHOAN(TENLOAI) values
 ('QUANLY'),
 ('NHANVIEN')
