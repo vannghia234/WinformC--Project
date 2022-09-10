@@ -223,6 +223,16 @@ namespace formLogin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap manager1 {
+            get {
+                object obj = ResourceManager.GetObject("manager1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap name_24px {
             get {
                 object obj = ResourceManager.GetObject("name_24px", resourceCulture);
@@ -356,6 +366,16 @@ namespace formLogin.Properties {
         internal static System.Drawing.Bitmap undraw_Coding_re_iv62__1_3 {
             get {
                 object obj = ResourceManager.GetObject("undraw_Coding_re_iv62 (1)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undraw_Coding_re_iv62__1_4 {
+            get {
+                object obj = ResourceManager.GetObject("undraw_Coding_re_iv62 (1)4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -33,9 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +51,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassProvider\DataProvider.cs" />
@@ -60,17 +67,29 @@
     <Compile Include="formLogin.Designer.cs">
       <DependentUpon>formLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLoginMain.cs">
+    <Compile Include="formNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLoginMain.Designer.cs">
-      <DependentUpon>formLoginMain.cs</DependentUpon>
+    <Compile Include="formNhanVien.Designer.cs">
+      <DependentUpon>formNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy.Designer.cs">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="formStaff.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formStaff.Designer.cs">
       <DependentUpon>formStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formT.Designer.cs">
+      <DependentUpon>formT.cs</DependentUpon>
     </Compile>
     <Compile Include="ftableManager.cs">
       <SubType>Form</SubType>
@@ -92,11 +111,17 @@
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLoginMain.resx">
-      <DependentUpon>formLoginMain.cs</DependentUpon>
+    <EmbeddedResource Include="formNhanVien.resx">
+      <DependentUpon>formNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy.resx">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formStaff.resx">
       <DependentUpon>formStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formT.resx">
+      <DependentUpon>formT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ftableManager.resx">
       <DependentUpon>ftableManager.cs</DependentUpon>
@@ -109,6 +134,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -225,6 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%294.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

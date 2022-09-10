@@ -11,13 +11,18 @@ namespace formLogin
         {
             InitializeComponent();
         }
-        string conStr = "Data Source=DAICA-ZORO\\MSSQLSERVER01;Initial Catalog=QLQUANCOFFEE;Integrated Security=True";
+        string conStr = "Data Source=DAICA-ZORO\\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
+        //Data Source=DAICA-ZORO\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True
 
         private void tbAccount_MouseClick(object sender, MouseEventArgs e)
         {
             txt_Account.Text = null;
-            txt_Password.Text = null;
-            txt_Account.ForeColor = Color.Black;
+
+            if (txt_Password.Text == null || txt_Password.Text == "Mật khẩu")
+            {
+                txt_Password.Text = null;
+                txt_Account.ForeColor = Color.Black;
+            }
         }
 
         private void tbpassword_MouseClick(object sender, MouseEventArgs e)
@@ -52,7 +57,6 @@ namespace formLogin
 
         private void tbAccount_KeyDown(object sender, KeyEventArgs e)
         {
-            txt_Password.Text = null;
             txt_Account.ForeColor = Color.Black;
             string t = txt_Account.Text;
             txt_Account.ForeColor = Color.Black;
@@ -61,6 +65,8 @@ namespace formLogin
             {
                 txt_Account.Clear();
             }
+            if (txt_Password.Text == "Mật khẩu")
+                txt_Password.Clear();
 
         }
         // kiểm tra tài khoản mật khẩu
@@ -87,7 +93,7 @@ namespace formLogin
                 return false;
 
             }
-            else if (string.IsNullOrEmpty(user))
+            else if (string.IsNullOrEmpty(user) || user == "Tài khoản")
             {
                 //MessageBox.Show("Bạn chưa nhập tài khoản hoặc mật khẩu", "Thông báo", MessageBoxButtons.OK);
                 lbl_Error.Text = "Vui lòng nhập tài khoản";
@@ -95,7 +101,7 @@ namespace formLogin
                 return false;
 
             }
-            else if (string.IsNullOrEmpty(pass))
+            else if (string.IsNullOrEmpty(pass) || pass == "Mật khẩu")
             {
                 lbl_ErrorPass.Text = "Vui lòng nhập mật khẩu";
                 txt_Password.Focus();
@@ -119,6 +125,9 @@ namespace formLogin
 
         private void bt_Login_Click(object sender, EventArgs e)
         {
+            
+            this.Size = new Size(770, 479);
+            this.StartPosition = FormStartPosition.CenterScreen;
             lbl_Error.Text = "";
             lbl_ErrorPass.Text = "";
 
@@ -129,36 +138,41 @@ namespace formLogin
                     conn.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.CommandText = "SP_CHECKLOGIN";
+                    cmd.CommandText = "CHECK_VALID_LOGIN";
                     cmd.Parameters.AddWithValue("@username", txt_Account.Text);
                     cmd.Parameters.AddWithValue("@password", txt_Password.Text);
                     cmd.Connection = conn;
                     object kq = cmd.ExecuteScalar();
                     int code = Convert.ToInt32(kq);
-                    formManager f = new formManager();
-                    if (code == 0)
-                    {
-                        MessageBox.Show("Chào mừng User đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        f.Show();
-                    }
-                    else if (code == 1)
-                    {
-                        MessageBox.Show("Chào mừng Admin đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        f.Show();
-                    }
-                    else if (code == 2)
-                    {
-                        MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_Account.Focus();
+                    FormQuanLy f = new FormQuanLy();
+                    this.Hide();
+                    f.Show();
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_Account.Focus();
-                    }
+                    //                    formStaff fst = new formStaff();
+                    //;                    if (code == 1)
+                    //                    {
+                    //                        MessageBox.Show("Chào mừng bạn đến với giao diện của Quản Lý !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //                        this.Hide();
+                    //                        f.Size = new Size(1600, 900);
+                    //                        f.Show();
+                    //                    }
+                    //                    else if (code == 2)
+                    //                    {
+                    //                        MessageBox.Show("Chào mừng bạn đến với giao diện của Nhân Viên cửa hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //                        this.Hide();
+                    //                        fst.Show();
+                    //                    }
+                    //                    else if (code == 3)
+                    //                    {
+                    //                        MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //                        txt_Account.Focus();
+
+                    //                    }
+                    //                    else if(code == 4)
+                    //                    {
+                    //                        MessageBox.Show("Tài khoản bạn nhập không tồn tại trên hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //                        txt_Account.Focus();
+                    //                    }
                     conn.Close();
                 }
                
@@ -175,10 +189,14 @@ namespace formLogin
             Application.Exit();
         }
 
-        private void bt_Login_Click_1(object sender, EventArgs e)
+        private void iconPictureBox1_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
+
 
         //TableManager a = new TableManager();
         //this.Hide();
