@@ -1,6 +1,6 @@
 ﻿namespace formLogin
 {
-    partial class formManager
+    partial class formT
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formManager));
             this.pic_Title = new FontAwesome.Sharp.IconPictureBox();
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
             this.btn_Kho = new FontAwesome.Sharp.IconButton();
@@ -37,19 +36,21 @@
             this.btn_Account = new FontAwesome.Sharp.IconButton();
             this.btn_Customer = new FontAwesome.Sharp.IconButton();
             this.btn_Staff = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Title = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_Products = new FontAwesome.Sharp.IconButton();
             this.btn_HomePage = new FontAwesome.Sharp.IconButton();
             this.panel_Logo = new System.Windows.Forms.Panel();
             this.lbl_ChucVu = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Menu = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_Logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             this.pic_Title.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
             this.pic_Title.IconColor = System.Drawing.Color.White;
             this.pic_Title.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pic_Title.Location = new System.Drawing.Point(18, 25);
+            this.pic_Title.Location = new System.Drawing.Point(16, 12);
             this.pic_Title.Name = "pic_Title";
             this.pic_Title.Size = new System.Drawing.Size(32, 32);
             this.pic_Title.TabIndex = 3;
@@ -80,7 +81,7 @@
             this.btn_Exit.Location = new System.Drawing.Point(0, 620);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Exit.Size = new System.Drawing.Size(269, 60);
+            this.btn_Exit.Size = new System.Drawing.Size(259, 60);
             this.btn_Exit.TabIndex = 16;
             this.btn_Exit.Text = "LOGOUT";
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,7 +103,7 @@
             this.btn_Kho.Location = new System.Drawing.Point(0, 560);
             this.btn_Kho.Name = "btn_Kho";
             this.btn_Kho.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Kho.Size = new System.Drawing.Size(269, 60);
+            this.btn_Kho.Size = new System.Drawing.Size(259, 60);
             this.btn_Kho.TabIndex = 15;
             this.btn_Kho.Text = "INVENTORY";
             this.btn_Kho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,7 +125,7 @@
             this.btn_Chart.Location = new System.Drawing.Point(0, 500);
             this.btn_Chart.Name = "btn_Chart";
             this.btn_Chart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Chart.Size = new System.Drawing.Size(269, 60);
+            this.btn_Chart.Size = new System.Drawing.Size(259, 60);
             this.btn_Chart.TabIndex = 14;
             this.btn_Chart.Text = "CHART";
             this.btn_Chart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,7 +147,7 @@
             this.btn_NCC.Location = new System.Drawing.Point(0, 440);
             this.btn_NCC.Name = "btn_NCC";
             this.btn_NCC.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_NCC.Size = new System.Drawing.Size(269, 60);
+            this.btn_NCC.Size = new System.Drawing.Size(259, 60);
             this.btn_NCC.TabIndex = 13;
             this.btn_NCC.Text = "SUPPLIER";
             this.btn_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,7 +169,7 @@
             this.btn_Account.Location = new System.Drawing.Point(0, 380);
             this.btn_Account.Name = "btn_Account";
             this.btn_Account.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Account.Size = new System.Drawing.Size(269, 60);
+            this.btn_Account.Size = new System.Drawing.Size(259, 60);
             this.btn_Account.TabIndex = 12;
             this.btn_Account.Text = "ACCOUNT";
             this.btn_Account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,7 +191,7 @@
             this.btn_Customer.Location = new System.Drawing.Point(0, 320);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Customer.Size = new System.Drawing.Size(269, 60);
+            this.btn_Customer.Size = new System.Drawing.Size(259, 60);
             this.btn_Customer.TabIndex = 11;
             this.btn_Customer.Text = "CUSTOMER";
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -212,12 +213,23 @@
             this.btn_Staff.Location = new System.Drawing.Point(0, 260);
             this.btn_Staff.Name = "btn_Staff";
             this.btn_Staff.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Staff.Size = new System.Drawing.Size(269, 60);
+            this.btn_Staff.Size = new System.Drawing.Size(259, 60);
             this.btn_Staff.TabIndex = 10;
             this.btn_Staff.Text = "STAFF";
             this.btn_Staff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Staff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Staff.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Title
+            // 
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.White;
+            this.lbl_Title.Location = new System.Drawing.Point(54, 12);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(128, 28);
+            this.lbl_Title.TabIndex = 3;
+            this.lbl_Title.Text = "TRANG CHỦ";
             // 
             // panel1
             // 
@@ -225,29 +237,18 @@
             this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Controls.Add(this.pic_Title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(269, 0);
+            this.panel1.Location = new System.Drawing.Point(259, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1313, 72);
-            this.panel1.TabIndex = 4;
-            // 
-            // lbl_Title
-            // 
-            this.lbl_Title.AutoSize = true;
-            this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title.Location = new System.Drawing.Point(67, 29);
-            this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(118, 25);
-            this.lbl_Title.TabIndex = 3;
-            this.lbl_Title.Text = "TRANG CHỦ";
+            this.panel1.Size = new System.Drawing.Size(1343, 57);
+            this.panel1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 40);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(100, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nguyễn Văn Nghĩa";
             // 
@@ -275,7 +276,7 @@
             this.btn_Products.Location = new System.Drawing.Point(0, 200);
             this.btn_Products.Name = "btn_Products";
             this.btn_Products.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Products.Size = new System.Drawing.Size(269, 60);
+            this.btn_Products.Size = new System.Drawing.Size(259, 60);
             this.btn_Products.TabIndex = 9;
             this.btn_Products.Text = "PRODUCTS";
             this.btn_Products.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -297,7 +298,7 @@
             this.btn_HomePage.Location = new System.Drawing.Point(0, 140);
             this.btn_HomePage.Name = "btn_HomePage";
             this.btn_HomePage.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_HomePage.Size = new System.Drawing.Size(269, 60);
+            this.btn_HomePage.Size = new System.Drawing.Size(259, 60);
             this.btn_HomePage.TabIndex = 1;
             this.btn_HomePage.Text = "HOME";
             this.btn_HomePage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,18 +313,29 @@
             this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Logo.Location = new System.Drawing.Point(0, 0);
             this.panel_Logo.Name = "panel_Logo";
-            this.panel_Logo.Size = new System.Drawing.Size(269, 140);
+            this.panel_Logo.Size = new System.Drawing.Size(259, 140);
             this.panel_Logo.TabIndex = 0;
             // 
             // lbl_ChucVu
             // 
             this.lbl_ChucVu.AutoSize = true;
-            this.lbl_ChucVu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ChucVu.Location = new System.Drawing.Point(115, 75);
+            this.lbl_ChucVu.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ChucVu.Location = new System.Drawing.Point(100, 75);
             this.lbl_ChucVu.Name = "lbl_ChucVu";
-            this.lbl_ChucVu.Size = new System.Drawing.Size(62, 20);
+            this.lbl_ChucVu.Size = new System.Drawing.Size(56, 17);
             this.lbl_ChucVu.TabIndex = 4;
             this.lbl_ChucVu.Text = "Quản lý";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_1;
+            this.pictureBox1.Location = new System.Drawing.Point(817, 310);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // panel_Menu
             // 
@@ -343,28 +355,26 @@
             this.panel_Menu.ForeColor = System.Drawing.Color.White;
             this.panel_Menu.Location = new System.Drawing.Point(0, 0);
             this.panel_Menu.Name = "panel_Menu";
-            this.panel_Menu.Size = new System.Drawing.Size(269, 853);
+            this.panel_Menu.Size = new System.Drawing.Size(259, 751);
             this.panel_Menu.TabIndex = 3;
             // 
-            // formManager
+            // formT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1582, 853);
+            this.ClientSize = new System.Drawing.Size(1602, 751);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel_Menu);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "formManager";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HỆ THỐNG HEALTHY CARE";
+            this.Name = "formT";
+            this.Text = "formT";
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_Logo.ResumeLayout(false);
             this.panel_Logo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -380,14 +390,15 @@
         private FontAwesome.Sharp.IconButton btn_Account;
         private FontAwesome.Sharp.IconButton btn_Customer;
         private FontAwesome.Sharp.IconButton btn_Staff;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_Title;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton btn_Products;
         private FontAwesome.Sharp.IconButton btn_HomePage;
         private System.Windows.Forms.Panel panel_Logo;
         private System.Windows.Forms.Label lbl_ChucVu;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel_Menu;
     }
 }
