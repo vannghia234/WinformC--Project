@@ -20,7 +20,7 @@ namespace formLogin
         private void btnHomePage_Click(object sender, EventArgs e)
         {
             btnHomePage.BackColor = Color.FromArgb(255,67,64);
-            addForm(new ftableManager());
+            //addForm(new ());
             btnAccountInfo.BackColor = Color.FromArgb(65, 67, 106);
             labelTitle.BackColor = Color.FromArgb(255,67,64);
             labelTitle.Text = "TRANG CHỦ";

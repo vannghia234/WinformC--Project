@@ -61,6 +61,12 @@
     <Compile Include="form.Designer.cs">
       <DependentUpon>form.cs</DependentUpon>
     </Compile>
+    <Compile Include="form1213.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form1213.Designer.cs">
+      <DependentUpon>form1213.cs</DependentUpon>
+    </Compile>
     <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,28 +91,31 @@
     <Compile Include="formStaff.Designer.cs">
       <DependentUpon>formStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="formT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formT.Designer.cs">
-      <DependentUpon>formT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ftableManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ftableManager.Designer.cs">
-      <DependentUpon>ftableManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="formManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formManager.Designer.cs">
       <DependentUpon>formManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="hoadon1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hoadon1.Designer.cs">
+      <DependentUpon>hoadon1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="progressbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progressbar.Designer.cs">
+      <DependentUpon>progressbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="form.resx">
       <DependentUpon>form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form1213.resx">
+      <DependentUpon>form1213.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
@@ -120,14 +129,14 @@
     <EmbeddedResource Include="formStaff.resx">
       <DependentUpon>formStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formT.resx">
-      <DependentUpon>formT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ftableManager.resx">
-      <DependentUpon>ftableManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formManager.resx">
       <DependentUpon>formManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hoadon1.resx">
+      <DependentUpon>hoadon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progressbar.resx">
+      <DependentUpon>progressbar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -257,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%295.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

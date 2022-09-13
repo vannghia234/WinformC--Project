@@ -33,9 +33,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cb_SavePassword = new System.Windows.Forms.CheckBox();
             this.lbl_ErrorPass = new System.Windows.Forms.Label();
             this.lbl_Error = new System.Windows.Forms.Label();
-            this.cbShowPass = new System.Windows.Forms.CheckBox();
+            this.cb_ShowPass = new System.Windows.Forms.CheckBox();
             this.bt_Login = new System.Windows.Forms.Button();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.txt_Account = new System.Windows.Forms.TextBox();
@@ -53,7 +54,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 394);
+            this.panel1.Size = new System.Drawing.Size(990, 465);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -63,14 +64,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(871, 394);
+            this.panel3.Size = new System.Drawing.Size(990, 465);
             this.panel3.TabIndex = 26;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::formLogin.Properties.Resources.undraw_Coding_re_iv62__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(60, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(315, 496);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -81,17 +82,30 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel2.Controls.Add(this.cb_SavePassword);
             this.panel2.Controls.Add(this.lbl_ErrorPass);
             this.panel2.Controls.Add(this.lbl_Error);
-            this.panel2.Controls.Add(this.cbShowPass);
+            this.panel2.Controls.Add(this.cb_ShowPass);
             this.panel2.Controls.Add(this.bt_Login);
             this.panel2.Controls.Add(this.txt_Password);
             this.panel2.Controls.Add(this.txt_Account);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(308, 0);
+            this.panel2.Location = new System.Drawing.Point(368, 35);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(563, 391);
             this.panel2.TabIndex = 32;
+            // 
+            // cb_SavePassword
+            // 
+            this.cb_SavePassword.AutoSize = true;
+            this.cb_SavePassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_SavePassword.Location = new System.Drawing.Point(352, 216);
+            this.cb_SavePassword.Name = "cb_SavePassword";
+            this.cb_SavePassword.Size = new System.Drawing.Size(130, 24);
+            this.cb_SavePassword.TabIndex = 36;
+            this.cb_SavePassword.Text = "Lưu đăng nhập";
+            this.cb_SavePassword.UseVisualStyleBackColor = true;
+            this.cb_SavePassword.CheckedChanged += new System.EventHandler(this.cb_SavePassword_CheckedChanged);
             // 
             // lbl_ErrorPass
             // 
@@ -115,17 +129,17 @@
             this.lbl_Error.TabIndex = 35;
             this.lbl_Error.Visible = false;
             // 
-            // cbShowPass
+            // cb_ShowPass
             // 
-            this.cbShowPass.AutoSize = true;
-            this.cbShowPass.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.cbShowPass.Location = new System.Drawing.Point(61, 217);
-            this.cbShowPass.Name = "cbShowPass";
-            this.cbShowPass.Size = new System.Drawing.Size(141, 23);
-            this.cbShowPass.TabIndex = 32;
-            this.cbShowPass.Text = "Hiển thị mật khẩu";
-            this.cbShowPass.UseVisualStyleBackColor = true;
-            this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged);
+            this.cb_ShowPass.AutoSize = true;
+            this.cb_ShowPass.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.cb_ShowPass.Location = new System.Drawing.Point(61, 217);
+            this.cb_ShowPass.Name = "cb_ShowPass";
+            this.cb_ShowPass.Size = new System.Drawing.Size(141, 23);
+            this.cb_ShowPass.TabIndex = 32;
+            this.cb_ShowPass.Text = "Hiển thị mật khẩu";
+            this.cb_ShowPass.UseVisualStyleBackColor = true;
+            this.cb_ShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged);
             // 
             // bt_Login
             // 
@@ -142,7 +156,7 @@
             this.bt_Login.Location = new System.Drawing.Point(61, 256);
             this.bt_Login.Name = "bt_Login";
             this.bt_Login.Padding = new System.Windows.Forms.Padding(5);
-            this.bt_Login.Size = new System.Drawing.Size(357, 45);
+            this.bt_Login.Size = new System.Drawing.Size(421, 45);
             this.bt_Login.TabIndex = 30;
             this.bt_Login.Text = "ĐĂNG NHẬP";
             this.bt_Login.UseVisualStyleBackColor = false;
@@ -158,7 +172,7 @@
             this.txt_Password.Location = new System.Drawing.Point(61, 161);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
-            this.txt_Password.Size = new System.Drawing.Size(357, 31);
+            this.txt_Password.Size = new System.Drawing.Size(421, 31);
             this.txt_Password.TabIndex = 29;
             this.txt_Password.TabStop = false;
             this.txt_Password.Text = "Mật khẩu";
@@ -173,7 +187,7 @@
             this.txt_Account.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_Account.Location = new System.Drawing.Point(61, 101);
             this.txt_Account.Name = "txt_Account";
-            this.txt_Account.Size = new System.Drawing.Size(357, 31);
+            this.txt_Account.Size = new System.Drawing.Size(421, 31);
             this.txt_Account.TabIndex = 28;
             this.txt_Account.TabStop = false;
             this.txt_Account.Text = "Tài khoản";
@@ -197,7 +211,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(871, 394);
+            this.ClientSize = new System.Drawing.Size(990, 465);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formLogin";
@@ -206,6 +220,7 @@
             this.Text = "Đăng nhập";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.formLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -224,11 +239,12 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_ErrorPass;
         private System.Windows.Forms.Label lbl_Error;
-        private System.Windows.Forms.CheckBox cbShowPass;
+        private System.Windows.Forms.CheckBox cb_ShowPass;
         private System.Windows.Forms.Button bt_Login;
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.TextBox txt_Account;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox cb_SavePassword;
     }
 }
 

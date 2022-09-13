@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class formT : Form
+    public partial class hoadon1 : Form
     {
-        public formT()
+        public hoadon1()
         {
             InitializeComponent();
         }

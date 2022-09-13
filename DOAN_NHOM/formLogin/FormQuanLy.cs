@@ -62,7 +62,8 @@ namespace formLogin
                 iconBtnExit.ForeColor = color;
                 //
                 iconBtnMini.ForeColor = color;
-
+                // shop name lbl
+                lbl_ShopName.ForeColor = color;
 
 
             }

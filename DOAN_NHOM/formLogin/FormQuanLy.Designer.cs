@@ -49,6 +49,8 @@
             this.iconBtnExit = new FontAwesome.Sharp.IconPictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pic_Title = new FontAwesome.Sharp.IconPictureBox();
+            this.lbl_ShopName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Menu.SuspendLayout();
             this.panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).BeginInit();
@@ -56,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Menu
@@ -357,6 +360,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lbl_ShopName);
             this.panel1.Controls.Add(this.iconBtnMini);
             this.panel1.Controls.Add(this.iconBtnExit);
             this.panel1.Controls.Add(this.lbl_Title);
@@ -420,9 +425,33 @@
             this.pic_Title.TabIndex = 3;
             this.pic_Title.TabStop = false;
             // 
+            // lbl_ShopName
+            // 
+            this.lbl_ShopName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ShopName.AutoSize = true;
+            this.lbl_ShopName.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ShopName.ForeColor = System.Drawing.Color.White;
+            this.lbl_ShopName.Location = new System.Drawing.Point(406, 15);
+            this.lbl_ShopName.Name = "lbl_ShopName";
+            this.lbl_ShopName.Size = new System.Drawing.Size(301, 46);
+            this.lbl_ShopName.TabIndex = 5;
+            this.lbl_ShopName.Text = "Healthy Care";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_1;
+            this.pictureBox1.Location = new System.Drawing.Point(699, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormQuanLy
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1335, 763);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Menu);
@@ -441,6 +470,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -467,5 +497,7 @@
         private FontAwesome.Sharp.IconButton btn_Staff;
         private FontAwesome.Sharp.IconButton btn_Products;
         private FontAwesome.Sharp.IconButton btn_HoaDon;
+        private System.Windows.Forms.Label lbl_ShopName;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

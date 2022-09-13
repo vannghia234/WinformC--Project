@@ -34,7 +34,7 @@ namespace formLogin
 
         private void cbShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbShowPass.Checked == true)
+            if (cb_ShowPass.Checked == true)
             {
                 txt_Password.PasswordChar = (char)0;
             }
@@ -125,7 +125,6 @@ namespace formLogin
 
         private void bt_Login_Click(object sender, EventArgs e)
         {
-            
             this.Size = new Size(770, 479);
             this.StartPosition = FormStartPosition.CenterScreen;
             lbl_Error.Text = "";
@@ -142,11 +141,14 @@ namespace formLogin
                     cmd.Parameters.AddWithValue("@username", txt_Account.Text);
                     cmd.Parameters.AddWithValue("@password", txt_Password.Text);
                     cmd.Connection = conn;
-                    object kq = cmd.ExecuteScalar();
-                    int code = Convert.ToInt32(kq);
-                    FormQuanLy f = new FormQuanLy();
+                    progressbar p = new progressbar();
                     this.Hide();
-                    f.Show();
+                    p.Show();
+                    //object kq = cmd.ExecuteScalar();
+                    //int code = Convert.ToInt32(kq);
+                    //FormQuanLy f = new FormQuanLy();
+                    //this.Hide();
+                    //f.Show();
 
                     //                    formStaff fst = new formStaff();
                     //;                    if (code == 1)
@@ -193,6 +195,49 @@ namespace formLogin
         {
 
         }
+
+        private void cb_SavePassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((txt_Account.Text != "" && txt_Password.Text != "") || txt_Account.Text != "Tài khoản" && txt_Password.Text != "Mật khẩu")
+            {
+                if (cb_SavePassword.Checked)
+                {
+                    string user = txt_Account.Text;
+                    string pass = txt_Password.Text;
+                    Properties.Settings.Default.username = user;
+                    Properties.Settings.Default.password = pass;
+                    Properties.Settings.Default.Save();
+                }
+                else if (cb_SavePassword.Checked == false)
+                {
+                    Properties.Settings.Default.Reset();
+                }
+            }
+        }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+
+            if (Properties.Settings.Default.username == "" || Properties.Settings.Default.password == "")
+            {
+                txt_Account.Text = "Tài khoản";
+                txt_Password.Text = "Mật khẩu";
+
+            }
+            else
+            {
+                txt_Account.Text = Properties.Settings.Default.username;
+                txt_Password.Text = Properties.Settings.Default.password;
+            }    
+               
+
+            if (Properties.Settings.Default.username != "")
+            {
+                cb_SavePassword.Checked = true;
+            }
+            else 
+                cb_SavePassword.Checked = false;
+         }
 
 
 
