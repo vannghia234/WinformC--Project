@@ -86,7 +86,7 @@ namespace formLogin
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất tài khoản không?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
            if (result == DialogResult.OK)
             {
-                formLogin hp = new formLogin();
+                FormLogin hp = new FormLogin();
                 this.Close();
                 hp.Show();
             }

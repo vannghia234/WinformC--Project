@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class progressbar : Form
+    public partial class FormProgressbar : Form
     {
-        public progressbar()
+        public FormProgressbar()
         {
             InitializeComponent();
         }

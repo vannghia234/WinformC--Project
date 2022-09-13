@@ -45,20 +45,20 @@
             this.lbl_ChucVu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_ShopName = new System.Windows.Forms.Label();
             this.iconBtnMini = new FontAwesome.Sharp.IconPictureBox();
             this.iconBtnExit = new FontAwesome.Sharp.IconPictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pic_Title = new FontAwesome.Sharp.IconPictureBox();
-            this.lbl_ShopName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_Menu.SuspendLayout();
             this.panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Menu
@@ -80,7 +80,7 @@
             this.panel_Menu.ForeColor = System.Drawing.Color.White;
             this.panel_Menu.Location = new System.Drawing.Point(0, 0);
             this.panel_Menu.Name = "panel_Menu";
-            this.panel_Menu.Size = new System.Drawing.Size(269, 763);
+            this.panel_Menu.Size = new System.Drawing.Size(263, 763);
             this.panel_Menu.TabIndex = 0;
             // 
             // btn_Exit
@@ -98,7 +98,7 @@
             this.btn_Exit.Location = new System.Drawing.Point(0, 680);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Exit.Size = new System.Drawing.Size(269, 60);
+            this.btn_Exit.Size = new System.Drawing.Size(263, 60);
             this.btn_Exit.TabIndex = 26;
             this.btn_Exit.Text = "ĐĂNG XUẤT";
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,7 +121,7 @@
             this.btn_Kho.Location = new System.Drawing.Point(0, 620);
             this.btn_Kho.Name = "btn_Kho";
             this.btn_Kho.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Kho.Size = new System.Drawing.Size(269, 60);
+            this.btn_Kho.Size = new System.Drawing.Size(263, 60);
             this.btn_Kho.TabIndex = 25;
             this.btn_Kho.Text = "NHẬP KHO";
             this.btn_Kho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,7 +144,7 @@
             this.btn_Chart.Location = new System.Drawing.Point(0, 560);
             this.btn_Chart.Name = "btn_Chart";
             this.btn_Chart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Chart.Size = new System.Drawing.Size(269, 60);
+            this.btn_Chart.Size = new System.Drawing.Size(263, 60);
             this.btn_Chart.TabIndex = 24;
             this.btn_Chart.Text = "THỐNG KÊ";
             this.btn_Chart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,7 +167,7 @@
             this.btn_NCC.Location = new System.Drawing.Point(0, 500);
             this.btn_NCC.Name = "btn_NCC";
             this.btn_NCC.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_NCC.Size = new System.Drawing.Size(269, 60);
+            this.btn_NCC.Size = new System.Drawing.Size(263, 60);
             this.btn_NCC.TabIndex = 23;
             this.btn_NCC.Text = "NHÀ CUNG CẤP";
             this.btn_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,7 +190,7 @@
             this.btn_Account.Location = new System.Drawing.Point(0, 440);
             this.btn_Account.Name = "btn_Account";
             this.btn_Account.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Account.Size = new System.Drawing.Size(269, 60);
+            this.btn_Account.Size = new System.Drawing.Size(263, 60);
             this.btn_Account.TabIndex = 22;
             this.btn_Account.Text = "TÀI KHOẢN";
             this.btn_Account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +213,7 @@
             this.btn_Customer.Location = new System.Drawing.Point(0, 380);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Customer.Size = new System.Drawing.Size(269, 60);
+            this.btn_Customer.Size = new System.Drawing.Size(263, 60);
             this.btn_Customer.TabIndex = 21;
             this.btn_Customer.Text = "KHÁCH HÀNG";
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,7 +236,7 @@
             this.btn_Staff.Location = new System.Drawing.Point(0, 320);
             this.btn_Staff.Name = "btn_Staff";
             this.btn_Staff.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Staff.Size = new System.Drawing.Size(269, 60);
+            this.btn_Staff.Size = new System.Drawing.Size(263, 60);
             this.btn_Staff.TabIndex = 20;
             this.btn_Staff.Text = "NHÂN VIÊN";
             this.btn_Staff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,7 +258,7 @@
             this.btn_Products.Location = new System.Drawing.Point(0, 260);
             this.btn_Products.Name = "btn_Products";
             this.btn_Products.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Products.Size = new System.Drawing.Size(269, 60);
+            this.btn_Products.Size = new System.Drawing.Size(263, 60);
             this.btn_Products.TabIndex = 19;
             this.btn_Products.Text = "SẢN PHẨM";
             this.btn_Products.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,7 +281,7 @@
             this.btn_HoaDon.Location = new System.Drawing.Point(0, 200);
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_HoaDon.Size = new System.Drawing.Size(269, 60);
+            this.btn_HoaDon.Size = new System.Drawing.Size(263, 60);
             this.btn_HoaDon.TabIndex = 18;
             this.btn_HoaDon.Text = "HÓA ĐƠN";
             this.btn_HoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -304,7 +304,7 @@
             this.btn_HomePage.Location = new System.Drawing.Point(0, 140);
             this.btn_HomePage.Name = "btn_HomePage";
             this.btn_HomePage.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_HomePage.Size = new System.Drawing.Size(269, 60);
+            this.btn_HomePage.Size = new System.Drawing.Size(263, 60);
             this.btn_HomePage.TabIndex = 1;
             this.btn_HomePage.Text = "HOME";
             this.btn_HomePage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,7 +320,7 @@
             this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Logo.Location = new System.Drawing.Point(0, 0);
             this.panel_Logo.Name = "panel_Logo";
-            this.panel_Logo.Size = new System.Drawing.Size(269, 140);
+            this.panel_Logo.Size = new System.Drawing.Size(263, 140);
             this.panel_Logo.TabIndex = 0;
             // 
             // iconBtn_logo
@@ -367,10 +367,33 @@
             this.panel1.Controls.Add(this.lbl_Title);
             this.panel1.Controls.Add(this.pic_Title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(269, 0);
+            this.panel1.Location = new System.Drawing.Point(263, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1066, 72);
+            this.panel1.Size = new System.Drawing.Size(1072, 60);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_1;
+            this.pictureBox1.Location = new System.Drawing.Point(702, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbl_ShopName
+            // 
+            this.lbl_ShopName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ShopName.AutoSize = true;
+            this.lbl_ShopName.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ShopName.ForeColor = System.Drawing.Color.White;
+            this.lbl_ShopName.Location = new System.Drawing.Point(409, 9);
+            this.lbl_ShopName.Name = "lbl_ShopName";
+            this.lbl_ShopName.Size = new System.Drawing.Size(301, 46);
+            this.lbl_ShopName.TabIndex = 5;
+            this.lbl_ShopName.Text = "Healthy Care";
             // 
             // iconBtnMini
             // 
@@ -379,9 +402,9 @@
             this.iconBtnMini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.iconBtnMini.IconColor = System.Drawing.Color.White;
             this.iconBtnMini.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnMini.Location = new System.Drawing.Point(978, 0);
+            this.iconBtnMini.Location = new System.Drawing.Point(984, 0);
             this.iconBtnMini.Name = "iconBtnMini";
-            this.iconBtnMini.Size = new System.Drawing.Size(32, 72);
+            this.iconBtnMini.Size = new System.Drawing.Size(32, 60);
             this.iconBtnMini.TabIndex = 4;
             this.iconBtnMini.TabStop = false;
             this.iconBtnMini.Click += new System.EventHandler(this.iconBtnMini_Click);
@@ -394,9 +417,9 @@
             this.iconBtnExit.IconColor = System.Drawing.Color.White;
             this.iconBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnExit.IconSize = 56;
-            this.iconBtnExit.Location = new System.Drawing.Point(1010, 0);
+            this.iconBtnExit.Location = new System.Drawing.Point(1016, 0);
             this.iconBtnExit.Name = "iconBtnExit";
-            this.iconBtnExit.Size = new System.Drawing.Size(56, 72);
+            this.iconBtnExit.Size = new System.Drawing.Size(56, 60);
             this.iconBtnExit.TabIndex = 3;
             this.iconBtnExit.TabStop = false;
             this.iconBtnExit.Click += new System.EventHandler(this.iconBtnExit_Click);
@@ -425,29 +448,6 @@
             this.pic_Title.TabIndex = 3;
             this.pic_Title.TabStop = false;
             // 
-            // lbl_ShopName
-            // 
-            this.lbl_ShopName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_ShopName.AutoSize = true;
-            this.lbl_ShopName.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ShopName.ForeColor = System.Drawing.Color.White;
-            this.lbl_ShopName.Location = new System.Drawing.Point(406, 15);
-            this.lbl_ShopName.Name = "lbl_ShopName";
-            this.lbl_ShopName.Size = new System.Drawing.Size(301, 46);
-            this.lbl_ShopName.TabIndex = 5;
-            this.lbl_ShopName.Text = "Healthy Care";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(699, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormQuanLy
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -467,10 +467,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

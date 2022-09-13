@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class formLogin : Form
+    public partial class FormLogin : Form
     {
-        public formLogin()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -141,7 +141,7 @@ namespace formLogin
                     cmd.Parameters.AddWithValue("@username", txt_Account.Text);
                     cmd.Parameters.AddWithValue("@password", txt_Password.Text);
                     cmd.Connection = conn;
-                    progressbar p = new progressbar();
+                    FormProgressbar p = new FormProgressbar();
                     this.Hide();
                     p.Show();
                     //object kq = cmd.ExecuteScalar();

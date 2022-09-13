@@ -1,6 +1,6 @@
 ﻿namespace formLogin
 {
-    partial class progressbar
+    partial class FormProgressbar
     {
         /// <summary>
         /// Required designer variable.

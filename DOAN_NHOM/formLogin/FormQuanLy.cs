@@ -147,7 +147,7 @@ namespace formLogin
         {
             ActiveButton(sender, MyColors.red);
             this.Hide();
-            formLogin fl = new formLogin();
+            FormLogin fl = new FormLogin();
             fl.Show();
 
 
