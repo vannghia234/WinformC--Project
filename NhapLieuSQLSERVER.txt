@@ -1,4 +1,4 @@
--- DANH MỤC
+﻿-- DANH MỤC
 INSERT INTO dbo.DANHMUC
 (
     MADM,
@@ -220,3 +220,102 @@ Insert Into TAIKHOAN(TAIKHOAN,MATKHAU,TENTAIKHOAN,MALOAI) values
 ('kieuthu', '11517854b', N'Kiều Thu','2'),
 ('kiemthoa', '21657854b', N'Kiêm Thoa','2'),
 ('kiemthu', '31657854b', N'Kiêm Thư','2')
+
+//Nguyễn Tấn Hùng
+
+INSERT INTO NHACUNGCAP(MANCC,TENNCC,SDT,DIACHI)
+VALUES 
+('NCC01',N'CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ MỸ PHẨM BẮC TRANG','0946698350',N'20 Trần Cao Vân, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh, Việt Nam'),
+('NCC02',N'CÔNG TY TNHH MỸ PHẨM EV PRINCESS','0838355005',N'35 Đường 3/2, Phường 11, Quận 10, Tp. Hồ Chí Minh (TPHCM) , Việt Nam'),
+('NCC03',N'CÔNG TY TNHH THƯƠNG MẠI A & P.L.U.S','0902667038',N'Cao ốc Wilton Tower 71/3 Nguyễn Văn Thương, F.25, Q. Bình ThạnhTp. Hồ Chí Minh (TPHCM)'),
+('NCC04',N'CÔNG TY TNHH DƯỢC MỸ PHẨM HƯƠNG THẢO GROUP','0109183552',N'Ngõ 206 Đường Cổ Linh, Phường Long Biên, Quận Long Biên, Thành phố Hà Nội, Việt Nam'),
+('NCC05',N'Công ty TNHH Dược Phẩm NASAKI','2300939637',N'Lô E8, E9 Cụm công nghiệp đa nghề Đông Thọ, Xã Đông Thọ, Huyện Yên Phong, Tỉnh Bắc Ninh, Việt Nam'),
+('NCC06',N'Nhà máy sản xuất Thực phẩm chức năng Âu Cơ','0812535789',N'Số 3, Lô 3, CCN Ô Tô Nguyên Khê, X. Nguyên Khê, H. Đông Anh, Hà Nội , Việt Nam'),
+('NCC07',N'Công ty TNHH Sản Xuất Đầu Tư Life Gift Việt Nam','0931341111',N'Lô A3, Khu công nghiệp Cầu Tràm , Xã Long Trạch, Huyện Cần Đước, Tỉnh Long An, Việt Nam'),
+('NCC08',N'CÔNG TY TNHH THẢO DƯỢC ÔNG BA ĐẤT PHÈN','0283899406',N'47/10 Bùi Đình Túy, Phường 24, Quận Bình Thạnh, Thành phố Hồ Chí Minh.'),
+('NCC09',N'Công ty Cổ phần Dược phẩm OPC','0837517111',N'1017 Hồng Bàng - Phường 12 - Quận 6 - TP Hồ Chí Minh.'),
+('NCC10',N'Công ty TNHH MEDIPHAR USA','0989183400',N'ấp Bình Tiền 2 - Xã Đức Hòa Hạ - Huyện Đức Hoà - Long An.'),
+('NCC11',N'CÔNG TY CỔ PHẦN DƯỢC PHẨM BOSTON VIỆT NAM','0274376960',N'35 Đường 3/2, Số 43, đường số 8, KCN Việt nam- Singapore, Phường Bình Hòa'),
+('NCC12',N'Công ty TNHH Bách Thảo Dược','0948675668',N'Khách sạn Minh Châu, Thị trấn Tà Lùng, Huyện Quảng Hòa, Tỉnh Cao Bằng, Việt Nam'),
+('NCC13',N'Công ty sản xuất thực phẩm chức năng IMC','0911818018',N'Lô 38-2 Khu CN Quang Minh 1, Thị trấn Quang Minh, Huyện Mê Linh, TP. Hà Nội'),
+('NCC14',N'Công ty ResHPCos','0949996969',N'412 Nguyễn Thị Minh Khai, Phường 5, Quận 3, TPHCM'),
+('NCC15',N'Công ty sản xuất thực phẩm chức năng SPM','1900545469',N'Lô 51, Đường số 2, KCN Tân Tạo, Q.Bình Tân, TP.HCM');
+
+INSERT INTO PHIEUGIAOHANG (MAPGH, MANCC, MANV)
+VALUES 
+	('PGH01','NCC02','NV01'),
+	('PGH02','NCC01','NV05'),
+	('PGH03','NCC04','NV02'),
+	('PGH04','NCC06','NV01'),
+	('PGH05','NCC07','NV06'),
+	('PGH06','NCC14','NV08'),
+	('PGH07','NCC11','NV03'),
+	('PGH08','NCC12','NV03'),
+	('PGH09','NCC08','NV03'),
+	('PGH10','NCC15','NV03'),
+	('PGH11','NCC13','NV10'),
+	('PGH12','NCC09','NV09'),
+	('PGH13','NCC10','NV03'),
+	('PGH14','NCC05','NV03'),
+	('PGH15','NCC03','NV04');
+
+INSERT INTO CTPGH (MAPGH, MASP, NGAYDAT, NGAYNHAN, SOLUONG, TONGTIEN)
+VALUES 
+	('PGH01','SP01','2020-09-12','2020-10-01',100,'20000000'),
+	('PGH02','SP02','2020-11-06','2020-12-17',50,'12500000'),
+	('PGH03','SP03','2020-11-20','2020-12-22',60,'15000000'),
+	('PGH04','SP04','2020-07-30','2020-08-13',90,'18000000'),
+	('PGH05','SP05','2020-05-18','2020-06-31',30,'9000000'),
+	('PGH06','SP06','2020-11-22','2020-12-01',100,'20000000'),
+	('PGH07','SP07','2020-11-23','2020-12-14',70,'14000000'),
+	('PGH08','SP14','2020-12-01','2020-12-26',40,'12000000'),
+	('PGH09','SP15','2020-11-26','2020-12-24',80,'16000000'),
+	('PGH10','SP08','2020-02-01','2020-03-05',60,'9000000'),
+	('PGH11','SP09','2020-01-06','2020-01-10',100,'15000000'),
+	('PGH12','SP10','2020-10-17','2020-11-14',70,'7000000'),
+	('PGH13','SP11','2020-11-23','2020-11-26',20,'4000000'),
+	('PGH14','SP12','2020-11-16','2020-11-29',40,'6000000'),
+	('PGH15','SP13','2020-10-16','2020-11-02',60,'12000000'),
+	('PGH16','SP16','2020-09-12','2020-10-12',100,'20000000'),
+	('PGH17','SP21','2020-11-06','2020-12-17',50,'12500000'),
+	('PGH18','SP20','2020-11-20','2020-12-22',60,'15000000'),
+	('PGH19','SP18','2020-07-30','2020-08-13',90,'18000000'),
+	('PGH20','SP17','2020-05-18','2020-06-31',30,'9000000'),
+	('PGH21','SP19','2020-11-22','2020-12-01',100,'20000000');
+INSERT INTO GIOHANG (MAHD, MASP, SOLUONG)
+VALUES
+	('HD01', 'SP02', 5),
+	('HD02', 'SP03', 10),
+	('HD03', 'SP05', 15),
+	('HD04', 'SP09', 20),
+	('HD05', 'SP10', 25),
+	('HD06', 'SP11', 30),
+	('HD07', 'SP01', 35),
+	('HD08', 'SP04', 40),
+	('HD09', 'SP07', 45),
+	('HD10', 'SP08', 50),
+	('HD11', 'SP06', 55),
+	('HD12', 'SP13', 35),
+	('HD13', 'SP12', 40),
+	('HD14', 'SP14', 25),
+	('HD15', 'SP15', 17),
+	('HD16', 'SP16', 11),
+	('HD17', 'SP17', 7),
+	('HD18', 'SP18', 2),
+	('HD19', 'SP19', 3),
+	('HD20', 'SP20', 41),
+	('HD21', 'SP21', 32);
+	
+INSERT INTO KHO (MAKHO, MANV, TENKHO, DIACHI)
+VALUES
+	('KHO01', 'NV02', N'Long Bình',N'Đường Phan Đăng Lưu, Phường Long Bình, TP. Biên Hòa, Tỉnh Đồng Nai.'),
+	('KHO02', 'NV03', N'Bình Tân',N'Kho Bình Tân, QJ38+W9F, Đường Số 12B, Bình Trị Đông B, Bình Tân, Thành phố Hồ Chí Minh'),
+	('KHO03', 'NV05', N'Thủ Khiêm',N'Công Ty TNHH Kho Vận Xuyên Á, 63T Ung Văn Khiêm, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh'),
+	('KHO04', 'NV09', N'Kiên Giang',N'đường Phú Riềng Đỏ, quốc lộ 14, thị xã Đồng Xoài '),
+	('KHO05', 'NV10', N'Rạch Giá',N'E16, Lô 16-23 Cù Chính Lan , Vĩnh lạc, Rạch Giá, Kiên Giang'),
+	('KHO06', 'NV11', N'Cà Mau',N'Hẻm 179 Tô Hiến Thành, Phường 13, Quận 10, Thành phố Hồ Chí Minh 700000'),
+	('KHO07', 'NV01', N'Bình Dương',N'Đường Thống Nhất, KCN Sóng Thần, Dĩ An, Bình Dương 820000'),
+	('KHO08', 'NV04', 'Nha Trang',N' Số 6B Đào Duy Từ, Vạn Thạnh, Nha Trang, Khánh Hòa 650000'),
+	('KHO09', 'NV07', N'Hà Nội',N'18 Phạm Hùng, P, Từ Liêm, Hà Nội 100000'),
+	('KHO10', 'NV08', N'Thừa Thiên Huế',N'68 Tố Hữu, Xuân Phú, Thành phố Huế, Thừa Thiên Huế');
+	
