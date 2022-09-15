@@ -18,7 +18,7 @@ namespace formLogin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormNV());
+            Application.Run(new FormHoaDon());
         }
     }
 }

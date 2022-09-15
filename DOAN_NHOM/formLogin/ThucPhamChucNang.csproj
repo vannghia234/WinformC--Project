@@ -252,5 +252,8 @@
   <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%295.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

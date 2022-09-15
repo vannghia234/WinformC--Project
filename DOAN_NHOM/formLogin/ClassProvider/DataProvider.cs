@@ -10,14 +10,34 @@ namespace formLogin.ClassProvider
 {
     public class dataProvider
     {
-        private static dataProvider instance;
+        private static dataProvider instance = null; // bien singleTon
+        public static dataProvider Instance { 
+            get { 
+                if (instance == null) 
+                    instance = new dataProvider();
+                return instance;
+            }
+            set => instance = value; }
 
-        public static dataProvider Instance { get { if (instance == null) { dataProvider instance = new dataProvider(); } return instance; } set => instance = value; }
-        public static DataTable GetDataTable (string query)
+        // method
+        public DataTable GetDataTableByProcedure (string query)
         {
-            string conStr = "Data Source=DAICA-ZORO\\MSSQLSERVER01;Initial Catalog=QLQUANCOFFEE;Integrated Security=True";
             DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(conStr))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+            }
+            return dt;
+        }
+        public DataTable GetDatatableByQuery (string query)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
             {
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);

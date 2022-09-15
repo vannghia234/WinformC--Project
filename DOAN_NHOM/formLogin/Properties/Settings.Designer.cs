@@ -46,5 +46,18 @@ namespace formLogin.Properties {
                 this["password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DAICA-ZORO\\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integra" +
+            "ted Security=True")]
+        public string Constr {
+            get {
+                return ((string)(this["Constr"]));
+            }
+            set {
+                this["Constr"] = value;
+            }
+        }
     }
 }

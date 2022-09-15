@@ -8,5 +8,8 @@
     <Setting Name="password" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Constr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=DAICA-ZORO\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
