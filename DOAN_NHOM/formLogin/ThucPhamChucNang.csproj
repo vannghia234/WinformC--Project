@@ -61,6 +61,12 @@
     <Compile Include="ChangeAccountInfo.Designer.cs">
       <DependentUpon>ChangeAccountInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDangNhap.Designer.cs">
+      <DependentUpon>formDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,34 +79,44 @@
     <Compile Include="formNhanVien.Designer.cs">
       <DependentUpon>formNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNV.cs">
+    <Compile Include="formNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNV.Designer.cs">
-      <DependentUpon>FormNV.cs</DependentUpon>
+    <Compile Include="formNV.Designer.cs">
+      <DependentUpon>formNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuanLy.cs">
+    <Compile Include="formQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuanLy.Designer.cs">
-      <DependentUpon>FormQuanLy.cs</DependentUpon>
+    <Compile Include="formQuanLy.Designer.cs">
+      <DependentUpon>formQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHoaDon.cs">
+    <Compile Include="formHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHoaDon.Designer.cs">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    <Compile Include="formHoaDon.Designer.cs">
+      <DependentUpon>formHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="MAHOA\PasswordEncryption.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="FormProgressbar.cs">
+    <Compile Include="formProgressbarQL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProgressbar.Designer.cs">
-      <DependentUpon>FormProgressbar.cs</DependentUpon>
+    <Compile Include="formProgressbarQL.Designer.cs">
+      <DependentUpon>formProgressbarQL.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="ChangeAccountInfo.dje.resx">
+      <DependentUpon>ChangeAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeAccountInfo.resx">
       <DependentUpon>ChangeAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDangNhap.resx">
+      <DependentUpon>formDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -108,17 +124,17 @@
     <EmbeddedResource Include="formNhanVien.resx">
       <DependentUpon>formNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNV.resx">
-      <DependentUpon>FormNV.cs</DependentUpon>
+    <EmbeddedResource Include="formNV.resx">
+      <DependentUpon>formNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLy.resx">
-      <DependentUpon>FormQuanLy.cs</DependentUpon>
+    <EmbeddedResource Include="formQuanLy.resx">
+      <DependentUpon>formQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHoaDon.resx">
-      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="formHoaDon.resx">
+      <DependentUpon>formHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProgressbar.resx">
-      <DependentUpon>FormProgressbar.cs</DependentUpon>
+    <EmbeddedResource Include="formProgressbarQL.resx">
+      <DependentUpon>formProgressbarQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -254,6 +270,30 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UX-UI-Design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\how-important-uiux-V2-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth-view-from-space-satellite-illust-art-ipad-pro-wallpaper-1472x1472-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UX-UI-Design1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gfh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

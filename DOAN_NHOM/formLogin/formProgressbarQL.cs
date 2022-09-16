@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class FormProgressbar : Form
+    public partial class formProgressbarQL : Form
     {
-        public FormProgressbar()
+        public formProgressbarQL()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace formLogin
             progressBar1.Value = progressBar1.Value + 5;
             if(progressBar1.Value > 99)
             {
-                FormQuanLy ql = new FormQuanLy();
+                formQuanLy ql = new formQuanLy();
                 this.Hide();
                 ql.Show();
                 timer1.Enabled = false;

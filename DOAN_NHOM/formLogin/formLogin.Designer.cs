@@ -59,6 +59,8 @@
             // 
             // panel3
             // 
+            this.panel3.AutoSize = true;
+            this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -71,9 +73,10 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::formLogin.Properties.Resources.undraw_Coding_re_iv62__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 35);
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(315, 496);
+            this.pictureBox1.Size = new System.Drawing.Size(315, 418);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
@@ -98,7 +101,8 @@
             // cb_SavePassword
             // 
             this.cb_SavePassword.AutoSize = true;
-            this.cb_SavePassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_SavePassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cb_SavePassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_SavePassword.Location = new System.Drawing.Point(352, 216);
             this.cb_SavePassword.Name = "cb_SavePassword";
             this.cb_SavePassword.Size = new System.Drawing.Size(130, 24);
@@ -110,8 +114,9 @@
             // lbl_ErrorPass
             // 
             this.lbl_ErrorPass.AutoSize = true;
-            this.lbl_ErrorPass.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ErrorPass.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.lbl_ErrorPass.ForeColor = System.Drawing.Color.Red;
+            this.lbl_ErrorPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbl_ErrorPass.Location = new System.Drawing.Point(57, 195);
             this.lbl_ErrorPass.Name = "lbl_ErrorPass";
             this.lbl_ErrorPass.Size = new System.Drawing.Size(0, 19);
@@ -121,8 +126,9 @@
             // lbl_Error
             // 
             this.lbl_Error.AutoSize = true;
-            this.lbl_Error.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Error.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.lbl_Error.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Error.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbl_Error.Location = new System.Drawing.Point(57, 134);
             this.lbl_Error.Name = "lbl_Error";
             this.lbl_Error.Size = new System.Drawing.Size(0, 19);
@@ -133,6 +139,7 @@
             // 
             this.cb_ShowPass.AutoSize = true;
             this.cb_ShowPass.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.cb_ShowPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_ShowPass.Location = new System.Drawing.Point(61, 217);
             this.cb_ShowPass.Name = "cb_ShowPass";
             this.cb_ShowPass.Size = new System.Drawing.Size(141, 23);
@@ -152,7 +159,8 @@
             this.bt_Login.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLightLight;
             this.bt_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.bt_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Login.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Login.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold);
+            this.bt_Login.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bt_Login.Location = new System.Drawing.Point(61, 256);
             this.bt_Login.Name = "bt_Login";
             this.bt_Login.Padding = new System.Windows.Forms.Padding(5);
@@ -167,7 +175,7 @@
             this.txt_Password.AcceptsTab = true;
             this.txt_Password.BackColor = System.Drawing.Color.White;
             this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Password.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Password.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txt_Password.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_Password.Location = new System.Drawing.Point(61, 161);
             this.txt_Password.Name = "txt_Password";
@@ -183,7 +191,7 @@
             this.txt_Account.BackColor = System.Drawing.Color.White;
             this.txt_Account.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Account.CausesValidation = false;
-            this.txt_Account.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Account.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.txt_Account.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_Account.Location = new System.Drawing.Point(61, 101);
             this.txt_Account.Name = "txt_Account";
@@ -198,6 +206,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox3.Image = global::formLogin.Properties.Resources.slack__1_;
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.Location = new System.Drawing.Point(50, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(390, 61);
@@ -205,23 +214,22 @@
             this.pictureBox3.TabIndex = 34;
             this.pictureBox3.TabStop = false;
             // 
-            // formLogin
+            // FormLogin
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AcceptButton = this.bt_Login;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(990, 465);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "formLogin";
-            this.ShowInTaskbar = false;
+            this.IsMdiContainer = true;
+            this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.formLogin_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace formLogin
 {
-    partial class FormHoaDon
+    partial class formHoaDon
     {
         /// <summary>
         /// Required designer variable.

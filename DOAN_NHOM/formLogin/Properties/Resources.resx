@@ -130,8 +130,8 @@
   <data name="slack1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\slack1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="manager1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\manager1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="receipt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\receipt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +141,12 @@
   </data>
   <data name="receipt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\receipt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="how-important-uiux-V2-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\how-important-uiux-V2-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +166,11 @@
   <data name="manager (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manager (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="undraw_Coding_re_iv62 (1)5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undraw_Coding_re_iv62 (1)5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="receipt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\receipt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +202,9 @@
   <data name="undraw_Coding_re_iv62 (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undraw_Coding_re_iv62 (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="manager1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\manager1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="satisfaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\satisfaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,8 +214,14 @@
   <data name="name_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\name_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gfh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gfh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="slack (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\slack (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="earth-view-from-space-satellite-illust-art-ipad-pro-wallpaper-1472x1472-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\earth-view-from-space-satellite-illust-art-ipad-pro-wallpaper-1472x1472-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warehouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,10 +235,19 @@
   <data name="cleaning-staff (2)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cleaning-staff (2)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="UX-UI-Design1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UX-UI-Design1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cleaning-staff (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cleaning-staff (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="undraw_Coding_re_iv62 (1)5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\undraw_Coding_re_iv62 (1)5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UX-UI-Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UX-UI-Design.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

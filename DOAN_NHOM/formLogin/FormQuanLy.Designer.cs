@@ -1,6 +1,6 @@
 ﻿namespace formLogin
 {
-    partial class FormQuanLy
+    partial class formQuanLy
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLy));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formQuanLy));
             this.panel_Menu = new System.Windows.Forms.Panel();
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
             this.btn_Kho = new FontAwesome.Sharp.IconButton();
@@ -369,14 +369,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(263, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1072, 60);
+            this.panel1.Size = new System.Drawing.Size(1342, 60);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(702, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(837, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -389,7 +389,7 @@
             this.lbl_ShopName.AutoSize = true;
             this.lbl_ShopName.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ShopName.ForeColor = System.Drawing.Color.White;
-            this.lbl_ShopName.Location = new System.Drawing.Point(409, 9);
+            this.lbl_ShopName.Location = new System.Drawing.Point(544, 9);
             this.lbl_ShopName.Name = "lbl_ShopName";
             this.lbl_ShopName.Size = new System.Drawing.Size(301, 46);
             this.lbl_ShopName.TabIndex = 5;
@@ -402,7 +402,7 @@
             this.iconBtnMini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.iconBtnMini.IconColor = System.Drawing.Color.White;
             this.iconBtnMini.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnMini.Location = new System.Drawing.Point(984, 0);
+            this.iconBtnMini.Location = new System.Drawing.Point(1254, 0);
             this.iconBtnMini.Name = "iconBtnMini";
             this.iconBtnMini.Size = new System.Drawing.Size(32, 60);
             this.iconBtnMini.TabIndex = 4;
@@ -417,7 +417,7 @@
             this.iconBtnExit.IconColor = System.Drawing.Color.White;
             this.iconBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnExit.IconSize = 56;
-            this.iconBtnExit.Location = new System.Drawing.Point(1016, 0);
+            this.iconBtnExit.Location = new System.Drawing.Point(1286, 0);
             this.iconBtnExit.Name = "iconBtnExit";
             this.iconBtnExit.Size = new System.Drawing.Size(56, 60);
             this.iconBtnExit.TabIndex = 3;
@@ -450,9 +450,10 @@
             // 
             // FormQuanLy
             // 
+            this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1335, 763);
+            this.ClientSize = new System.Drawing.Size(1605, 763);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -460,7 +461,6 @@
             this.Name = "FormQuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel_Menu.ResumeLayout(false);
             this.panel_Logo.ResumeLayout(false);
             this.panel_Logo.PerformLayout();

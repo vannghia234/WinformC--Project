@@ -12,16 +12,28 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class FormQuanLy : Form
+    public partial class formQuanLy : Form
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-        public FormQuanLy()
+        public formQuanLy()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 60);
             panel_Menu.Controls.Add(leftBorderBtn);
+
+        
+        }
+        private void addForm(Form form)
+        {
+            //this.pannelHomepage.Controls.Clear();
+            //pannelHomepage.Dock = DockStyle.Fill;
+            //form.TopLevel = false;
+            //form.Dock = DockStyle.Fill;
+            //pannelHomepage.Controls.Add(form);
+            //form.Show();
+
         }
         private struct MyColors
         {
@@ -91,10 +103,7 @@ namespace formLogin
 
 
         }
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+      
 
         private void btn_HomePage_Click(object sender, EventArgs e)
         {

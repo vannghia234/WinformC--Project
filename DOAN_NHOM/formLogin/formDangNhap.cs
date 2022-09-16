@@ -1,18 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class FormLogin : Form
+    public partial class formDangNhap : Form
     {
-        public FormLogin()
+        public formDangNhap()
         {
             InitializeComponent();
         }
-        string conStr = "Data Source=DAICA-ZORO\\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
-        //Data Source=DAICA-ZORO\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True
 
         private void tbAccount_MouseClick(object sender, MouseEventArgs e)
         {
@@ -182,10 +186,10 @@ namespace formLogin
         {
             lbl_Error.Text = "";
             lbl_ErrorPass.Text = "";
-           
+
             if (kiemTra_UserPass())
             {
-                using (SqlConnection conn = new SqlConnection(conStr))
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand();
@@ -236,22 +240,18 @@ namespace formLogin
             }
         }
 
+        private void iconPic_Hide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
-
-
-
-        //TableManager a = new TableManager();
-        //this.Hide();
-        //a.ShowDialog();
-        //this.Show();
-        //if (kiemTra_UserPass)
-        //txt_Account.Text = "Tài khoản";
-        //txt_Password.Text = "Mật khẩu";
-        //txt_Account.ForeColor = Color.Black;
-        //txt_Password.ForeColor = Color.Black;
-        //txt_Account.Focus();
-
-
+        private void formDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ok = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel);
+            if (ok == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
     }
-    }
-    
+}
