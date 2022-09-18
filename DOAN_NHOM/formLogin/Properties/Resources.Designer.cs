@@ -233,6 +233,16 @@ namespace formLogin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lovepik_com_450127848_Get_a_glimpse_of_design_studio_flat_illustration {
+            get {
+                object obj = ResourceManager.GetObject("Lovepik_com-450127848-Get a glimpse of design studio flat illustration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man {
             get {
                 object obj = ResourceManager.GetObject("man", resourceCulture);
@@ -476,6 +486,16 @@ namespace formLogin.Properties {
         internal static System.Drawing.Bitmap UX_UI_Design1 {
             get {
                 object obj = ResourceManager.GetObject("UX-UI-Design1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UX_UI_Design2 {
+            get {
+                object obj = ResourceManager.GetObject("UX-UI-Design2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

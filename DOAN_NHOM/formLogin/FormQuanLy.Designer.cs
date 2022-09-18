@@ -448,7 +448,7 @@
             this.pic_Title.TabIndex = 3;
             this.pic_Title.TabStop = false;
             // 
-            // FormQuanLy
+            // formQuanLy
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -458,7 +458,7 @@
             this.Controls.Add(this.panel_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormQuanLy";
+            this.Name = "formQuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
             this.panel_Menu.ResumeLayout(false);

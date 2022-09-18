@@ -20,11 +20,11 @@ namespace formLogin
 
         private void tbAccount_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_Account.Text = null;
+            txt_Account.Text = "";
 
-            if (txt_Password.Text == null || txt_Password.Text == "Mật khẩu")
+            if (txt_Password.Text == "" || txt_Password.Text == "Mật khẩu")
             {
-                txt_Password.Text = null;
+                txt_Password.Text = "";
                 txt_Account.ForeColor = Color.Black;
             }
         }
@@ -181,7 +181,39 @@ namespace formLogin
             else
                 cb_SavePassword.Checked = false;
         }
-
+        private Boolean kiemTraChuoiMatKhau(string s)
+        {
+            int demThuong = 0;
+            int demHoa = 0;
+            int demSo = 0;
+            if (s.Length < 8)
+            {
+                return false;
+            }
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] >= 'a' && s[i] <= 'z')
+                {
+                    demThuong++;
+                }
+                if (s[i] >= 'A' && s[i] <= 'Z')
+                {
+                    demHoa++;
+                }
+                if (s[i] > '0' && s[i] < '9')
+                {
+                    demSo++;
+                }
+            }
+            if (demThuong > 0 && demSo > 0 && demHoa > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void bt_Login_Click(object sender, EventArgs e)
         {
             lbl_Error.Text = "";
@@ -189,48 +221,57 @@ namespace formLogin
 
             if (kiemTra_UserPass())
             {
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+                if (kiemTraChuoiMatKhau(txt_Password.Text))
                 {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.CommandText = "CHECK_VALID_LOGIN";
-                    cmd.Parameters.AddWithValue("@username", txt_Account.Text);
-                    cmd.Parameters.AddWithValue("@password", txt_Password.Text);
-                    cmd.Connection = conn;
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.CommandText = "CHECK_LOGIN";
+                        cmd.Parameters.AddWithValue("@username", txt_Account.Text);
+                        cmd.Parameters.AddWithValue("@pass", txt_Password.Text);
+                        cmd.Connection = conn;
 
-                    object kq = cmd.ExecuteScalar();
-                    int code = Convert.ToInt32(kq);
-                    formQuanLy f = new formQuanLy();
-                    formNV fst = new formNV();
-                    if (code == 1)
-                    {
-                        formProgressbarQL p = new formProgressbarQL();
-                        this.Hide();
-                        p.Show();
-                        //MessageBox.Show("Chào mừng bạn đến với giao diện của Quản Lý !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //this.Hide();
-                        //f.Show();
-                    }
-                    else if (code == 2)
-                    {
-                        MessageBox.Show("Chào mừng bạn đến với giao diện của Nhân Viên cửa hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        fst.Show();
-                    }
-                    else if (code == 3)
-                    {
-                        MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_Account.Focus();
+                        object kq = cmd.ExecuteScalar();
+                        int code = Convert.ToInt32(kq);
+                        if (code == 1)
+                        {
+                            formProgressbarQL p = new formProgressbarQL();
+                            this.Hide();
+                            p.Show();
+                            //MessageBox.Show("Chào mừng bạn đến với giao diện của Quản Lý !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //this.Hide();
+                            //f.Show();
+                        }
+                        else if (code == 2)
+                        {
+                            formProgressBarNV pgnv = new formProgressBarNV();
+                            this.Hide();
+                            pgnv.Show();
+                            MessageBox.Show("Chào mừng bạn đến với giao diện của Nhân Viên cửa hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            //fst.Show();
+                        }
+                        else if (code == 3)
+                        {
+                            MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txt_Account.Focus();
 
+                        }
+                        else if (code == 4)
+                        {
+                            MessageBox.Show("Tài khoản bạn nhập không tồn tại trên hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txt_Account.Focus();
+                        }
+                        conn.Close();
                     }
-                    else if (code == 4)
-                    {
-                        MessageBox.Show("Tài khoản bạn nhập không tồn tại trên hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txt_Account.Focus();
-                    }
-                    conn.Close();
                 }
+                else
+                {
+                    lbl_ErrorPass.Text = "Mật khẩu của bạn phải có ít nhất 8 ký tự bao gồm 1 ký tự Hoa, 1 thường, 1 số !";
+                }
+
 
                 txt_Account.Text = "Tài khoản";
                 txt_Password.Text = "Mật khẩu";
@@ -252,6 +293,38 @@ namespace formLogin
             {
                 e.Cancel = true;
             }
+        }
+
+        private void formDangNhap_Load(object sender, EventArgs e)
+        {
+            
+            if (Properties.Settings.Default.username == "" || Properties.Settings.Default.password == "")
+            {
+                txt_Account.Text = "Tài khoản";
+                txt_Password.Text = "Mật khẩu";
+
+            }
+            else
+            {
+                txt_Account.ForeColor = Color.Black;
+                txt_Password.ForeColor = Color.Black;
+
+                txt_Account.Text = Properties.Settings.Default.username;
+                txt_Password.Text = Properties.Settings.Default.password;
+            }
+
+
+            if (Properties.Settings.Default.username != "")
+            {
+                cb_SavePassword.Checked = true;
+            }
+            else
+                cb_SavePassword.Checked = false;
+        }
+
+        private void txt_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            txt_Password.PasswordChar = '*';
         }
     }
 }

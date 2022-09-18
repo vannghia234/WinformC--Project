@@ -55,35 +55,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassProvider\DataProvider.cs" />
-    <Compile Include="ChangeAccountInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChangeAccountInfo.Designer.cs">
-      <DependentUpon>ChangeAccountInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="formDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formDangNhap.Designer.cs">
       <DependentUpon>formDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formNhanVien.Designer.cs">
-      <DependentUpon>formNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="formNV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formNV.Designer.cs">
       <DependentUpon>formNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formProgressBarNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formProgressBarNV.Designer.cs">
+      <DependentUpon>formProgressBarNV.cs</DependentUpon>
     </Compile>
     <Compile Include="formQuanLy.cs">
       <SubType>Form</SubType>
@@ -109,23 +97,14 @@
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="ChangeAccountInfo.dje.resx">
-      <DependentUpon>ChangeAccountInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChangeAccountInfo.resx">
-      <DependentUpon>ChangeAccountInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formDangNhap.resx">
       <DependentUpon>formDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formNhanVien.resx">
-      <DependentUpon>formNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formNV.resx">
       <DependentUpon>formNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formProgressBarNV.resx">
+      <DependentUpon>formProgressBarNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formQuanLy.resx">
       <DependentUpon>formQuanLy.cs</DependentUpon>
@@ -294,6 +273,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UX-UI-Design2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-450127848-Get a glimpse of design studio flat illustration.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
