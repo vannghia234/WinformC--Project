@@ -1,4 +1,4 @@
-## Ứng dụng quản lý bán hàng sức khoẻ & sắc đẹp
+## Ứng dụng quản lý bán hàng *Sức khoẻ & Sắc đẹp*
 ### Giới thiệu
 <sub>Có lẽ dưỡi những tác động ngày càng xấu đi của biến đổi khí hậu, ô nhiễm môi trường, thực phẩm kém chất lượng thì ý thức bảo vệ sức khỏe của người dân ngày càng được tăng cao. Trên thị trường Việt Nam, thực phẩm chức năng có mặt từ năm 1999 tới năm 2005 có hơn 1 triệu người sử dụng thực phẩm chức năng nhằm kết hợp điều trị bệnh.
 Thực phẩm chức năng là những sản phẩm có tác dụng tăng cường duy trì chức năng cơ thể, hỗ trợ điều trị mốt số bệnh tật, nâng cao thể trạng, giúp cơ thể sống tốt hơn, kéo dài tuổi thọ. TPCN có 5 vai trò chính, đó là chống lão hóa, kéo dài tuổi thọ, tạo ra sức khỏe sung mãn - tăng sức khỏe tổng thể, giúp cơ thể tăng sức đề kháng, phòng ngừa - giảm thiểu nguy cơ bị bệnh, hỗ trợ điều trị một số bệnh và giúp làm đẹp - đặc biệt là phụ nữ.
