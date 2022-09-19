@@ -1,10 +1,14 @@
-## Ứng dụng quản lý bán hàng *Sức khoẻ & Sắc đẹp*
+## Ứng dụng quản lý bán hàng Healthy Care
 ### Giới thiệu
-<sub>Có lẽ dưỡi những tác động ngày càng xấu đi của biến đổi khí hậu, ô nhiễm môi trường, thực phẩm kém chất lượng thì ý thức bảo vệ sức khỏe của người dân ngày càng được tăng cao. Trên thị trường Việt Nam, thực phẩm chức năng có mặt từ năm 1999 tới năm 2005 có hơn 1 triệu người sử dụng thực phẩm chức năng nhằm kết hợp điều trị bệnh.
+<sub> Có lẽ dưỡi những tác động ngày càng xấu đi của biến đổi khí hậu, ô nhiễm môi trường, thực phẩm kém chất lượng thì ý thức bảo vệ sức khỏe của người dân ngày càng được tăng cao. Trên thị trường Việt Nam, thực phẩm chức năng có mặt từ năm 1999 tới năm 2005 có hơn 1 triệu người sử dụng thực phẩm chức năng nhằm kết hợp điều trị bệnh.
+</sub>
+<sub>
 Thực phẩm chức năng là những sản phẩm có tác dụng tăng cường duy trì chức năng cơ thể, hỗ trợ điều trị mốt số bệnh tật, nâng cao thể trạng, giúp cơ thể sống tốt hơn, kéo dài tuổi thọ. TPCN có 5 vai trò chính, đó là chống lão hóa, kéo dài tuổi thọ, tạo ra sức khỏe sung mãn - tăng sức khỏe tổng thể, giúp cơ thể tăng sức đề kháng, phòng ngừa - giảm thiểu nguy cơ bị bệnh, hỗ trợ điều trị một số bệnh và giúp làm đẹp - đặc biệt là phụ nữ.
- </sub>
+</sub>
+
 <sub>Cùng với những nhu cầu đó các cửa hàng buôn bán mặc hàng thực phẩm chức năng trên mỗi vùng dân, địa bàng đang dần mọc nên ồ ạt, nên việc tin học hóa việc buôn bán hàng là một việc không thể thiếu để giúp các nhà phát triển cửa hàng có thể kiểm soát được nhiều chi nhánh hơn. Phần mềm quản lý bán hàng ngày càng phổ biến trong việc quản lý các mặt hàng, nó mang lại lợi ích rất nhiều cho cho các doanh nghiệp, tập thể, cá nhân nào đó. Trước đây việc quản lý các mặt hàng bằng hình thức thủ công, nó gây ra rất nhiều bất cập dẫn đến khó kiểm soát các mặt hàng, vì vậy mà nó thiếu tính chuyên nghiệp và dễ mắc nhiều sai sót. Phần mềm này ra đời giúp cho người sử dụng tương tác với phần mềm một cách nhanh chóng, không rườm rà, quản lý được số lượng mặt hàng có trong kho, nhanh chóng thống kê được doanh thu trong ngày, lập hóa đơn, kiểm soát các mặt hàng, giảm thiểu các thiệt hại không đáng có. Với phần mềm quản lý bán hàng sức khỏe và sắc đẹp này chúng tôi mong muốn làm ra được sản phẩm phù hợp, dễ sử dụng, đa dạng với người sử dụng trong việc kiểm soát một cách hợp lí.
 </sub>
+
 ## Tổng quan phần mềm 
 
 - Nhân viên muốn sử dụng phần mềm thì phải được quản lý cung cấp cho tài khoản, hệ thống có hai loại tài khoản là tài khoản quản lý và tài khoản nhân viên. Sau khi đăng nhập, tùy vào loại tài khoản sẽ được hiển thị giao diện người dùng tương ứng, tài khoản Admin thì được sử dụng tất cả các chức năng của tài khoản Nhân viên (như thêm, xóa, sửa khách hàng/ sản phẩm, in hóa đơn, thanh toán, thay đổi thông tin cá nhân, tìm kiếm khách hàng/ sản phẩm…) và bao gồm các chức năng quản lý dành riêng cho quản lý như thêm, xóa, sửa Nhân viên/ Nhà cung cấp/ Tài khoản, thống kê hóa đơn (hàng ngày, hàng tháng, hàng năm…).
