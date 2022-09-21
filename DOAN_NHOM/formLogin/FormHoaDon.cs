@@ -16,7 +16,8 @@ namespace formLogin
         {
             InitializeComponent();
         }
-        DataTable dt = new DataTable();
+        private DataTable dt = new DataTable();
+        private double total = 0;
 
         // click datagridview Product
         private void dtgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -81,6 +82,7 @@ namespace formLogin
             int currentUpdateAmount = amount + currentAmout;
             double price = Convert.ToDouble(txt_Price.Text);
             double updatePrice = currentUpdateAmount * price;
+            total = total + (amount * price);
             string rs = string.Format("{0:0.000}", updatePrice);
             row.Cells[3].Value = rs;
 
@@ -90,29 +92,56 @@ namespace formLogin
         // thêm giỏ hàng
         private void btn_Cart_Click(object sender, EventArgs e)
         {
-            double price = Convert.ToDouble(txt_Price.Text);
-            int amount = Convert.ToInt32(nmr_Amount.Value);
-            int index = GetindexSP(txt_ProductID.Text);
-            string rs = string.Format("{0:0.000}", price);
-
-
-
-            if (index == -1)
+            try
             {
-                dtgv_Cart.Rows.Add(txt_ProductID.Text, txt_ProductName.Text, nmr_Amount.Value, rs);
-            }
-            else
-            {
-                UpdateInsert(index);
+                double price = Convert.ToDouble(txt_Price.Text);
+                int amount = Convert.ToInt32(nmr_Amount.Value);
+                int index = GetindexSP(txt_ProductID.Text);
+                string rs = string.Format("{0:0.000}", price);
 
-                MessageBox.Show("Đã cập nhật giỏ hàng");
+
+
+                if (index == -1)
+                {
+                    dtgv_Cart.Rows.Add(txt_ProductID.Text, txt_ProductName.Text, nmr_Amount.Value, rs);
+                    total = total + (amount * price);
+                }
+                else
+                {
+                    UpdateInsert(index);
+
+                }
+                
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Vui lòng chọn sản phẩm để thêm vào giỏ hàng", "Thông báo");
+
+            }
+            txt_TotalPrice.Text = String.Format("{0:0.000}", total);
         }
 
         private void btn_HoanTac_Click(object sender, EventArgs e)
         {
-            int index = dtgv_Cart.SelectedRows[0].Index;
-            dtgv_Cart.Rows.RemoveAt(index);
+
+            try
+            {
+                int index = dtgv_Cart.SelectedRows[0].Index;
+
+                if (dtgv_Cart.Rows.Count > 0)
+                {
+                    double unionPrice = Convert.ToDouble(dtgv_Cart.Rows[index].Cells[3].Value.ToString());
+                    dtgv_Cart.Rows.RemoveAt(index);
+                    total = total - unionPrice;
+                    txt_TotalPrice.Text = String.Format("{0:0.000}", total);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Giỏ hàng rỗng, không thể hoàn tác", "Cảnh báo");
+              
+            }
 
 
 
@@ -180,6 +209,13 @@ namespace formLogin
         private void iconBtn_HoaDon_Click(object sender, EventArgs e)
         {
             txt_HoaDon.Text = RandomIdHoaDon(8);
+            btn_Cart.Enabled = true;
+            btn_HoanTac.Enabled = true;
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
