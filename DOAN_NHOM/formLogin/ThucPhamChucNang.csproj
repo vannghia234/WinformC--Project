@@ -86,6 +86,12 @@
       <DependentUpon>formHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="MAHOA\PasswordEncryption.cs" />
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="formProgressbarQL.cs">
       <SubType>Form</SubType>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formProgressbarQL.resx">
       <DependentUpon>formProgressbarQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -279,6 +288,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Lovepik_com-450127848-Get a glimpse of design studio flat illustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext419750556792680.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

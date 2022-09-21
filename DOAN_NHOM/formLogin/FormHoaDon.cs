@@ -18,6 +18,7 @@ namespace formLogin
         }
         private DataTable dt = new DataTable();
         private double total = 0;
+        private string maHD = "";
 
         // click datagridview Product
         private void dtgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -121,7 +122,7 @@ namespace formLogin
             }
             txt_TotalPrice.Text = String.Format("{0:0.000}", total);
         }
-
+        // hoàn tác giỏ hàng
         private void btn_HoanTac_Click(object sender, EventArgs e)
         {
 
@@ -146,7 +147,7 @@ namespace formLogin
 
 
         }
-
+        // trao đổi dữ liệu
         private void dtgv_Cart_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -186,7 +187,7 @@ namespace formLogin
         {
             dtgv_Product.DataSource = dt;
         }
-
+        // tìm kiếm datagridview dùng rowfilter dataview
         private void rjButton1_Click(object sender, EventArgs e)
         {
             DataView data = new DataView(dt);
@@ -215,7 +216,10 @@ namespace formLogin
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
+            maHD = txt_HoaDon.Text;
 
+            Payment pm = new Payment(total, maHD);
+            pm.Show();
         }
     }
 }

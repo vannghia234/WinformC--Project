@@ -73,6 +73,16 @@ namespace formLogin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abc {
+            get {
+                object obj = ResourceManager.GetObject("abc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap admin__2_ {
             get {
                 object obj = ResourceManager.GetObject("admin (2)", resourceCulture);
@@ -136,6 +146,16 @@ namespace formLogin.Properties {
         internal static System.Drawing.Bitmap cleaning_staff__2_2 {
             get {
                 object obj = ResourceManager.GetObject("cleaning-staff (2)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext419750556792680 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext419750556792680", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

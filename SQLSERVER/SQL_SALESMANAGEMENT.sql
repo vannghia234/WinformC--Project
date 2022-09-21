@@ -1,4 +1,4 @@
-CREATE DATABASE QUANLY_BEAUTY_HEALTH
+﻿CREATE DATABASE QUANLY_BEAUTY_HEALTH
 ON ( NAME = 'QUANLYBH_DATA', FILENAME = 'C:\Users\Van Nghia\OneDrive\Desktop\Winform c#\DATA\QUANLYBH.MDF')
 LOG ON ( NAME = 'QUANLYBH_LOG', FILENAME = 'C:\Users\Van Nghia\OneDrive\Desktop\Winform c#\DATA\QUANLYBH.LDF')
 GO
@@ -94,6 +94,7 @@ CREATE TABLE HOADON
 	FOREIGN KEY (MANV) REFERENCES dbo.NHANVIEN(MANV),
 	FOREIGN KEY (MAKH) REFERENCES dbo.KHACHHANG(MAKH)
 )
+ALTER TABLE dbo.HOADON ADD CONSTRAINT TRANGTHAI_CONSTRAIN DEFAULT N'CHƯA THANH TOÁN' FOR TRANGTHAI
 ALTER TABLE dbo.HOADON ADD KHUYENMAI FLOAT
 GO
 CREATE TABLE PHIEUGIAOHANG
@@ -183,4 +184,53 @@ VALUES
     1    -- MALOAI - int
     )
 GO
-INSERT IN
+
+CREATE OR ALTER PROC INSERT_HOADON @MAHD VARCHAR(10), @MANV VARCHAR(10), 
+@MAKH VARCHAR(10), @NGAYLAP DATE, @KHUYENMAI INT, @THANHTIEN MONEY
+AS
+BEGIN
+	INSERT INTO dbo.HOADON
+	(
+	    MAHD,
+	    MANV,
+	    MAKH,
+	    NGAYLAP,
+	    THANHTIEN,
+	    KHUYENMAI
+	)
+	VALUES
+	(   @MAHD,        -- MAHD - varchar(10)
+	    @MANV,        -- MANV - varchar(10)
+	    @MAKH,        -- MAKH - varchar(10)
+	    @NGAYLAP, -- NGAYLAP - date
+	    @THANHTIEN,      -- THANHTIEN - money
+	    @KHUYENMAI       -- KHUYENMAI - float
+	    )
+END
+EXEC dbo.INSERT_HOADON @MAHD = 'HDA2A3',              -- varchar(10)
+                       @MANV = 'NV01',              -- varchar(10)
+                       @MAKH = 'KH01',              -- varchar(10)
+                       @NGAYLAP = '2022-09-21', -- date
+                       @KHUYENMAI = 10,          -- int
+                       @THANHTIEN = 50000000      -- money
+
+
+GO
+CREATE PROC INSERT_GIOHANG @MAHD VARCHAR(10), @MASP VARCHAR(10), @SOLUONG INT, @GIABAN MONEY
+AS
+BEGIN
+	INSERT INTO dbo.GIOHANG
+	(
+	    MAHD,
+	    MASP,
+	    SOLUONG,
+	    GIABAN
+	)
+	VALUES
+	(   @MAHD,  -- MAHD - varchar(10)
+	    @MASP,  -- MASP - varchar(10)
+	    @SOLUONG,   -- SOLUONG - int
+	    @GIABAN -- GIABAN - money
+	    )
+END
+GO
