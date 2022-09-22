@@ -108,47 +108,56 @@ namespace formLogin
         private void btn_HomePage_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.red);
+            pannelQuanLyDoiTuong.Visible = false;
+
         }
 
         private void btn_Products_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.yellow);
-
+            pannelQuanLyDoiTuong.Visible = false;
         }
 
         private void btn_Staff_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.green);
+            pannelQuanLyDoiTuong.Visible = false;
+
 
         }
 
         private void btn_Customer_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.blue);
+            pannelQuanLyDoiTuong.Visible = false;
 
         }
 
         private void btn_Account_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.red);
+            pannelQuanLyDoiTuong.Visible = false;
 
         }
 
         private void btn_NCC_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, MyColors.yellow);
+            ActiveButton(sender, MyColors.green);
+            pannelQuanLyDoiTuong.Visible = false;
 
         }
 
         private void btn_Chart_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.green);
+            pannelQuanLyDoiTuong.Visible = false;
 
         }
 
         private void btn_Kho_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.blue);
+            pannelQuanLyDoiTuong.Visible = false;
 
         }
 
@@ -180,9 +189,17 @@ namespace formLogin
         private void btn_HoaDon_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.blue);
+            pannelQuanLyDoiTuong.Visible = false;
+
 
         }
 
-        
+        private void btn_QuanLyDoiTuong_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, MyColors.yellow);
+
+            pannelQuanLyDoiTuong.Visible = true;
+
+        }
     }
 }

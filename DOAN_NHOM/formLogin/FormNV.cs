@@ -91,10 +91,7 @@ namespace formLogin
 
 
         }
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+       
 
         private void btn_HomePage_Click(object sender, EventArgs e)
         {
@@ -174,10 +171,20 @@ namespace formLogin
             ActiveButton(sender, MyColors.blue);
 
         }
+         private void addForm(Form form)
+        {
+            this.panel_Content.Controls.Clear();
+            form.TopLevel = false;
+            panel_Content.Controls.Add(form);
+            form.Show();
 
+        }
         private void btn_Cart_Click(object sender, EventArgs e)
         {
-
+            if (panel_Content.Controls.Count == 0)
+            {
+                addForm(new formHoaDon());
+            }
             ActiveButton(sender, MyColors.yellow);
         }
     }
