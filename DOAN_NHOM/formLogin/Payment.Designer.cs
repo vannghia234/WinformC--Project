@@ -105,7 +105,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::formLogin.Properties.Resources.cooltext419750556792680;
             this.pictureBox1.Location = new System.Drawing.Point(328, 50);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(541, 80);

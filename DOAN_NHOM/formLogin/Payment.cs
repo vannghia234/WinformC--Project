@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -63,7 +64,7 @@ namespace formLogin
 
             double khachDua = Convert.ToDouble(txtKhachDua.Text);
 
-            lblResult.Text = String.Format("{0:0.000}", (khachDua - tong)) + "   VNĐ"; 
+            lblResult.Text = String.Format("{0:0.000}", (khachDua - tong)) + "   VNĐ";
         }
 
         private void btnHoanTac_Click(object sender, EventArgs e)
@@ -75,7 +76,11 @@ namespace formLogin
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
+
+
+            this.Close();
+
         }
     }
 }

@@ -100,6 +100,11 @@
       <DependentUpon>formProgressbarQL.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -134,11 +139,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -158,9 +158,6 @@
     <None Include="Resources\slack.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\graph.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\info.png" />
   </ItemGroup>
   <ItemGroup>
@@ -170,55 +167,13 @@
     <None Include="Resources\slack %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\admin %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\supplier.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\supplier %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\warehouse.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\receipt1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\satisfaction.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\receipt2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\slack %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\man.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cleaning-staff %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cleaning-staff %282%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager %283%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.png" />
@@ -236,19 +191,10 @@
     <None Include="Resources\undraw_Coding_re_iv62 %281%291.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\16691578_5778883.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cleaning-staff %282%292.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%292.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%293.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%294.png" />
@@ -263,13 +209,7 @@
     <None Include="Resources\UX-UI-Design.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\how-important-uiux-V2-2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\earth-view-from-space-satellite-illust-art-ipad-pro-wallpaper-1472x1472-1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bg1.png" />
@@ -278,22 +218,67 @@
     <None Include="Resources\UX-UI-Design1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\gfh.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bg2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UX-UI-Design2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Lovepik_com-450127848-Get a glimpse of design studio flat illustration.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\abc.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cooltext419750556792680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-macos-maximize-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-undo-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-billing-machine-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-invoice-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-450127848-Get a glimpse of design studio flat illustration2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-billing-machine-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-undo-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-invoice-243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

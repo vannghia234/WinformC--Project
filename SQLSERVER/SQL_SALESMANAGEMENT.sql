@@ -207,10 +207,10 @@ BEGIN
 	    @KHUYENMAI       -- KHUYENMAI - float
 	    )
 END
-EXEC dbo.INSERT_HOADON @MAHD = 'HDA2A3',              -- varchar(10)
+EXEC dbo.INSERT_HOADON @MAHD = 'HDA2A4',              -- varchar(10)
                        @MANV = 'NV01',              -- varchar(10)
                        @MAKH = 'KH01',              -- varchar(10)
-                       @NGAYLAP = '2022-09-21', -- date
+                       @NGAYLAP = '', -- date
                        @KHUYENMAI = 10,          -- int
                        @THANHTIEN = 50000000      -- money
 
@@ -233,4 +233,29 @@ BEGIN
 	    @GIABAN -- GIABAN - money
 	    )
 END
+EXEC dbo.INSERT_GIOHANG @MAHD = 'HD11',    -- varchar(10)
+                        @MASP = 'SP11',    -- varchar(10)
+                        @SOLUONG = 10,  -- int
+                        @GIABAN = 500000 -- money
+
 GO
+CREATE PROC UPDATE_TRANGTHAI @MAHD VARCHAR(10)
+AS
+BEGIN
+	UPDATE dbo.HOADON SET TRANGTHAI = N'ĐÃ THANH TOÁN' WHERE MAHD = @MAHD
+
+END
+EXEC dbo.UPDATE_TRANGTHAI @MAHD = '5ZEGIG1N' -- varchar(10)
+
+SELECT * FROM dbo.HOADON WHERE THANHTIEN > 300.000
+
+SELECT 
+FROM dbo.GIOHANG, dbo.HOADON
+WHERE HD.MAHD = dbo.GIOHANG.MAHD
+
+
+SELECT COUNT(SOLUONG), MASP
+FROM dbo.HOADON HD, dbo.GIOHANG
+WHERE HD.MAHD = dbo.GIOHANG.MAHD
+GROUP BY MASP
+

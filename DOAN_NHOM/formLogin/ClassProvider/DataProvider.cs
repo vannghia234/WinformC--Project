@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,6 +12,7 @@ namespace formLogin.ClassProvider
     public class dataProvider
     {
         private static dataProvider instance = null; // bien singleTon
+       
         public static dataProvider Instance { 
             get { 
                 if (instance == null) 
@@ -45,6 +47,24 @@ namespace formLogin.ClassProvider
                 conn.Close();
             }
             return dt;
+        }
+        public void ExcuteNonQueryDB(string NonQuery)
+        {
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = NonQuery;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
+
+        public void ExcuteProcManyPara(string[] objects)
+        {
+
         }
     }
 }

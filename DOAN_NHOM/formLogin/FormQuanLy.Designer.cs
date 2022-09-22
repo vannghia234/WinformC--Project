@@ -30,6 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formQuanLy));
             this.panel_Menu = new System.Windows.Forms.Panel();
+            this.panel_Logo = new System.Windows.Forms.Panel();
+            this.lbl_ChucVu = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_ShopName = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconBtnMini = new FontAwesome.Sharp.IconPictureBox();
+            this.iconBtnExit = new FontAwesome.Sharp.IconPictureBox();
+            this.pic_Title = new FontAwesome.Sharp.IconPictureBox();
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
             this.btn_Kho = new FontAwesome.Sharp.IconButton();
             this.btn_Chart = new FontAwesome.Sharp.IconButton();
@@ -40,25 +50,15 @@
             this.btn_Products = new FontAwesome.Sharp.IconButton();
             this.btn_HoaDon = new FontAwesome.Sharp.IconButton();
             this.btn_HomePage = new FontAwesome.Sharp.IconButton();
-            this.panel_Logo = new System.Windows.Forms.Panel();
             this.iconBtn_logo = new FontAwesome.Sharp.IconPictureBox();
-            this.lbl_ChucVu = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_ShopName = new System.Windows.Forms.Label();
-            this.iconBtnMini = new FontAwesome.Sharp.IconPictureBox();
-            this.iconBtnExit = new FontAwesome.Sharp.IconPictureBox();
-            this.lbl_Title = new System.Windows.Forms.Label();
-            this.pic_Title = new FontAwesome.Sharp.IconPictureBox();
             this.panel_Menu.SuspendLayout();
             this.panel_Logo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Menu
@@ -82,6 +82,128 @@
             this.panel_Menu.Name = "panel_Menu";
             this.panel_Menu.Size = new System.Drawing.Size(263, 763);
             this.panel_Menu.TabIndex = 0;
+            // 
+            // panel_Logo
+            // 
+            this.panel_Logo.Controls.Add(this.iconBtn_logo);
+            this.panel_Logo.Controls.Add(this.lbl_ChucVu);
+            this.panel_Logo.Controls.Add(this.label1);
+            this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_Logo.Name = "panel_Logo";
+            this.panel_Logo.Size = new System.Drawing.Size(263, 140);
+            this.panel_Logo.TabIndex = 0;
+            // 
+            // lbl_ChucVu
+            // 
+            this.lbl_ChucVu.AutoSize = true;
+            this.lbl_ChucVu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ChucVu.Location = new System.Drawing.Point(115, 75);
+            this.lbl_ChucVu.Name = "lbl_ChucVu";
+            this.lbl_ChucVu.Size = new System.Drawing.Size(62, 20);
+            this.lbl_ChucVu.TabIndex = 4;
+            this.lbl_ChucVu.Text = "Quản lý";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(115, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nguyễn Văn Nghĩa";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lbl_ShopName);
+            this.panel1.Controls.Add(this.iconBtnMini);
+            this.panel1.Controls.Add(this.iconBtnExit);
+            this.panel1.Controls.Add(this.lbl_Title);
+            this.panel1.Controls.Add(this.pic_Title);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(263, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1293, 60);
+            this.panel1.TabIndex = 2;
+            // 
+            // lbl_ShopName
+            // 
+            this.lbl_ShopName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ShopName.AutoSize = true;
+            this.lbl_ShopName.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ShopName.ForeColor = System.Drawing.Color.White;
+            this.lbl_ShopName.Location = new System.Drawing.Point(519, 9);
+            this.lbl_ShopName.Name = "lbl_ShopName";
+            this.lbl_ShopName.Size = new System.Drawing.Size(301, 46);
+            this.lbl_ShopName.TabIndex = 5;
+            this.lbl_ShopName.Text = "Healthy Care";
+            // 
+            // lbl_Title
+            // 
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.White;
+            this.lbl_Title.Location = new System.Drawing.Point(67, 25);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(118, 25);
+            this.lbl_Title.TabIndex = 3;
+            this.lbl_Title.Text = "TRANG CHỦ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(812, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // iconBtnMini
+            // 
+            this.iconBtnMini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconBtnMini.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconBtnMini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconBtnMini.IconColor = System.Drawing.Color.White;
+            this.iconBtnMini.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnMini.Location = new System.Drawing.Point(1205, 0);
+            this.iconBtnMini.Name = "iconBtnMini";
+            this.iconBtnMini.Size = new System.Drawing.Size(32, 60);
+            this.iconBtnMini.TabIndex = 4;
+            this.iconBtnMini.TabStop = false;
+            this.iconBtnMini.Click += new System.EventHandler(this.iconBtnMini_Click);
+            // 
+            // iconBtnExit
+            // 
+            this.iconBtnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconBtnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconBtnExit.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.iconBtnExit.IconColor = System.Drawing.Color.White;
+            this.iconBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnExit.IconSize = 56;
+            this.iconBtnExit.Location = new System.Drawing.Point(1237, 0);
+            this.iconBtnExit.Name = "iconBtnExit";
+            this.iconBtnExit.Size = new System.Drawing.Size(56, 60);
+            this.iconBtnExit.TabIndex = 3;
+            this.iconBtnExit.TabStop = false;
+            this.iconBtnExit.Click += new System.EventHandler(this.iconBtnExit_Click);
+            // 
+            // pic_Title
+            // 
+            this.pic_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.pic_Title.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
+            this.pic_Title.IconColor = System.Drawing.Color.White;
+            this.pic_Title.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pic_Title.IconSize = 44;
+            this.pic_Title.Location = new System.Drawing.Point(17, 15);
+            this.pic_Title.Name = "pic_Title";
+            this.pic_Title.Size = new System.Drawing.Size(44, 45);
+            this.pic_Title.TabIndex = 3;
+            this.pic_Title.TabStop = false;
             // 
             // btn_Exit
             // 
@@ -312,17 +434,6 @@
             this.btn_HomePage.UseVisualStyleBackColor = true;
             this.btn_HomePage.Click += new System.EventHandler(this.btn_HomePage_Click);
             // 
-            // panel_Logo
-            // 
-            this.panel_Logo.Controls.Add(this.iconBtn_logo);
-            this.panel_Logo.Controls.Add(this.lbl_ChucVu);
-            this.panel_Logo.Controls.Add(this.label1);
-            this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_Logo.Name = "panel_Logo";
-            this.panel_Logo.Size = new System.Drawing.Size(263, 140);
-            this.panel_Logo.TabIndex = 0;
-            // 
             // iconBtn_logo
             // 
             this.iconBtn_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -337,123 +448,12 @@
             this.iconBtn_logo.TabIndex = 3;
             this.iconBtn_logo.TabStop = false;
             // 
-            // lbl_ChucVu
-            // 
-            this.lbl_ChucVu.AutoSize = true;
-            this.lbl_ChucVu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ChucVu.Location = new System.Drawing.Point(115, 75);
-            this.lbl_ChucVu.Name = "lbl_ChucVu";
-            this.lbl_ChucVu.Size = new System.Drawing.Size(62, 20);
-            this.lbl_ChucVu.TabIndex = 4;
-            this.lbl_ChucVu.Text = "Quản lý";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nguyễn Văn Nghĩa";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lbl_ShopName);
-            this.panel1.Controls.Add(this.iconBtnMini);
-            this.panel1.Controls.Add(this.iconBtnExit);
-            this.panel1.Controls.Add(this.lbl_Title);
-            this.panel1.Controls.Add(this.pic_Title);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(263, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1342, 60);
-            this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(837, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbl_ShopName
-            // 
-            this.lbl_ShopName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_ShopName.AutoSize = true;
-            this.lbl_ShopName.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ShopName.ForeColor = System.Drawing.Color.White;
-            this.lbl_ShopName.Location = new System.Drawing.Point(544, 9);
-            this.lbl_ShopName.Name = "lbl_ShopName";
-            this.lbl_ShopName.Size = new System.Drawing.Size(301, 46);
-            this.lbl_ShopName.TabIndex = 5;
-            this.lbl_ShopName.Text = "Healthy Care";
-            // 
-            // iconBtnMini
-            // 
-            this.iconBtnMini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconBtnMini.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconBtnMini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconBtnMini.IconColor = System.Drawing.Color.White;
-            this.iconBtnMini.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnMini.Location = new System.Drawing.Point(1254, 0);
-            this.iconBtnMini.Name = "iconBtnMini";
-            this.iconBtnMini.Size = new System.Drawing.Size(32, 60);
-            this.iconBtnMini.TabIndex = 4;
-            this.iconBtnMini.TabStop = false;
-            this.iconBtnMini.Click += new System.EventHandler(this.iconBtnMini_Click);
-            // 
-            // iconBtnExit
-            // 
-            this.iconBtnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.iconBtnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconBtnExit.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
-            this.iconBtnExit.IconColor = System.Drawing.Color.White;
-            this.iconBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnExit.IconSize = 56;
-            this.iconBtnExit.Location = new System.Drawing.Point(1286, 0);
-            this.iconBtnExit.Name = "iconBtnExit";
-            this.iconBtnExit.Size = new System.Drawing.Size(56, 60);
-            this.iconBtnExit.TabIndex = 3;
-            this.iconBtnExit.TabStop = false;
-            this.iconBtnExit.Click += new System.EventHandler(this.iconBtnExit_Click);
-            // 
-            // lbl_Title
-            // 
-            this.lbl_Title.AutoSize = true;
-            this.lbl_Title.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title.Location = new System.Drawing.Point(67, 25);
-            this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(118, 25);
-            this.lbl_Title.TabIndex = 3;
-            this.lbl_Title.Text = "TRANG CHỦ";
-            // 
-            // pic_Title
-            // 
-            this.pic_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.pic_Title.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
-            this.pic_Title.IconColor = System.Drawing.Color.White;
-            this.pic_Title.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pic_Title.IconSize = 44;
-            this.pic_Title.Location = new System.Drawing.Point(17, 15);
-            this.pic_Title.Name = "pic_Title";
-            this.pic_Title.Size = new System.Drawing.Size(44, 45);
-            this.pic_Title.TabIndex = 3;
-            this.pic_Title.TabStop = false;
-            // 
             // formQuanLy
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1605, 763);
+            this.ClientSize = new System.Drawing.Size(1556, 763);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -464,13 +464,13 @@
             this.panel_Menu.ResumeLayout(false);
             this.panel_Logo.ResumeLayout(false);
             this.panel_Logo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
