@@ -82,5 +82,7 @@ namespace formLogin
             this.Close();
 
         }
+
+       
     }
 }

@@ -59,6 +59,22 @@ namespace formLogin
             DataTable nhanvien = ClassProvider.dataProvider.Instance.GetDatatableByQuery("Select * from NhanVien");
             cbb_NhanVien.DataSource = nhanvien;
             cbb_NhanVien.DisplayMember = "MANV";
+            // autocomplete
+            loadDataToColection();
+        }
+
+        private void loadDataToColection()
+        {
+            AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
+            DataTable dtb = ClassProvider.dataProvider.Instance.GetDatatableByQuery("select tensp from sanpham");
+            foreach (DataRow item in dtb.Rows)
+            {
+                auto.Add(item["TENSP"].ToString());
+            }
+            txt_Search.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txt_Search.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txt_Search.AutoCompleteCustomSource = auto;
+
         }
 
         // cập nhật số lượng sản phẩm
@@ -206,8 +222,11 @@ namespace formLogin
         private void rjButton1_Click(object sender, EventArgs e)
         {
             DataView data = new DataView(dt);
-            data.RowFilter = String.Format("TENSP like '%{0}%'", txt_Search.Text);
+            data.RowFilter = String.Format("TENSP like '%{0}%' or MASP like '%{1}%'", txt_Search.Text, txt_Search.t);
             dtgv_Product.DataSource = data;
+
+
+            dtgv_Product.DataSource = (from DataRow s in dt.Rows where s["TENSP"].ToString().Contains(txt_Search.Text) select s).ToList();
 
         }
         // tạo random mã HOADON

@@ -15,6 +15,29 @@ namespace formLogin
         public formProgressBarNV()
         {
             InitializeComponent();
+            
+        }
+
+        //private void timer1_Tick(object sender, EventArgs e)
+        //{
+        //    progressBar1.Value = progressBar1.Value + 5;
+        //    if (progressBar1.Value > 99)
+        //    {
+        //        formNV ql = new formNV();
+        //        this.Hide();
+        //        ql.Show();
+        //        timer1.Enabled = false;
+        //    }
+        //}
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -27,11 +50,6 @@ namespace formLogin
                 ql.Show();
                 timer1.Enabled = false;
             }
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
