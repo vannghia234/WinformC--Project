@@ -38,8 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_HoanTac = new CustomControls.RJControls.RJButton();
-            this.btn_Cart = new CustomControls.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.nmr_Amount = new System.Windows.Forms.NumericUpDown();
@@ -61,12 +59,7 @@
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPicLoad = new FontAwesome.Sharp.IconPictureBox();
             this.btn_Search = new CustomControls.RJControls.RJButton();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.btnThanhToan = new CustomControls.RJControls.RJButton();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_HoaDon = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -83,6 +76,16 @@
             this.nmr_KhuyenMai = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.iconPicLoad = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.btn_HoanTac = new CustomControls.RJControls.RJButton();
+            this.btn_Cart = new CustomControls.RJControls.RJButton();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnThanhToan = new CustomControls.RJControls.RJButton();
+            this.rjButton3 = new CustomControls.RJControls.RJButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_Amount)).BeginInit();
@@ -91,16 +94,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Cart)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicLoad)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_KhuyenMai)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPicLoad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Controls.Add(this.btn_HoanTac);
             this.panel1.Controls.Add(this.btn_Cart);
             this.panel1.Controls.Add(this.panel6);
@@ -113,56 +119,15 @@
             this.panel1.Controls.Add(this.txt_ProductID);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(915, 16);
+            this.panel1.Location = new System.Drawing.Point(915, -3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 372);
             this.panel1.TabIndex = 2;
             // 
-            // btn_HoanTac
-            // 
-            this.btn_HoanTac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btn_HoanTac.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btn_HoanTac.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_HoanTac.BorderRadius = 19;
-            this.btn_HoanTac.BorderSize = 0;
-            this.btn_HoanTac.FlatAppearance.BorderSize = 0;
-            this.btn_HoanTac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.btn_HoanTac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HoanTac.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HoanTac.ForeColor = System.Drawing.Color.White;
-            this.btn_HoanTac.Location = new System.Drawing.Point(384, 256);
-            this.btn_HoanTac.Name = "btn_HoanTac";
-            this.btn_HoanTac.Size = new System.Drawing.Size(163, 43);
-            this.btn_HoanTac.TabIndex = 21;
-            this.btn_HoanTac.Text = "Hoàn tác";
-            this.btn_HoanTac.TextColor = System.Drawing.Color.White;
-            this.btn_HoanTac.UseVisualStyleBackColor = false;
-            this.btn_HoanTac.Click += new System.EventHandler(this.btn_HoanTac_Click);
-            // 
-            // btn_Cart
-            // 
-            this.btn_Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btn_Cart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btn_Cart.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Cart.BorderRadius = 19;
-            this.btn_Cart.BorderSize = 0;
-            this.btn_Cart.FlatAppearance.BorderSize = 0;
-            this.btn_Cart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.btn_Cart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cart.ForeColor = System.Drawing.Color.White;
-            this.btn_Cart.Location = new System.Drawing.Point(194, 256);
-            this.btn_Cart.Name = "btn_Cart";
-            this.btn_Cart.Size = new System.Drawing.Size(166, 43);
-            this.btn_Cart.TabIndex = 20;
-            this.btn_Cart.Text = "Thêm vào giỏ hàng";
-            this.btn_Cart.TextColor = System.Drawing.Color.White;
-            this.btn_Cart.UseVisualStyleBackColor = false;
-            this.btn_Cart.Click += new System.EventHandler(this.btn_Cart_Click);
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.panel6.Controls.Add(this.iconPictureBox2);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
@@ -175,11 +140,11 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(9, 9);
+            this.label10.Location = new System.Drawing.Point(56, 5);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 25);
+            this.label10.Size = new System.Drawing.Size(48, 25);
             this.label10.TabIndex = 16;
-            this.label10.Text = "Giỏ hàng";
+            this.label10.Text = "Cart";
             // 
             // nmr_Amount
             // 
@@ -447,38 +412,9 @@
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(52, 7);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(252, 25);
+            this.label13.Size = new System.Drawing.Size(125, 25);
             this.label13.TabIndex = 18;
-            this.label13.Text = "Danh sách giỏ hàng của bạn";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 39;
-            this.iconPictureBox1.Location = new System.Drawing.Point(0, 1);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(52, 39);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // iconPicLoad
-            // 
-            this.iconPicLoad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPicLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.iconPicLoad.IconChar = FontAwesome.Sharp.IconChar.Sync;
-            this.iconPicLoad.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.iconPicLoad.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPicLoad.Location = new System.Drawing.Point(12, 16);
-            this.iconPicLoad.Name = "iconPicLoad";
-            this.iconPicLoad.Size = new System.Drawing.Size(49, 32);
-            this.iconPicLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPicLoad.TabIndex = 17;
-            this.iconPicLoad.TabStop = false;
-            this.iconPicLoad.Click += new System.EventHandler(this.iconPicLoad_Click);
+            this.label13.Text = "Your Cart List";
             // 
             // btn_Search
             // 
@@ -497,73 +433,10 @@
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(156, 34);
             this.btn_Search.TabIndex = 18;
-            this.btn_Search.Text = "Tìm kiếm sản phẩm";
+            this.btn_Search.Text = "Search Products";
             this.btn_Search.TextColor = System.Drawing.Color.White;
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.AutoSize = true;
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 19;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(58, 12);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(73, 34);
-            this.rjButton1.TabIndex = 19;
-            this.rjButton1.Text = "Refresh";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btnThanhToan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThanhToan.BorderRadius = 19;
-            this.btnThanhToan.BorderSize = 0;
-            this.btnThanhToan.FlatAppearance.BorderSize = 0;
-            this.btnThanhToan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(39, 408);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(523, 43);
-            this.btnThanhToan.TabIndex = 22;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.TextColor = System.Drawing.Color.White;
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.rjButton2_Click);
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton3.BorderRadius = 19;
-            this.rjButton3.BorderSize = 0;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(39, 345);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(523, 43);
-            this.rjButton3.TabIndex = 23;
-            this.rjButton3.Text = "Tạo hóa đơn";
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
-            this.rjButton3.Click += new System.EventHandler(this.iconBtn_HoaDon_Click);
             // 
             // label5
             // 
@@ -657,6 +530,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
@@ -669,11 +543,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(9, 11);
+            this.label11.Location = new System.Drawing.Point(58, 5);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 25);
+            this.label11.Size = new System.Drawing.Size(74, 25);
             this.label11.TabIndex = 17;
-            this.label11.Text = "Hóa đơn";
+            this.label11.Text = "Invoice";
             // 
             // label12
             // 
@@ -687,6 +561,9 @@
             // 
             // dtpk_NgayLap
             // 
+            this.dtpk_NgayLap.CalendarMonthBackground = System.Drawing.SystemColors.HighlightText;
+            this.dtpk_NgayLap.Checked = false;
+            this.dtpk_NgayLap.CustomFormat = "";
             this.dtpk_NgayLap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpk_NgayLap.Location = new System.Drawing.Point(157, 196);
             this.dtpk_NgayLap.Name = "dtpk_NgayLap";
@@ -720,7 +597,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txt_HoaDon);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(915, 395);
+            this.panel3.Location = new System.Drawing.Point(915, 376);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(600, 481);
             this.panel3.TabIndex = 4;
@@ -735,13 +612,195 @@
             this.label14.TabIndex = 24;
             this.label14.Text = "VNĐ";
             // 
+            // iconPicLoad
+            // 
+            this.iconPicLoad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPicLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.iconPicLoad.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.iconPicLoad.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.iconPicLoad.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPicLoad.Location = new System.Drawing.Point(12, 16);
+            this.iconPicLoad.Name = "iconPicLoad";
+            this.iconPicLoad.Size = new System.Drawing.Size(49, 32);
+            this.iconPicLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPicLoad.TabIndex = 17;
+            this.iconPicLoad.TabStop = false;
+            this.iconPicLoad.Click += new System.EventHandler(this.iconPicLoad_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 39;
+            this.iconPictureBox1.Location = new System.Drawing.Point(0, 1);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(52, 39);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 19;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Image = global::formLogin.Properties.Resources.icons8_refresh_322;
+            this.rjButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rjButton1.Location = new System.Drawing.Point(38, 257);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(163, 43);
+            this.rjButton1.TabIndex = 22;
+            this.rjButton1.Text = "Refresh";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click_1);
+            // 
+            // btn_HoanTac
+            // 
+            this.btn_HoanTac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btn_HoanTac.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btn_HoanTac.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_HoanTac.BorderRadius = 19;
+            this.btn_HoanTac.BorderSize = 0;
+            this.btn_HoanTac.FlatAppearance.BorderSize = 0;
+            this.btn_HoanTac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.btn_HoanTac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_HoanTac.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HoanTac.ForeColor = System.Drawing.Color.White;
+            this.btn_HoanTac.Image = global::formLogin.Properties.Resources.icons8_undo_30;
+            this.btn_HoanTac.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_HoanTac.Location = new System.Drawing.Point(408, 257);
+            this.btn_HoanTac.Name = "btn_HoanTac";
+            this.btn_HoanTac.Size = new System.Drawing.Size(163, 43);
+            this.btn_HoanTac.TabIndex = 21;
+            this.btn_HoanTac.Text = "Undo";
+            this.btn_HoanTac.TextColor = System.Drawing.Color.White;
+            this.btn_HoanTac.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_HoanTac.UseVisualStyleBackColor = false;
+            this.btn_HoanTac.Click += new System.EventHandler(this.btn_HoanTac_Click);
+            // 
+            // btn_Cart
+            // 
+            this.btn_Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btn_Cart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btn_Cart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Cart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Cart.BorderRadius = 19;
+            this.btn_Cart.BorderSize = 0;
+            this.btn_Cart.FlatAppearance.BorderSize = 0;
+            this.btn_Cart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.btn_Cart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cart.ForeColor = System.Drawing.Color.White;
+            this.btn_Cart.Image = global::formLogin.Properties.Resources.icons8_shopping_cart_32;
+            this.btn_Cart.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Cart.Location = new System.Drawing.Point(218, 257);
+            this.btn_Cart.Name = "btn_Cart";
+            this.btn_Cart.Size = new System.Drawing.Size(166, 43);
+            this.btn_Cart.TabIndex = 20;
+            this.btn_Cart.Text = "Add cart";
+            this.btn_Cart.TextColor = System.Drawing.Color.White;
+            this.btn_Cart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Cart.UseVisualStyleBackColor = false;
+            this.btn_Cart.Click += new System.EventHandler(this.btn_Cart_Click);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 38;
+            this.iconPictureBox2.Location = new System.Drawing.Point(8, 4);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(47, 38);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconPictureBox2.TabIndex = 19;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThanhToan.BorderRadius = 19;
+            this.btnThanhToan.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Image = global::formLogin.Properties.Resources.icons8_payment_321;
+            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThanhToan.Location = new System.Drawing.Point(39, 408);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(523, 43);
+            this.btnThanhToan.TabIndex = 22;
+            this.btnThanhToan.Text = "PAY";
+            this.btnThanhToan.TextColor = System.Drawing.Color.White;
+            this.btnThanhToan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.rjButton2_Click);
+            // 
+            // rjButton3
+            // 
+            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton3.BorderRadius = 19;
+            this.rjButton3.BorderSize = 0;
+            this.rjButton3.FlatAppearance.BorderSize = 0;
+            this.rjButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton3.ForeColor = System.Drawing.Color.White;
+            this.rjButton3.Image = global::formLogin.Properties.Resources.icons8_invoice_242;
+            this.rjButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rjButton3.Location = new System.Drawing.Point(39, 345);
+            this.rjButton3.Name = "rjButton3";
+            this.rjButton3.Size = new System.Drawing.Size(523, 43);
+            this.rjButton3.TabIndex = 23;
+            this.rjButton3.Text = "CREATE INVOICE";
+            this.rjButton3.TextColor = System.Drawing.Color.White;
+            this.rjButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rjButton3.UseVisualStyleBackColor = false;
+            this.rjButton3.Click += new System.EventHandler(this.iconBtn_HoaDon_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::formLogin.Properties.Resources.icons8_billing_machine_501;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(86, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(166, 24);
+            this.comboBox1.TabIndex = 19;
+            // 
             // formHoaDon
             // 
             this.AcceptButton = this.btn_Search;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1527, 883);
-            this.Controls.Add(this.rjButton1);
+            this.ClientSize = new System.Drawing.Size(1527, 845);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.iconPicLoad);
             this.Controls.Add(this.panel7);
@@ -750,6 +809,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formHoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "hoadon1";
@@ -765,13 +825,15 @@
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicLoad)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_KhuyenMai)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPicLoad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -803,7 +865,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPicLoad;
         private CustomControls.RJControls.RJButton btn_Search;
         private System.Windows.Forms.Label label13;
-        private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJButton btn_HoanTac;
         private CustomControls.RJControls.RJButton btn_Cart;
         private CustomControls.RJControls.RJButton btnThanhToan;
@@ -824,5 +885,9 @@
         private System.Windows.Forms.NumericUpDown nmr_KhuyenMai;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

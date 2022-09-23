@@ -249,8 +249,6 @@ namespace formLogin
                             formProgressBarNV pgnv = new formProgressBarNV();
                             this.Hide();
                             pgnv.Show();
-                            MessageBox.Show("Chào mừng bạn đến với giao diện của Nhân Viên cửa hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
                             //fst.Show();
                         }
                         else if (code == 3)

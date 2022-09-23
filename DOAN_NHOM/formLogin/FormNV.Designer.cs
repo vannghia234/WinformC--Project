@@ -66,7 +66,7 @@
             this.lbl_ShopName.AutoSize = true;
             this.lbl_ShopName.Font = new System.Drawing.Font("Showcard Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ShopName.ForeColor = System.Drawing.Color.White;
-            this.lbl_ShopName.Location = new System.Drawing.Point(400, 9);
+            this.lbl_ShopName.Location = new System.Drawing.Point(629, 9);
             this.lbl_ShopName.Name = "lbl_ShopName";
             this.lbl_ShopName.Size = new System.Drawing.Size(301, 46);
             this.lbl_ShopName.TabIndex = 5;
@@ -95,14 +95,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(263, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1054, 60);
+            this.panel1.Size = new System.Drawing.Size(1512, 60);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(693, 6);
+            this.pictureBox1.Image = global::formLogin.Properties.Resources.slack__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(922, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +116,7 @@
             this.iconBtnMini.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.iconBtnMini.IconColor = System.Drawing.Color.White;
             this.iconBtnMini.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnMini.Location = new System.Drawing.Point(966, 0);
+            this.iconBtnMini.Location = new System.Drawing.Point(1424, 0);
             this.iconBtnMini.Name = "iconBtnMini";
             this.iconBtnMini.Size = new System.Drawing.Size(32, 60);
             this.iconBtnMini.TabIndex = 4;
@@ -131,7 +131,7 @@
             this.iconBtnExit.IconColor = System.Drawing.Color.White;
             this.iconBtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnExit.IconSize = 56;
-            this.iconBtnExit.Location = new System.Drawing.Point(998, 0);
+            this.iconBtnExit.Location = new System.Drawing.Point(1456, 0);
             this.iconBtnExit.Name = "iconBtnExit";
             this.iconBtnExit.Size = new System.Drawing.Size(56, 60);
             this.iconBtnExit.TabIndex = 3;
@@ -214,7 +214,7 @@
             this.panel_Menu.ForeColor = System.Drawing.Color.White;
             this.panel_Menu.Location = new System.Drawing.Point(0, 0);
             this.panel_Menu.Name = "panel_Menu";
-            this.panel_Menu.Size = new System.Drawing.Size(263, 716);
+            this.panel_Menu.Size = new System.Drawing.Size(263, 903);
             this.panel_Menu.TabIndex = 3;
             // 
             // btn_Exit
@@ -402,26 +402,25 @@
             // 
             // panel_Content
             // 
+            this.panel_Content.BackColor = System.Drawing.Color.RosyBrown;
             this.panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Content.Location = new System.Drawing.Point(263, 60);
             this.panel_Content.Name = "panel_Content";
-            this.panel_Content.Size = new System.Drawing.Size(1054, 656);
+            this.panel_Content.Size = new System.Drawing.Size(1512, 843);
             this.panel_Content.TabIndex = 5;
             // 
-            // FormNV
+            // formNV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 716);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1775, 903);
             this.Controls.Add(this.panel_Content);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormNV";
+            this.Name = "formNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNV";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
