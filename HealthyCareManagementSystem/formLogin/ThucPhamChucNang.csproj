@@ -111,6 +111,9 @@
     <Compile Include="formHoaDon.Designer.cs">
       <DependentUpon>formHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>HoaDon.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -179,6 +182,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report123.rdlc" />
+    <EmbeddedResource Include="ReportHD.rdlc" />
     <EmbeddedResource Include="reportView.resx">
       <DependentUpon>reportView.cs</DependentUpon>
     </EmbeddedResource>

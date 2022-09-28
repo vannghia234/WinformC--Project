@@ -19,6 +19,7 @@
               <xs:element name="HANSUDUNG" msprop:Generator_ColumnPropNameInTable="HANSUDUNGColumn" msprop:Generator_ColumnPropNameInRow="HANSUDUNG" msprop:Generator_UserColumnName="HANSUDUNG" msprop:Generator_ColumnVarNameInTable="columnHANSUDUNG" type="xs:string" minOccurs="0" />
               <xs:element name="SOLUONG" msprop:Generator_ColumnPropNameInTable="SOLUONGColumn" msprop:Generator_ColumnPropNameInRow="SOLUONG" msprop:Generator_UserColumnName="SOLUONG" msprop:Generator_ColumnVarNameInTable="columnSOLUONG" type="xs:int" minOccurs="0" />
               <xs:element name="GIABAN" msprop:Generator_ColumnPropNameInTable="GIABANColumn" msprop:Generator_ColumnPropNameInRow="GIABAN" msprop:Generator_UserColumnName="GIABAN" msprop:Generator_ColumnVarNameInTable="columnGIABAN" type="xs:double" minOccurs="0" />
+              <xs:element name="MAHD" msprop:Generator_ColumnPropNameInRow="MAHD" msprop:Generator_ColumnPropNameInTable="MAHDColumn" msprop:Generator_ColumnVarNameInTable="columnMAHD" msprop:Generator_UserColumnName="MAHD" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

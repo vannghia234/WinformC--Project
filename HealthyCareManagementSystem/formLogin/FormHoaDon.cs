@@ -16,9 +16,8 @@ namespace formLogin
     {
         private DataTable dt = new DataTable();
         private double total = 0;
-        public static string maHD;
+        public static string maHD = "HD03";
      
-
         public formHoaDon()
         {
             InitializeComponent();
@@ -230,7 +229,6 @@ namespace formLogin
             dtgv_Product.DataSource = data;
 
 
-            dtgv_Product.DataSource = (from DataRow s in dt.Rows where s["TENSP"].ToString().Contains(txt_Search.Text) select s).ToList();
 
         }
         // tạo random mã HOADON
@@ -250,6 +248,7 @@ namespace formLogin
         {
             txt_HoaDon.Text = RandomIdHoaDon(8);
             btn_Cart.Enabled = true;
+            maHD = txt_HoaDon.Text;
             btn_HoanTac.Enabled = true;
         }
         
@@ -258,10 +257,8 @@ namespace formLogin
         private void rjButton2_Click(object sender, EventArgs e)
         {
             maHD = txt_HoaDon.Text;
-            MessageBox.Show(dtpk_NgayLap.Value.ToString());
             string ngay = dtpk_NgayLap.Value.ToString("yyyy/MM/dd");
-            Payment pm = new Payment(total, maHD, int.Parse(nmr_KhuyenMai.Value.ToString()));
-            pm.ShowDialog();
+           
             try
             {
                 using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Constr))
@@ -286,6 +283,7 @@ namespace formLogin
 
                 MessageBox.Show(ex.Message);
             }
+           
             try
             {
                 using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Constr))
@@ -313,6 +311,8 @@ namespace formLogin
 
                 MessageBox.Show(ex.Message);
             }
+            Payment pm = new Payment(total, maHD, int.Parse(nmr_KhuyenMai.Value.ToString()));
+            pm.ShowDialog();
             try
             {
                 using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Constr))
