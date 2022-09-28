@@ -33,13 +33,14 @@
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
             this.btn_Kho = new FontAwesome.Sharp.IconButton();
             this.btn_Chart = new FontAwesome.Sharp.IconButton();
-            this.btn_NCC = new FontAwesome.Sharp.IconButton();
+            this.pannelQuanLyDoiTuong = new System.Windows.Forms.Panel();
+            this.btn_Account = new FontAwesome.Sharp.IconButton();
             this.btn_Product = new FontAwesome.Sharp.IconButton();
-            this.btn_Customer = new FontAwesome.Sharp.IconButton();
+            this.btn_NCC = new FontAwesome.Sharp.IconButton();
             this.btn_Staff = new FontAwesome.Sharp.IconButton();
+            this.btn_Customer = new FontAwesome.Sharp.IconButton();
             this.btn_QuanLyDoiTuong = new FontAwesome.Sharp.IconButton();
             this.btn_HoaDon = new FontAwesome.Sharp.IconButton();
-            this.btn_HomePage = new FontAwesome.Sharp.IconButton();
             this.panel_Logo = new System.Windows.Forms.Panel();
             this.iconBtn_logo = new FontAwesome.Sharp.IconPictureBox();
             this.lbl_ChucVu = new System.Windows.Forms.Label();
@@ -51,9 +52,8 @@
             this.iconBtnExit = new FontAwesome.Sharp.IconPictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.pic_Title = new FontAwesome.Sharp.IconPictureBox();
-            this.pannelQuanLyDoiTuong = new System.Windows.Forms.Panel();
-            this.btn_Account = new FontAwesome.Sharp.IconButton();
             this.panel_Menu.SuspendLayout();
+            this.pannelQuanLyDoiTuong.SuspendLayout();
             this.panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).BeginInit();
-            this.pannelQuanLyDoiTuong.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Menu
@@ -73,7 +72,6 @@
             this.panel_Menu.Controls.Add(this.pannelQuanLyDoiTuong);
             this.panel_Menu.Controls.Add(this.btn_QuanLyDoiTuong);
             this.panel_Menu.Controls.Add(this.btn_HoaDon);
-            this.panel_Menu.Controls.Add(this.btn_HomePage);
             this.panel_Menu.Controls.Add(this.panel_Logo);
             this.panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Menu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,7 +94,7 @@
             this.btn_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Exit.IconSize = 32;
             this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Exit.Location = new System.Drawing.Point(0, 740);
+            this.btn_Exit.Location = new System.Drawing.Point(0, 680);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Exit.Size = new System.Drawing.Size(263, 60);
@@ -120,7 +118,7 @@
             this.btn_Kho.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Kho.IconSize = 32;
             this.btn_Kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Kho.Location = new System.Drawing.Point(0, 680);
+            this.btn_Kho.Location = new System.Drawing.Point(0, 620);
             this.btn_Kho.Name = "btn_Kho";
             this.btn_Kho.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Kho.Size = new System.Drawing.Size(263, 60);
@@ -144,7 +142,7 @@
             this.btn_Chart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Chart.IconSize = 32;
             this.btn_Chart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Chart.Location = new System.Drawing.Point(0, 620);
+            this.btn_Chart.Location = new System.Drawing.Point(0, 560);
             this.btn_Chart.Name = "btn_Chart";
             this.btn_Chart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Chart.Size = new System.Drawing.Size(263, 60);
@@ -155,28 +153,43 @@
             this.btn_Chart.UseVisualStyleBackColor = false;
             this.btn_Chart.Click += new System.EventHandler(this.btn_Chart_Click);
             // 
-            // btn_NCC
+            // pannelQuanLyDoiTuong
             // 
-            this.btn_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
-            this.btn_NCC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_NCC.FlatAppearance.BorderSize = 0;
-            this.btn_NCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_NCC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NCC.ForeColor = System.Drawing.Color.White;
-            this.btn_NCC.IconChar = FontAwesome.Sharp.IconChar.TruckFieldUn;
-            this.btn_NCC.IconColor = System.Drawing.Color.White;
-            this.btn_NCC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_NCC.IconSize = 32;
-            this.btn_NCC.Location = new System.Drawing.Point(0, 120);
-            this.btn_NCC.Name = "btn_NCC";
-            this.btn_NCC.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_NCC.Size = new System.Drawing.Size(263, 60);
-            this.btn_NCC.TabIndex = 23;
-            this.btn_NCC.Text = "NHÀ CUNG CẤP";
-            this.btn_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_NCC.UseVisualStyleBackColor = false;
-            this.btn_NCC.Click += new System.EventHandler(this.btn_NCC_Click);
+            this.pannelQuanLyDoiTuong.BackColor = System.Drawing.Color.DarkGray;
+            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Account);
+            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Product);
+            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_NCC);
+            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Staff);
+            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Customer);
+            this.pannelQuanLyDoiTuong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pannelQuanLyDoiTuong.Location = new System.Drawing.Point(0, 260);
+            this.pannelQuanLyDoiTuong.Name = "pannelQuanLyDoiTuong";
+            this.pannelQuanLyDoiTuong.Size = new System.Drawing.Size(263, 300);
+            this.pannelQuanLyDoiTuong.TabIndex = 3;
+            this.pannelQuanLyDoiTuong.Visible = false;
+            // 
+            // btn_Account
+            // 
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_Account.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Account.FlatAppearance.BorderSize = 0;
+            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.IconChar = FontAwesome.Sharp.IconChar.UserPen;
+            this.btn_Account.IconColor = System.Drawing.Color.White;
+            this.btn_Account.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Account.IconSize = 32;
+            this.btn_Account.Location = new System.Drawing.Point(0, 240);
+            this.btn_Account.Name = "btn_Account";
+            this.btn_Account.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_Account.Size = new System.Drawing.Size(263, 60);
+            this.btn_Account.TabIndex = 24;
+            this.btn_Account.Text = "TÀI KHOẢN";
+            this.btn_Account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Account.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Account.UseVisualStyleBackColor = false;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // btn_Product
             // 
@@ -201,28 +214,28 @@
             this.btn_Product.UseVisualStyleBackColor = false;
             this.btn_Product.Click += new System.EventHandler(this.btn_Products_Click);
             // 
-            // btn_Customer
+            // btn_NCC
             // 
-            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
-            this.btn_Customer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Customer.FlatAppearance.BorderSize = 0;
-            this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Customer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Customer.ForeColor = System.Drawing.Color.White;
-            this.btn_Customer.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.btn_Customer.IconColor = System.Drawing.Color.White;
-            this.btn_Customer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Customer.IconSize = 32;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 0);
-            this.btn_Customer.Name = "btn_Customer";
-            this.btn_Customer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Customer.Size = new System.Drawing.Size(263, 60);
-            this.btn_Customer.TabIndex = 21;
-            this.btn_Customer.Text = "KHÁCH HÀNG";
-            this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Customer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Customer.UseVisualStyleBackColor = false;
-            this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
+            this.btn_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_NCC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_NCC.FlatAppearance.BorderSize = 0;
+            this.btn_NCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NCC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NCC.ForeColor = System.Drawing.Color.White;
+            this.btn_NCC.IconChar = FontAwesome.Sharp.IconChar.TruckFieldUn;
+            this.btn_NCC.IconColor = System.Drawing.Color.White;
+            this.btn_NCC.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_NCC.IconSize = 32;
+            this.btn_NCC.Location = new System.Drawing.Point(0, 120);
+            this.btn_NCC.Name = "btn_NCC";
+            this.btn_NCC.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_NCC.Size = new System.Drawing.Size(263, 60);
+            this.btn_NCC.TabIndex = 23;
+            this.btn_NCC.Text = "NHÀ CUNG CẤP";
+            this.btn_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_NCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_NCC.UseVisualStyleBackColor = false;
+            this.btn_NCC.Click += new System.EventHandler(this.btn_NCC_Click);
             // 
             // btn_Staff
             // 
@@ -247,6 +260,29 @@
             this.btn_Staff.UseVisualStyleBackColor = false;
             this.btn_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
             // 
+            // btn_Customer
+            // 
+            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_Customer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Customer.FlatAppearance.BorderSize = 0;
+            this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Customer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.ForeColor = System.Drawing.Color.White;
+            this.btn_Customer.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btn_Customer.IconColor = System.Drawing.Color.White;
+            this.btn_Customer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Customer.IconSize = 32;
+            this.btn_Customer.Location = new System.Drawing.Point(0, 0);
+            this.btn_Customer.Name = "btn_Customer";
+            this.btn_Customer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btn_Customer.Size = new System.Drawing.Size(263, 60);
+            this.btn_Customer.TabIndex = 21;
+            this.btn_Customer.Text = "KHÁCH HÀNG";
+            this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Customer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Customer.UseVisualStyleBackColor = false;
+            this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
+            // 
             // btn_QuanLyDoiTuong
             // 
             this.btn_QuanLyDoiTuong.Dock = System.Windows.Forms.DockStyle.Top;
@@ -258,7 +294,7 @@
             this.btn_QuanLyDoiTuong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_QuanLyDoiTuong.IconSize = 32;
             this.btn_QuanLyDoiTuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_QuanLyDoiTuong.Location = new System.Drawing.Point(0, 260);
+            this.btn_QuanLyDoiTuong.Location = new System.Drawing.Point(0, 200);
             this.btn_QuanLyDoiTuong.Name = "btn_QuanLyDoiTuong";
             this.btn_QuanLyDoiTuong.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_QuanLyDoiTuong.Size = new System.Drawing.Size(263, 60);
@@ -281,7 +317,7 @@
             this.btn_HoaDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_HoaDon.IconSize = 32;
             this.btn_HoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HoaDon.Location = new System.Drawing.Point(0, 200);
+            this.btn_HoaDon.Location = new System.Drawing.Point(0, 140);
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_HoaDon.Size = new System.Drawing.Size(263, 60);
@@ -291,29 +327,6 @@
             this.btn_HoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_HoaDon.UseVisualStyleBackColor = true;
             this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
-            // 
-            // btn_HomePage
-            // 
-            this.btn_HomePage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_HomePage.FlatAppearance.BorderSize = 0;
-            this.btn_HomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HomePage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HomePage.ForeColor = System.Drawing.Color.White;
-            this.btn_HomePage.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btn_HomePage.IconColor = System.Drawing.Color.White;
-            this.btn_HomePage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_HomePage.IconSize = 32;
-            this.btn_HomePage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HomePage.Location = new System.Drawing.Point(0, 140);
-            this.btn_HomePage.Name = "btn_HomePage";
-            this.btn_HomePage.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_HomePage.Size = new System.Drawing.Size(263, 60);
-            this.btn_HomePage.TabIndex = 1;
-            this.btn_HomePage.Text = "TRANG CHỦ";
-            this.btn_HomePage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_HomePage.UseVisualStyleBackColor = true;
-            this.btn_HomePage.Click += new System.EventHandler(this.btn_HomePage_Click);
             // 
             // panel_Logo
             // 
@@ -451,44 +464,6 @@
             this.pic_Title.TabIndex = 3;
             this.pic_Title.TabStop = false;
             // 
-            // pannelQuanLyDoiTuong
-            // 
-            this.pannelQuanLyDoiTuong.BackColor = System.Drawing.Color.DarkGray;
-            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Account);
-            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Product);
-            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_NCC);
-            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Staff);
-            this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Customer);
-            this.pannelQuanLyDoiTuong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pannelQuanLyDoiTuong.Location = new System.Drawing.Point(0, 320);
-            this.pannelQuanLyDoiTuong.Name = "pannelQuanLyDoiTuong";
-            this.pannelQuanLyDoiTuong.Size = new System.Drawing.Size(263, 300);
-            this.pannelQuanLyDoiTuong.TabIndex = 3;
-            this.pannelQuanLyDoiTuong.Visible = false;
-            // 
-            // btn_Account
-            // 
-            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
-            this.btn_Account.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Account.FlatAppearance.BorderSize = 0;
-            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Account.ForeColor = System.Drawing.Color.White;
-            this.btn_Account.IconChar = FontAwesome.Sharp.IconChar.UserPen;
-            this.btn_Account.IconColor = System.Drawing.Color.White;
-            this.btn_Account.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Account.IconSize = 32;
-            this.btn_Account.Location = new System.Drawing.Point(0, 240);
-            this.btn_Account.Name = "btn_Account";
-            this.btn_Account.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_Account.Size = new System.Drawing.Size(263, 60);
-            this.btn_Account.TabIndex = 24;
-            this.btn_Account.Text = "TÀI KHOẢN";
-            this.btn_Account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Account.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Account.UseVisualStyleBackColor = false;
-            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
-            // 
             // formQuanLy
             // 
             this.AllowDrop = true;
@@ -503,6 +478,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
             this.panel_Menu.ResumeLayout(false);
+            this.pannelQuanLyDoiTuong.ResumeLayout(false);
             this.panel_Logo.ResumeLayout(false);
             this.panel_Logo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).EndInit();
@@ -512,7 +488,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).EndInit();
-            this.pannelQuanLyDoiTuong.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -521,7 +496,6 @@
 
         private System.Windows.Forms.Panel panel_Menu;
         private System.Windows.Forms.Panel panel_Logo;
-        private FontAwesome.Sharp.IconButton btn_HomePage;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox pic_Title;
         private System.Windows.Forms.Label lbl_Title;

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GET_INVOICE" msprop:Generator_RowEvHandlerName="GET_INVOICERowChangeEventHandler" msprop:Generator_RowDeletedName="GET_INVOICERowDeleted" msprop:Generator_RowDeletingName="GET_INVOICERowDeleting" msprop:Generator_RowEvArgName="GET_INVOICERowChangeEvent" msprop:Generator_TablePropName="GET_INVOICE" msprop:Generator_RowChangedName="GET_INVOICERowChanged" msprop:Generator_RowChangingName="GET_INVOICERowChanging" msprop:Generator_TableClassName="GET_INVOICEDataTable" msprop:Generator_RowClassName="GET_INVOICERow" msprop:Generator_TableVarName="tableGET_INVOICE" msprop:Generator_UserTableName="GET_INVOICE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TENSP" msprop:Generator_ColumnPropNameInRow="TENSP" msprop:Generator_ColumnPropNameInTable="TENSPColumn" msprop:Generator_ColumnVarNameInTable="columnTENSP" msprop:Generator_UserColumnName="TENSP" type="xs:string" minOccurs="0" />
+              <xs:element name="HANSUDUNG" msprop:Generator_ColumnPropNameInRow="HANSUDUNG" msprop:Generator_ColumnPropNameInTable="HANSUDUNGColumn" msprop:Generator_ColumnVarNameInTable="columnHANSUDUNG" msprop:Generator_UserColumnName="HANSUDUNG" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SOLUONG" msprop:Generator_ColumnPropNameInRow="SOLUONG" msprop:Generator_ColumnPropNameInTable="SOLUONGColumn" msprop:Generator_ColumnVarNameInTable="columnSOLUONG" msprop:Generator_UserColumnName="SOLUONG" type="xs:int" minOccurs="0" />
+              <xs:element name="GIABAN" msprop:Generator_ColumnPropNameInRow="GIABAN" msprop:Generator_ColumnPropNameInTable="GIABANColumn" msprop:Generator_ColumnVarNameInTable="columnGIABAN" msprop:Generator_UserColumnName="GIABAN" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -36,9 +36,22 @@ namespace formLogin.ClassProvider
             }
             return dt;
         }
-        public DataTable GetDatatableByQuery (string query)
+        public DataTable GetDatatableByQuery(string query)
         {
             DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(query,conn);
+                da.Fill(dt);
+                conn.Close();
+            }
+            return dt;
+        }
+
+        public DataSet getDataSetbyProc (string query)
+        {
+            DataSet dt = new DataSet();
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
             {
                 conn.Open();

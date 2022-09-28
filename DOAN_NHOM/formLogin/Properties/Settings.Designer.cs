@@ -59,5 +59,16 @@ namespace formLogin.Properties {
                 this["Constr"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DAICA-ZORO\\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integra" +
+            "ted Security=True")]
+        public string QUANLY_BEAUTY_HEALTHConnectionString {
+            get {
+                return ((string)(this["QUANLY_BEAUTY_HEALTHConnectionString"]));
+            }
+        }
     }
 }
