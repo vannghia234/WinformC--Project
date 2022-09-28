@@ -15,15 +15,17 @@ namespace formLogin
     {
         private double tongTien;
         private string maHD;
+        private int khuyenMai;
         public Payment()
         {
             InitializeComponent();
         }
-        public Payment(double total, string maHD)
+        public Payment(double total, string maHD, int khuyenMai)
         {
             InitializeComponent();
             this.tongTien = total;
             this.maHD = maHD;
+            this.khuyenMai = khuyenMai;
         }
 
 
@@ -50,7 +52,8 @@ namespace formLogin
 
         private void Payment_Load(object sender, EventArgs e)
         {
-            txtTotalPrice.Text = String.Format("{0:0.000}", tongTien);
+            txtTotalPrice.Text = String.Format("{0:0.000}", (tongTien-((khuyenMai * tongTien)/100)));
+            txtDiscount.Text = String.Format("{0:0.000}", (khuyenMai*tongTien)/100);
         }
 
         private void rjButton1_Click(object sender, EventArgs e)

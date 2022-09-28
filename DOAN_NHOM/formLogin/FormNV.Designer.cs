@@ -48,7 +48,6 @@
             this.btn_Customer = new FontAwesome.Sharp.IconButton();
             this.btn_Products = new FontAwesome.Sharp.IconButton();
             this.btn_Cart = new FontAwesome.Sharp.IconButton();
-            this.btn_HomePage = new FontAwesome.Sharp.IconButton();
             this.panel_Content = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -207,7 +206,6 @@
             this.panel_Menu.Controls.Add(this.btn_Customer);
             this.panel_Menu.Controls.Add(this.btn_Products);
             this.panel_Menu.Controls.Add(this.btn_Cart);
-            this.panel_Menu.Controls.Add(this.btn_HomePage);
             this.panel_Menu.Controls.Add(this.panel_Logo);
             this.panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Menu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -229,7 +227,7 @@
             this.btn_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Exit.IconSize = 32;
             this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Exit.Location = new System.Drawing.Point(0, 560);
+            this.btn_Exit.Location = new System.Drawing.Point(0, 500);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Exit.Size = new System.Drawing.Size(263, 60);
@@ -252,7 +250,7 @@
             this.btn_Account.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Account.IconSize = 32;
             this.btn_Account.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Account.Location = new System.Drawing.Point(0, 500);
+            this.btn_Account.Location = new System.Drawing.Point(0, 440);
             this.btn_Account.Name = "btn_Account";
             this.btn_Account.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Account.Size = new System.Drawing.Size(263, 60);
@@ -275,7 +273,7 @@
             this.btn_Kho.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Kho.IconSize = 32;
             this.btn_Kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Kho.Location = new System.Drawing.Point(0, 440);
+            this.btn_Kho.Location = new System.Drawing.Point(0, 380);
             this.btn_Kho.Name = "btn_Kho";
             this.btn_Kho.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Kho.Size = new System.Drawing.Size(263, 60);
@@ -298,7 +296,7 @@
             this.btn_NCC.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_NCC.IconSize = 32;
             this.btn_NCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_NCC.Location = new System.Drawing.Point(0, 380);
+            this.btn_NCC.Location = new System.Drawing.Point(0, 320);
             this.btn_NCC.Name = "btn_NCC";
             this.btn_NCC.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_NCC.Size = new System.Drawing.Size(263, 60);
@@ -321,7 +319,7 @@
             this.btn_Customer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Customer.IconSize = 32;
             this.btn_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 320);
+            this.btn_Customer.Location = new System.Drawing.Point(0, 260);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Customer.Size = new System.Drawing.Size(263, 60);
@@ -343,7 +341,7 @@
             this.btn_Products.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Products.IconSize = 32;
             this.btn_Products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Products.Location = new System.Drawing.Point(0, 260);
+            this.btn_Products.Location = new System.Drawing.Point(0, 200);
             this.btn_Products.Name = "btn_Products";
             this.btn_Products.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Products.Size = new System.Drawing.Size(263, 60);
@@ -366,7 +364,7 @@
             this.btn_Cart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Cart.IconSize = 32;
             this.btn_Cart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cart.Location = new System.Drawing.Point(0, 200);
+            this.btn_Cart.Location = new System.Drawing.Point(0, 140);
             this.btn_Cart.Name = "btn_Cart";
             this.btn_Cart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Cart.Size = new System.Drawing.Size(263, 60);
@@ -376,29 +374,6 @@
             this.btn_Cart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Cart.UseVisualStyleBackColor = true;
             this.btn_Cart.Click += new System.EventHandler(this.btn_Cart_Click);
-            // 
-            // btn_HomePage
-            // 
-            this.btn_HomePage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_HomePage.FlatAppearance.BorderSize = 0;
-            this.btn_HomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_HomePage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HomePage.ForeColor = System.Drawing.Color.White;
-            this.btn_HomePage.IconChar = FontAwesome.Sharp.IconChar.HomeUser;
-            this.btn_HomePage.IconColor = System.Drawing.Color.White;
-            this.btn_HomePage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_HomePage.IconSize = 32;
-            this.btn_HomePage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HomePage.Location = new System.Drawing.Point(0, 140);
-            this.btn_HomePage.Name = "btn_HomePage";
-            this.btn_HomePage.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btn_HomePage.Size = new System.Drawing.Size(263, 60);
-            this.btn_HomePage.TabIndex = 1;
-            this.btn_HomePage.Text = "TRANG CHỦ";
-            this.btn_HomePage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_HomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_HomePage.UseVisualStyleBackColor = true;
-            this.btn_HomePage.Click += new System.EventHandler(this.btn_HomePage_Click);
             // 
             // panel_Content
             // 
@@ -448,7 +423,6 @@
         private System.Windows.Forms.Label lbl_Title;
         private FontAwesome.Sharp.IconButton btn_NCC;
         private FontAwesome.Sharp.IconPictureBox pic_Title;
-        private FontAwesome.Sharp.IconButton btn_HomePage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_ChucVu;
         private System.Windows.Forms.Label label1;

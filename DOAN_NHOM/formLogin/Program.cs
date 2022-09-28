@@ -20,5 +20,6 @@ namespace formLogin
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new formHoaDon());
         }
+        
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,13 +14,16 @@ namespace formLogin
 {
     public partial class formHoaDon : Form
     {
+        private DataTable dt = new DataTable();
+        private double total = 0;
+        public static string maHD;
+     
+
         public formHoaDon()
         {
             InitializeComponent();
         }
-        private DataTable dt = new DataTable();
-        private double total = 0;
-        private string maHD = "";
+
 
         // click datagridview Product
         private void dtgv_Product_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -222,7 +226,7 @@ namespace formLogin
         private void rjButton1_Click(object sender, EventArgs e)
         {
             DataView data = new DataView(dt);
-            data.RowFilter = String.Format("TENSP like '%{0}%' or MASP like '%{1}%'", txt_Search.Text, txt_Search.t);
+            data.RowFilter = String.Format("TENSP like '%{0}%' or MASP like '%{1}%'", txt_Search.Text, txt_Search.Text);
             dtgv_Product.DataSource = data;
 
 
@@ -254,8 +258,9 @@ namespace formLogin
         private void rjButton2_Click(object sender, EventArgs e)
         {
             maHD = txt_HoaDon.Text;
+            MessageBox.Show(dtpk_NgayLap.Value.ToString());
             string ngay = dtpk_NgayLap.Value.ToString("yyyy/MM/dd");
-            Payment pm = new Payment(total, maHD);
+            Payment pm = new Payment(total, maHD, int.Parse(nmr_KhuyenMai.Value.ToString()));
             pm.ShowDialog();
             try
             {
