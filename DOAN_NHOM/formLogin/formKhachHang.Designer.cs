@@ -41,8 +41,6 @@
             this.lb_DiaChi_KH = new System.Windows.Forms.Label();
             this.lb_Ten_KH = new System.Windows.Forms.Label();
             this.lb_Ma_KH = new System.Windows.Forms.Label();
-            this.lb_TieuDe_KH = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCustomersPhoneNumber = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -54,37 +52,40 @@
             this.qUANLY_BEAUTY_HEALTHDataSet = new formLogin.QUANLY_BEAUTY_HEALTHDataSet();
             this.kHACHHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHACHHANGTableAdapter = new formLogin.QUANLY_BEAUTY_HEALTHDataSetTableAdapters.KHACHHANGTableAdapter();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
+            this.lb_TieuDe_KH = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_BEAUTY_HEALTHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_CustomerID
             // 
             this.txt_CustomerID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_CustomerID.Location = new System.Drawing.Point(178, 60);
+            this.txt_CustomerID.Location = new System.Drawing.Point(98, 53);
             this.txt_CustomerID.Name = "txt_CustomerID";
-            this.txt_CustomerID.Size = new System.Drawing.Size(330, 20);
+            this.txt_CustomerID.Size = new System.Drawing.Size(364, 20);
             this.txt_CustomerID.TabIndex = 19;
             // 
             // txt_CustomerAddress
             // 
             this.txt_CustomerAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_CustomerAddress.Location = new System.Drawing.Point(609, 60);
+            this.txt_CustomerAddress.Location = new System.Drawing.Point(98, 194);
             this.txt_CustomerAddress.Name = "txt_CustomerAddress";
-            this.txt_CustomerAddress.Size = new System.Drawing.Size(404, 20);
+            this.txt_CustomerAddress.Size = new System.Drawing.Size(364, 20);
             this.txt_CustomerAddress.TabIndex = 17;
             // 
             // txt_CustomerName
             // 
             this.txt_CustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_CustomerName.Location = new System.Drawing.Point(178, 101);
+            this.txt_CustomerName.Location = new System.Drawing.Point(98, 126);
             this.txt_CustomerName.Name = "txt_CustomerName";
-            this.txt_CustomerName.Size = new System.Drawing.Size(330, 20);
+            this.txt_CustomerName.Size = new System.Drawing.Size(364, 20);
             this.txt_CustomerName.TabIndex = 16;
             // 
             // lb_DienThoai_KH
@@ -92,7 +93,7 @@
             this.lb_DienThoai_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DienThoai_KH.AutoSize = true;
             this.lb_DienThoai_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DienThoai_KH.Location = new System.Drawing.Point(533, 101);
+            this.lb_DienThoai_KH.Location = new System.Drawing.Point(22, 258);
             this.lb_DienThoai_KH.Name = "lb_DienThoai_KH";
             this.lb_DienThoai_KH.Size = new System.Drawing.Size(73, 17);
             this.lb_DienThoai_KH.TabIndex = 15;
@@ -103,7 +104,7 @@
             this.lb_DiaChi_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DiaChi_KH.AutoSize = true;
             this.lb_DiaChi_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DiaChi_KH.Location = new System.Drawing.Point(533, 60);
+            this.lb_DiaChi_KH.Location = new System.Drawing.Point(22, 194);
             this.lb_DiaChi_KH.Name = "lb_DiaChi_KH";
             this.lb_DiaChi_KH.Size = new System.Drawing.Size(51, 17);
             this.lb_DiaChi_KH.TabIndex = 14;
@@ -114,7 +115,7 @@
             this.lb_Ten_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ten_KH.AutoSize = true;
             this.lb_Ten_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ten_KH.Location = new System.Drawing.Point(98, 101);
+            this.lb_Ten_KH.Location = new System.Drawing.Point(18, 126);
             this.lb_Ten_KH.Name = "lb_Ten_KH";
             this.lb_Ten_KH.Size = new System.Drawing.Size(74, 17);
             this.lb_Ten_KH.TabIndex = 13;
@@ -125,57 +126,34 @@
             this.lb_Ma_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ma_KH.AutoSize = true;
             this.lb_Ma_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ma_KH.Location = new System.Drawing.Point(98, 60);
+            this.lb_Ma_KH.Location = new System.Drawing.Point(18, 53);
             this.lb_Ma_KH.Name = "lb_Ma_KH";
             this.lb_Ma_KH.Size = new System.Drawing.Size(71, 17);
             this.lb_Ma_KH.TabIndex = 12;
             this.lb_Ma_KH.Text = "Mã khách ";
             // 
-            // lb_TieuDe_KH
-            // 
-            this.lb_TieuDe_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_TieuDe_KH.AutoSize = true;
-            this.lb_TieuDe_KH.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TieuDe_KH.ForeColor = System.Drawing.Color.White;
-            this.lb_TieuDe_KH.Location = new System.Drawing.Point(387, 30);
-            this.lb_TieuDe_KH.Name = "lb_TieuDe_KH";
-            this.lb_TieuDe_KH.Size = new System.Drawing.Size(365, 37);
-            this.lb_TieuDe_KH.TabIndex = 0;
-            this.lb_TieuDe_KH.Text = "DANH MỤC KHÁCH HÀNG ";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.lb_TieuDe_KH);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1123, 97);
-            this.panel1.TabIndex = 35;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.lb_DiaChi_KH);
-            this.panel2.Controls.Add(this.txtCustomersPhoneNumber);
             this.panel2.Controls.Add(this.txt_CustomerID);
-            this.panel2.Controls.Add(this.txt_CustomerAddress);
-            this.panel2.Controls.Add(this.txt_CustomerName);
-            this.panel2.Controls.Add(this.lb_DienThoai_KH);
             this.panel2.Controls.Add(this.lb_Ma_KH);
+            this.panel2.Controls.Add(this.txtCustomersPhoneNumber);
             this.panel2.Controls.Add(this.lb_Ten_KH);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Controls.Add(this.lb_DienThoai_KH);
+            this.panel2.Controls.Add(this.txt_CustomerName);
+            this.panel2.Controls.Add(this.txt_CustomerAddress);
             this.panel2.Location = new System.Drawing.Point(0, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1123, 165);
+            this.panel2.Size = new System.Drawing.Size(520, 317);
             this.panel2.TabIndex = 36;
             // 
             // txtCustomersPhoneNumber
             // 
             this.txtCustomersPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(609, 101);
+            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(98, 258);
             this.txtCustomersPhoneNumber.Name = "txtCustomersPhoneNumber";
-            this.txtCustomersPhoneNumber.Size = new System.Drawing.Size(403, 20);
+            this.txtCustomersPhoneNumber.Size = new System.Drawing.Size(364, 20);
             this.txtCustomersPhoneNumber.TabIndex = 20;
             // 
             // panel3
@@ -186,10 +164,9 @@
             this.panel3.Controls.Add(this.btn_Close);
             this.panel3.Controls.Add(this.btn_Delete);
             this.panel3.Controls.Add(this.btn_Add);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 262);
+            this.panel3.Location = new System.Drawing.Point(0, 449);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1123, 144);
+            this.panel3.Size = new System.Drawing.Size(520, 279);
             this.panel3.TabIndex = 37;
             // 
             // btnShow
@@ -202,7 +179,7 @@
             this.btnShow.ForeColor = System.Drawing.Color.White;
             this.btnShow.Image = global::formLogin.Properties.Resources.icons8_show_non_hidden_views_32;
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(246, 47);
+            this.btnShow.Location = new System.Drawing.Point(25, 57);
             this.btnShow.Name = "btnShow";
             this.btnShow.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnShow.Size = new System.Drawing.Size(128, 51);
@@ -220,7 +197,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::formLogin.Properties.Resources.icons8_save_32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(648, 47);
+            this.btnSave.Location = new System.Drawing.Point(334, 57);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(128, 51);
@@ -239,7 +216,7 @@
             this.btn_Close.ForeColor = System.Drawing.Color.White;
             this.btn_Close.Image = global::formLogin.Properties.Resources.icons8_close_32;
             this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Close.Location = new System.Drawing.Point(782, 47);
+            this.btn_Close.Location = new System.Drawing.Point(334, 163);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Close.Size = new System.Drawing.Size(128, 51);
@@ -258,7 +235,7 @@
             this.btn_Delete.ForeColor = System.Drawing.Color.White;
             this.btn_Delete.Image = global::formLogin.Properties.Resources.icons8_delete_32;
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(514, 47);
+            this.btn_Delete.Location = new System.Drawing.Point(25, 163);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Delete.Size = new System.Drawing.Size(128, 51);
@@ -276,7 +253,7 @@
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.Image = global::formLogin.Properties.Resources.icons8_add_32;
             this.btn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Add.Location = new System.Drawing.Point(380, 47);
+            this.btn_Add.Location = new System.Drawing.Point(180, 112);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Add.Size = new System.Drawing.Size(128, 51);
@@ -298,6 +275,14 @@
             // kHACHHANGTableAdapter
             // 
             this.kHACHHANGTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel4.Location = new System.Drawing.Point(0, 420);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(520, 23);
+            this.panel4.TabIndex = 21;
             // 
             // dgvCustomers
             // 
@@ -331,11 +316,10 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCustomers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvCustomers.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvCustomers.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.dgvCustomers.Location = new System.Drawing.Point(0, 493);
+            this.dgvCustomers.Location = new System.Drawing.Point(521, 97);
             this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -349,9 +333,32 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvCustomers.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCustomers.RowTemplate.Height = 24;
-            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(1123, 235);
+            this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvCustomers.Size = new System.Drawing.Size(602, 631);
             this.dgvCustomers.TabIndex = 38;
+            this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
+            // 
+            // lb_TieuDe_KH
+            // 
+            this.lb_TieuDe_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_TieuDe_KH.AutoSize = true;
+            this.lb_TieuDe_KH.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TieuDe_KH.ForeColor = System.Drawing.Color.White;
+            this.lb_TieuDe_KH.Location = new System.Drawing.Point(387, 30);
+            this.lb_TieuDe_KH.Name = "lb_TieuDe_KH";
+            this.lb_TieuDe_KH.Size = new System.Drawing.Size(365, 37);
+            this.lb_TieuDe_KH.TabIndex = 0;
+            this.lb_TieuDe_KH.Text = "DANH MỤC KHÁCH HÀNG ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.lb_TieuDe_KH);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1123, 97);
+            this.panel1.TabIndex = 35;
             // 
             // formKhachHang
             // 
@@ -361,6 +368,7 @@
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1123, 728);
             this.Controls.Add(this.dgvCustomers);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -370,8 +378,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách Hàng ";
             this.Load += new System.EventHandler(this.fromCustomer_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -379,6 +385,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_BEAUTY_HEALTHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -391,8 +399,6 @@
         private System.Windows.Forms.Label lb_DiaChi_KH;
         private System.Windows.Forms.Label lb_Ten_KH;
         private System.Windows.Forms.Label lb_Ma_KH;
-        private System.Windows.Forms.Label lb_TieuDe_KH;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Close;
@@ -404,7 +410,10 @@
         private QUANLY_BEAUTY_HEALTHDataSet qUANLY_BEAUTY_HEALTHDataSet;
         private System.Windows.Forms.BindingSource kHACHHANGBindingSource;
         private QUANLY_BEAUTY_HEALTHDataSetTableAdapters.KHACHHANGTableAdapter kHACHHANGTableAdapter;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.Label lb_TieuDe_KH;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
