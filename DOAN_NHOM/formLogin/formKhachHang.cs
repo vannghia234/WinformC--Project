@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace formLogin
 {
-    public partial class fromKhachHang : Form
+    public partial class formKhachHang : Form
     {
 
         DataTable dataTable = new DataTable("KHACHHANG");
@@ -23,7 +23,7 @@ namespace formLogin
 
 
 
-        public fromKhachHang()
+        public formKhachHang()
         {
             InitAdapter();
 
@@ -42,7 +42,7 @@ namespace formLogin
                 adapter.TableMappings.Add("Table", "KHACHHANG");
 
                 // SelectCommand - Thực thi khi gọi Fill lấy dữ liệu về DataSet
-                adapter.SelectCommand = new SqlCommand(@"SELECT MAKH as 'Mã Khách Hàng' , TENKH as 'Tên Khách Hàng' , SDT as 'Mã Khách Hàng' , DIACHI FROM KHACHHANG", connection);
+                adapter.SelectCommand = new SqlCommand(@"SELECT MAKH as 'Mã Khách Hàng' , TENKH as 'Tên Khách Hàng' , SDT as 'Số Điện Thoại' , DIACHI as 'Địa Chỉ' FROM KHACHHANG", connection);
 
                 // InsertCommand - Thực khi khi gọi Update, nếu DataSet có chèn dòng mới (vào DataTable)
                 // Dữ liệu lấy từ DataTable, như cột MAKH tương  ứng với tham số @MAKH
@@ -174,7 +174,7 @@ namespace formLogin
             if (txt_CustomerID.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_CustomerName.Focus();
+                txt_CustomerID.Focus();
                 return false;
             }
             if (txt_CustomerName.Text == "")
@@ -198,6 +198,9 @@ namespace formLogin
             else if(txt_CustomerName.Text == "" && txt_CustomerAddress.Text == "" && txtCustomersPhoneNumber.Text == "" && txt_CustomerID.Text == "")
             {
                 MessageBox.Show("Vui lòng điền thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_CustomerID.Focus();
+                txt_CustomerName.Focus();
+                txt_CustomerAddress.Focus();
                 txtCustomersPhoneNumber.Focus();
                 return false;
             }
@@ -207,10 +210,10 @@ namespace formLogin
         private void AddValue()
         {
             DataRow row = dataTable.NewRow();
-            row["MAKH"] = txt_CustomerID.Text.ToString();
-            row["TENKH"] = txt_CustomerName.Text.ToString();
-            row["SDT"] = txtCustomersPhoneNumber.Text.ToString();
-            row["DIACHI"] = txt_CustomerAddress.Text.ToString();
+            row["Mã Khách Hàng"] = txt_CustomerID.Text.ToString();
+            row["Tên Khách Hàng"] = txt_CustomerName.Text.ToString();
+            row["Số Điện Thoại"] = txtCustomersPhoneNumber.Text.ToString();
+            row["Địa Chỉ"] = txt_CustomerAddress.Text.ToString();
             dataTable.Rows.Add(row);   
         }
 
@@ -236,10 +239,10 @@ namespace formLogin
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row = dgvCustomers.Rows[e.RowIndex];
-                txt_CustomerID.Text = Convert.ToString(row.Cells["MAKH"].Value);
-                txt_CustomerName.Text = Convert.ToString(row.Cells["TENKH"].Value);
-                txt_CustomerAddress.Text = Convert.ToString(row.Cells["DIACHI"].Value);
-                txtCustomersPhoneNumber.Text = Convert.ToString(row.Cells["SDT"].Value);
+                txt_CustomerID.Text = Convert.ToString(row.Cells["Mã Khách Hàng"].Value);
+                txt_CustomerName.Text = Convert.ToString(row.Cells["Tên Khách Hàng"].Value);
+                txt_CustomerAddress.Text = Convert.ToString(row.Cells["Địa Chỉ"].Value);
+                txtCustomersPhoneNumber.Text = Convert.ToString(row.Cells["Số Điện Thoại"].Value);
             }
             catch(Exception ex)
             {

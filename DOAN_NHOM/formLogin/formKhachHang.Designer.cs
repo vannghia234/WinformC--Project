@@ -1,6 +1,6 @@
 ﻿namespace formLogin
 {
-    partial class fromKhachHang
+    partial class formKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -51,16 +51,16 @@
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.qUANLY_BEAUTY_HEALTHDataSet = new formLogin.QUANLY_BEAUTY_HEALTHDataSet();
             this.kHACHHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHACHHANGTableAdapter = new formLogin.QUANLY_BEAUTY_HEALTHDataSetTableAdapters.KHACHHANGTableAdapter();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_BEAUTY_HEALTHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_CustomerID
@@ -285,6 +285,20 @@
             this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
+            // qUANLY_BEAUTY_HEALTHDataSet
+            // 
+            this.qUANLY_BEAUTY_HEALTHDataSet.DataSetName = "QUANLY_BEAUTY_HEALTHDataSet";
+            this.qUANLY_BEAUTY_HEALTHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kHACHHANGBindingSource
+            // 
+            this.kHACHHANGBindingSource.DataMember = "KHACHHANG";
+            this.kHACHHANGBindingSource.DataSource = this.qUANLY_BEAUTY_HEALTHDataSet;
+            // 
+            // kHACHHANGTableAdapter
+            // 
+            this.kHACHHANGTableAdapter.ClearBeforeFill = true;
+            // 
             // dgvCustomers
             // 
             this.dgvCustomers.AllowUserToAddRows = false;
@@ -295,7 +309,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
             this.dgvCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCustomers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dgvCustomers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCustomers.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCustomers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCustomers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
@@ -319,7 +333,7 @@
             this.dgvCustomers.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomers.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.dgvCustomers.Location = new System.Drawing.Point(0, 412);
+            this.dgvCustomers.Location = new System.Drawing.Point(0, 493);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -336,25 +350,10 @@
             this.dgvCustomers.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCustomers.RowTemplate.Height = 24;
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(1123, 316);
+            this.dgvCustomers.Size = new System.Drawing.Size(1123, 235);
             this.dgvCustomers.TabIndex = 38;
-            this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
-            // qUANLY_BEAUTY_HEALTHDataSet
-            // 
-            this.qUANLY_BEAUTY_HEALTHDataSet.DataSetName = "QUANLY_BEAUTY_HEALTHDataSet";
-            this.qUANLY_BEAUTY_HEALTHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kHACHHANGBindingSource
-            // 
-            this.kHACHHANGBindingSource.DataMember = "KHACHHANG";
-            this.kHACHHANGBindingSource.DataSource = this.qUANLY_BEAUTY_HEALTHDataSet;
-            // 
-            // kHACHHANGTableAdapter
-            // 
-            this.kHACHHANGTableAdapter.ClearBeforeFill = true;
-            // 
-            // fromKhachHang
+            // formKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -367,7 +366,7 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "fromKhachHang";
+            this.Name = "formKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách Hàng ";
             this.Load += new System.EventHandler(this.fromCustomer_Load);
@@ -377,9 +376,9 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_BEAUTY_HEALTHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,10 +401,10 @@
         private System.Windows.Forms.TextBox txtCustomersPhoneNumber;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.DataGridView dgvCustomers;
         private QUANLY_BEAUTY_HEALTHDataSet qUANLY_BEAUTY_HEALTHDataSet;
         private System.Windows.Forms.BindingSource kHACHHANGBindingSource;
         private QUANLY_BEAUTY_HEALTHDataSetTableAdapters.KHACHHANGTableAdapter kHACHHANGTableAdapter;
+        private System.Windows.Forms.DataGridView dgvCustomers;
     }
 }
 

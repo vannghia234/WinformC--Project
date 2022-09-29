@@ -28,206 +28,347 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvAcounts = new System.Windows.Forms.DataGridView();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.txtCustomersPhoneNumber = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_DiaChi_KH = new System.Windows.Forms.Label();
+            this.txt_AccountsID = new System.Windows.Forms.TextBox();
+            this.txt_AccountName = new System.Windows.Forms.TextBox();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.lb_DienThoai_KH = new System.Windows.Forms.Label();
+            this.lb_Ma_KH = new System.Windows.Forms.Label();
+            this.lb_Ten_KH = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_TieuDe_KH = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAcounts)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // dgvAcounts
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(567, 97);
-            this.panel1.TabIndex = 0;
+            this.dgvAcounts.AllowUserToAddRows = false;
+            this.dgvAcounts.AllowUserToDeleteRows = false;
+            this.dgvAcounts.AllowUserToResizeColumns = false;
+            this.dgvAcounts.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.dgvAcounts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAcounts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAcounts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dgvAcounts.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvAcounts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAcounts.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dgvAcounts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAcounts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAcounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAcounts.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAcounts.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvAcounts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.dgvAcounts.Location = new System.Drawing.Point(0, 373);
+            this.dgvAcounts.Name = "dgvAcounts";
+            this.dgvAcounts.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAcounts.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAcounts.RowHeadersVisible = false;
+            this.dgvAcounts.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvAcounts.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvAcounts.RowTemplate.Height = 24;
+            this.dgvAcounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAcounts.Size = new System.Drawing.Size(1107, 316);
+            this.dgvAcounts.TabIndex = 42;
             // 
-            // label1
+            // btnShow
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DANH MỤC TÀI KHOẢN";
+            this.btnShow.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShow.AutoSize = true;
+            this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnShow.FlatAppearance.BorderSize = 5;
+            this.btnShow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShow.ForeColor = System.Drawing.Color.White;
+            this.btnShow.Image = global::formLogin.Properties.Resources.icons8_show_non_hidden_views_32;
+            this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShow.Location = new System.Drawing.Point(241, 33);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnShow.Size = new System.Drawing.Size(128, 51);
+            this.btnShow.TabIndex = 37;
+            this.btnShow.Text = "Xem";
+            this.btnShow.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // btnSave
             // 
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(2, 105);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(567, 100);
-            this.panel2.TabIndex = 1;
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.AutoSize = true;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = global::formLogin.Properties.Resources.icons8_save_32;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(643, 33);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(128, 51);
+            this.btnSave.TabIndex = 36;
+            this.btnSave.TabStop = false;
+            this.btnSave.Text = "lưu";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // btn_Close
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên Tài Khoản";
+            this.btn_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Close.AutoSize = true;
+            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Close.ForeColor = System.Drawing.Color.White;
+            this.btn_Close.Image = global::formLogin.Properties.Resources.icons8_close_32;
+            this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Close.Location = new System.Drawing.Point(777, 33);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_Close.Size = new System.Drawing.Size(128, 51);
+            this.btn_Close.TabIndex = 35;
+            this.btn_Close.TabStop = false;
+            this.btn_Close.Text = "Thoát ";
+            this.btn_Close.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // btn_Delete
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Mật Khẩu ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Tài Khoản ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(247, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Mã Loại";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(41, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(116, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(116, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(343, 47);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(343, 11);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Delete.AutoSize = true;
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.ForeColor = System.Drawing.Color.White;
+            this.btn_Delete.Image = global::formLogin.Properties.Resources.icons8_delete_32;
+            this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Delete.Location = new System.Drawing.Point(509, 33);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_Delete.Size = new System.Drawing.Size(128, 51);
+            this.btn_Delete.TabIndex = 33;
+            this.btn_Delete.Text = "Xóa";
+            this.btn_Delete.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(2, 212);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.btnShow);
+            this.panel3.Controls.Add(this.btnSave);
+            this.panel3.Controls.Add(this.btn_Close);
+            this.panel3.Controls.Add(this.btn_Delete);
+            this.panel3.Controls.Add(this.btn_Add);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 262);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(567, 85);
-            this.panel3.TabIndex = 2;
+            this.panel3.Size = new System.Drawing.Size(1107, 144);
+            this.panel3.TabIndex = 41;
             // 
-            // button2
+            // btn_Add
             // 
-            this.button2.Location = new System.Drawing.Point(122, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Add.AutoSize = true;
+            this.btn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.ForeColor = System.Drawing.Color.White;
+            this.btn_Add.Image = global::formLogin.Properties.Resources.icons8_add_32;
+            this.btn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Add.Location = new System.Drawing.Point(375, 33);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btn_Add.Size = new System.Drawing.Size(128, 51);
+            this.btn_Add.TabIndex = 32;
+            this.btn_Add.Text = "Thêm";
+            this.btn_Add.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // txtCustomersPhoneNumber
             // 
-            this.button3.Location = new System.Drawing.Point(203, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.txtCustomersPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(643, 99);
+            this.txtCustomersPhoneNumber.Name = "txtCustomersPhoneNumber";
+            this.txtCustomersPhoneNumber.Size = new System.Drawing.Size(142, 20);
+            this.txtCustomersPhoneNumber.TabIndex = 20;
             // 
-            // button4
+            // panel2
             // 
-            this.button4.Location = new System.Drawing.Point(284, 32);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.lb_DiaChi_KH);
+            this.panel2.Controls.Add(this.txtCustomersPhoneNumber);
+            this.panel2.Controls.Add(this.txt_AccountsID);
+            this.panel2.Controls.Add(this.txt_AccountName);
+            this.panel2.Controls.Add(this.txt_Password);
+            this.panel2.Controls.Add(this.lb_DienThoai_KH);
+            this.panel2.Controls.Add(this.lb_Ma_KH);
+            this.panel2.Controls.Add(this.lb_Ten_KH);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 97);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1107, 165);
+            this.panel2.TabIndex = 40;
+            // 
+            // lb_DiaChi_KH
+            // 
+            this.lb_DiaChi_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_DiaChi_KH.AutoSize = true;
+            this.lb_DiaChi_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_DiaChi_KH.Location = new System.Drawing.Point(542, 58);
+            this.lb_DiaChi_KH.Name = "lb_DiaChi_KH";
+            this.lb_DiaChi_KH.Size = new System.Drawing.Size(95, 17);
+            this.lb_DiaChi_KH.TabIndex = 14;
+            this.lb_DiaChi_KH.Text = "Tên Tài Khoản";
+            // 
+            // txt_AccountsID
+            // 
+            this.txt_AccountsID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_AccountsID.Location = new System.Drawing.Point(372, 58);
+            this.txt_AccountsID.Name = "txt_AccountsID";
+            this.txt_AccountsID.Size = new System.Drawing.Size(156, 20);
+            this.txt_AccountsID.TabIndex = 19;
+            // 
+            // txt_AccountName
+            // 
+            this.txt_AccountName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_AccountName.Location = new System.Drawing.Point(643, 58);
+            this.txt_AccountName.Name = "txt_AccountName";
+            this.txt_AccountName.Size = new System.Drawing.Size(142, 20);
+            this.txt_AccountName.TabIndex = 17;
+            // 
+            // txt_Password
+            // 
+            this.txt_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Password.Location = new System.Drawing.Point(372, 99);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(156, 20);
+            this.txt_Password.TabIndex = 16;
+            // 
+            // lb_DienThoai_KH
+            // 
+            this.lb_DienThoai_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_DienThoai_KH.AutoSize = true;
+            this.lb_DienThoai_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_DienThoai_KH.Location = new System.Drawing.Point(542, 99);
+            this.lb_DienThoai_KH.Name = "lb_DienThoai_KH";
+            this.lb_DienThoai_KH.Size = new System.Drawing.Size(57, 17);
+            this.lb_DienThoai_KH.TabIndex = 15;
+            this.lb_DienThoai_KH.Text = "Mã Loại";
+            // 
+            // lb_Ma_KH
+            // 
+            this.lb_Ma_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_Ma_KH.AutoSize = true;
+            this.lb_Ma_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Ma_KH.Location = new System.Drawing.Point(292, 58);
+            this.lb_Ma_KH.Name = "lb_Ma_KH";
+            this.lb_Ma_KH.Size = new System.Drawing.Size(69, 17);
+            this.lb_Ma_KH.TabIndex = 12;
+            this.lb_Ma_KH.Text = "Tài Khoản";
+            // 
+            // lb_Ten_KH
+            // 
+            this.lb_Ten_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_Ten_KH.AutoSize = true;
+            this.lb_Ten_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Ten_KH.Location = new System.Drawing.Point(292, 99);
+            this.lb_Ten_KH.Name = "lb_Ten_KH";
+            this.lb_Ten_KH.Size = new System.Drawing.Size(67, 17);
+            this.lb_Ten_KH.TabIndex = 13;
+            this.lb_Ten_KH.Text = "Mật Khẩu";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.lb_TieuDe_KH);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1107, 97);
+            this.panel1.TabIndex = 39;
+            // 
+            // lb_TieuDe_KH
+            // 
+            this.lb_TieuDe_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_TieuDe_KH.AutoSize = true;
+            this.lb_TieuDe_KH.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TieuDe_KH.ForeColor = System.Drawing.Color.White;
+            this.lb_TieuDe_KH.Location = new System.Drawing.Point(379, 30);
+            this.lb_TieuDe_KH.Name = "lb_TieuDe_KH";
+            this.lb_TieuDe_KH.Size = new System.Drawing.Size(323, 37);
+            this.lb_TieuDe_KH.TabIndex = 0;
+            this.lb_TieuDe_KH.Text = "DANH MỤC TÀI KHOẢN";
             // 
             // formTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 689);
+            this.Controls.Add(this.dgvAcounts);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "formTaiKhoan";
             this.Text = "formTaiKhoan";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAcounts)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvAcounts;
+        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.TextBox txtCustomersPhoneNumber;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lb_DiaChi_KH;
+        private System.Windows.Forms.TextBox txt_AccountsID;
+        private System.Windows.Forms.TextBox txt_AccountName;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.Label lb_DienThoai_KH;
+        private System.Windows.Forms.Label lb_Ma_KH;
+        private System.Windows.Forms.Label lb_Ten_KH;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lb_TieuDe_KH;
     }
 }
