@@ -97,41 +97,41 @@ namespace formLogin
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    DialogResult dg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            //    if (dg == DialogResult.OK)
-            //    {
-            //        Application.Exit();
-            //    }
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            try
+            {
+                DialogResult dg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dg == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    DialogResult dg = MessageBox.Show("Bạn có muốn lưu lại không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            //    if (dg == DialogResult.OK)
-            //    {
-                    
-            //        adapter.Update(dataSet);
+            try
+            {
+                DialogResult dg = MessageBox.Show("Bạn có muốn lưu lại không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dg == DialogResult.OK)
+                {
 
-            //        dataTable.Rows.Clear();
+                    adapter.Update(dataSet);
 
-            //        adapter.Fill(dataSet);
+                    dataTable.Rows.Clear();
 
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message + "\n\n Không thêm được khách hàng, mời nhập lại.", "Mã Khách hàng bị trùng lặp !",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-            //}
-          
+                    adapter.Fill(dataSet);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n\n Không thêm được khách hàng, mời nhập lại.", "Mã Khách hàng bị trùng lặp !", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            }
+
         }
          
         private void btn_Delete_Click(object sender, EventArgs e)
