@@ -12,6 +12,7 @@ namespace formLogin
 {
     public partial class formTaiKhoan : Form
     {
+
         public formTaiKhoan()
         {
             InitializeComponent();

@@ -51,6 +51,7 @@
             this.lb_Ten_KH = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_TieuDe_KH = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcounts)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,9 +90,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAcounts.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAcounts.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvAcounts.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvAcounts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.dgvAcounts.Location = new System.Drawing.Point(0, 373);
+            this.dgvAcounts.Location = new System.Drawing.Point(580, 97);
             this.dgvAcounts.Name = "dgvAcounts";
             this.dgvAcounts.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -108,7 +109,7 @@
             this.dgvAcounts.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAcounts.RowTemplate.Height = 24;
             this.dgvAcounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAcounts.Size = new System.Drawing.Size(1107, 316);
+            this.dgvAcounts.Size = new System.Drawing.Size(543, 631);
             this.dgvAcounts.TabIndex = 42;
             // 
             // btnShow
@@ -121,7 +122,7 @@
             this.btnShow.ForeColor = System.Drawing.Color.White;
             this.btnShow.Image = global::formLogin.Properties.Resources.icons8_show_non_hidden_views_32;
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(241, 33);
+            this.btnShow.Location = new System.Drawing.Point(51, 95);
             this.btnShow.Name = "btnShow";
             this.btnShow.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnShow.Size = new System.Drawing.Size(128, 51);
@@ -138,7 +139,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::formLogin.Properties.Resources.icons8_save_32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(643, 33);
+            this.btnSave.Location = new System.Drawing.Point(365, 191);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(128, 51);
@@ -156,7 +157,7 @@
             this.btn_Close.ForeColor = System.Drawing.Color.White;
             this.btn_Close.Image = global::formLogin.Properties.Resources.icons8_close_32;
             this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Close.Location = new System.Drawing.Point(777, 33);
+            this.btn_Close.Location = new System.Drawing.Point(365, 95);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Close.Size = new System.Drawing.Size(128, 51);
@@ -174,7 +175,7 @@
             this.btn_Delete.ForeColor = System.Drawing.Color.White;
             this.btn_Delete.Image = global::formLogin.Properties.Resources.icons8_delete_32;
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(509, 33);
+            this.btn_Delete.Location = new System.Drawing.Point(51, 191);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Delete.Size = new System.Drawing.Size(128, 51);
@@ -190,10 +191,9 @@
             this.panel3.Controls.Add(this.btn_Close);
             this.panel3.Controls.Add(this.btn_Delete);
             this.panel3.Controls.Add(this.btn_Add);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 262);
+            this.panel3.Location = new System.Drawing.Point(0, 322);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1107, 144);
+            this.panel3.Size = new System.Drawing.Size(580, 406);
             this.panel3.TabIndex = 41;
             // 
             // btn_Add
@@ -205,7 +205,7 @@
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.Image = global::formLogin.Properties.Resources.icons8_add_32;
             this.btn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Add.Location = new System.Drawing.Point(375, 33);
+            this.btn_Add.Location = new System.Drawing.Point(208, 142);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Add.Size = new System.Drawing.Size(128, 51);
@@ -216,7 +216,7 @@
             // txtCustomersPhoneNumber
             // 
             this.txtCustomersPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(643, 99);
+            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(381, 121);
             this.txtCustomersPhoneNumber.Name = "txtCustomersPhoneNumber";
             this.txtCustomersPhoneNumber.Size = new System.Drawing.Size(142, 20);
             this.txtCustomersPhoneNumber.TabIndex = 20;
@@ -232,10 +232,9 @@
             this.panel2.Controls.Add(this.lb_DienThoai_KH);
             this.panel2.Controls.Add(this.lb_Ma_KH);
             this.panel2.Controls.Add(this.lb_Ten_KH);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1107, 165);
+            this.panel2.Size = new System.Drawing.Size(583, 208);
             this.panel2.TabIndex = 40;
             // 
             // lb_DiaChi_KH
@@ -243,7 +242,7 @@
             this.lb_DiaChi_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DiaChi_KH.AutoSize = true;
             this.lb_DiaChi_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DiaChi_KH.Location = new System.Drawing.Point(542, 58);
+            this.lb_DiaChi_KH.Location = new System.Drawing.Point(280, 80);
             this.lb_DiaChi_KH.Name = "lb_DiaChi_KH";
             this.lb_DiaChi_KH.Size = new System.Drawing.Size(95, 17);
             this.lb_DiaChi_KH.TabIndex = 14;
@@ -252,7 +251,7 @@
             // txt_AccountsID
             // 
             this.txt_AccountsID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_AccountsID.Location = new System.Drawing.Point(372, 58);
+            this.txt_AccountsID.Location = new System.Drawing.Point(110, 80);
             this.txt_AccountsID.Name = "txt_AccountsID";
             this.txt_AccountsID.Size = new System.Drawing.Size(156, 20);
             this.txt_AccountsID.TabIndex = 19;
@@ -260,7 +259,7 @@
             // txt_AccountName
             // 
             this.txt_AccountName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_AccountName.Location = new System.Drawing.Point(643, 58);
+            this.txt_AccountName.Location = new System.Drawing.Point(381, 80);
             this.txt_AccountName.Name = "txt_AccountName";
             this.txt_AccountName.Size = new System.Drawing.Size(142, 20);
             this.txt_AccountName.TabIndex = 17;
@@ -268,7 +267,7 @@
             // txt_Password
             // 
             this.txt_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Password.Location = new System.Drawing.Point(372, 99);
+            this.txt_Password.Location = new System.Drawing.Point(110, 121);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(156, 20);
             this.txt_Password.TabIndex = 16;
@@ -278,7 +277,7 @@
             this.lb_DienThoai_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DienThoai_KH.AutoSize = true;
             this.lb_DienThoai_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DienThoai_KH.Location = new System.Drawing.Point(542, 99);
+            this.lb_DienThoai_KH.Location = new System.Drawing.Point(280, 121);
             this.lb_DienThoai_KH.Name = "lb_DienThoai_KH";
             this.lb_DienThoai_KH.Size = new System.Drawing.Size(57, 17);
             this.lb_DienThoai_KH.TabIndex = 15;
@@ -289,7 +288,7 @@
             this.lb_Ma_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ma_KH.AutoSize = true;
             this.lb_Ma_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ma_KH.Location = new System.Drawing.Point(292, 58);
+            this.lb_Ma_KH.Location = new System.Drawing.Point(30, 80);
             this.lb_Ma_KH.Name = "lb_Ma_KH";
             this.lb_Ma_KH.Size = new System.Drawing.Size(69, 17);
             this.lb_Ma_KH.TabIndex = 12;
@@ -300,7 +299,7 @@
             this.lb_Ten_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ten_KH.AutoSize = true;
             this.lb_Ten_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ten_KH.Location = new System.Drawing.Point(292, 99);
+            this.lb_Ten_KH.Location = new System.Drawing.Point(30, 121);
             this.lb_Ten_KH.Name = "lb_Ten_KH";
             this.lb_Ten_KH.Size = new System.Drawing.Size(67, 17);
             this.lb_Ten_KH.TabIndex = 13;
@@ -313,7 +312,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1107, 97);
+            this.panel1.Size = new System.Drawing.Size(1123, 97);
             this.panel1.TabIndex = 39;
             // 
             // lb_TieuDe_KH
@@ -322,22 +321,33 @@
             this.lb_TieuDe_KH.AutoSize = true;
             this.lb_TieuDe_KH.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_TieuDe_KH.ForeColor = System.Drawing.Color.White;
-            this.lb_TieuDe_KH.Location = new System.Drawing.Point(379, 30);
+            this.lb_TieuDe_KH.Location = new System.Drawing.Point(387, 30);
             this.lb_TieuDe_KH.Name = "lb_TieuDe_KH";
             this.lb_TieuDe_KH.Size = new System.Drawing.Size(323, 37);
             this.lb_TieuDe_KH.TabIndex = 0;
             this.lb_TieuDe_KH.Text = "DANH MỤC TÀI KHOẢN";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel4.Location = new System.Drawing.Point(0, 303);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(580, 21);
+            this.panel4.TabIndex = 43;
+            // 
             // formTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 689);
+            this.ClientSize = new System.Drawing.Size(1123, 728);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.dgvAcounts);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formTaiKhoan";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcounts)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -370,5 +380,6 @@
         private System.Windows.Forms.Label lb_Ten_KH;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lb_TieuDe_KH;
+        private System.Windows.Forms.Panel panel4;
     }
 }
