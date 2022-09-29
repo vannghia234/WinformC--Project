@@ -235,20 +235,20 @@ namespace formLogin
 
         private void dgvCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //try
-            //{
-            //    DataGridViewRow row = new DataGridViewRow();
-            //    row = dgvCustomers.Rows[e.RowIndex];
-            //    txt_CustomerID.Text = Convert.ToString(row.Cells["Mã Khách Hàng"].Value);
-            //    txt_CustomerName.Text = Convert.ToString(row.Cells["Tên Khách Hàng"].Value);
-            //    txt_CustomerAddress.Text = Convert.ToString(row.Cells["Địa Chỉ"].Value);
-            //    txtCustomersPhoneNumber.Text = Convert.ToString(row.Cells["Số Điện Thoại"].Value);
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dgvCustomers.Rows[e.RowIndex];
+                txt_CustomerID.Text = Convert.ToString(row.Cells["Mã Khách Hàng"].Value);
+                txt_CustomerName.Text = Convert.ToString(row.Cells["Tên Khách Hàng"].Value);
+                txt_CustomerAddress.Text = Convert.ToString(row.Cells["Địa Chỉ"].Value);
+                txtCustomersPhoneNumber.Text = Convert.ToString(row.Cells["Số Điện Thoại"].Value);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         
