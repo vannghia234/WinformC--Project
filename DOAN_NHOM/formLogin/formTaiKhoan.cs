@@ -129,5 +129,38 @@ namespace formLogin
                 MessageBox.Show(ex.Message + "\n\n Không thêm được tài khoản, mời nhập lại.", "tài khoản bị trùng lặp !", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             }
         }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow item in this.dgvAcounts.SelectedRows)
+                {
+                    DialogResult dg = MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dg == DialogResult.OK)
+                    {
+                        dgvAcounts.Rows.RemoveAt(item.Index);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadDataTable();
+                dgvAcounts.DataSource = dataTable.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
