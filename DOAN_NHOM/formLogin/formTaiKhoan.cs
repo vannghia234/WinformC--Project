@@ -225,5 +225,22 @@ namespace formLogin
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void dgvAcounts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dgvAcounts.Rows[e.RowIndex];
+                txt_AccountsID.Text = Convert.ToString(row.Cells["Tài Khoản"].Value);
+                txt_Password.Text = Convert.ToString(row.Cells["Mật Khẩu"].Value);
+                txt_AccountName.Text = Convert.ToString(row.Cells["Tên tài Khoản"].Value);
+                txtMaLoai.Text = Convert.ToString(row.Cells["Mã Loại"].Value);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
