@@ -33,9 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,79 +51,117 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassProvider\DataProvider.cs" />
-    <Compile Include="form.cs">
+    <Compile Include="formDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form.Designer.cs">
-      <DependentUpon>form.cs</DependentUpon>
+    <Compile Include="formDangNhap.Designer.cs">
+      <DependentUpon>formDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLogin.cs">
+    <Compile Include="formKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLogin.Designer.cs">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <Compile Include="formKhachHang.Designer.cs">
+      <DependentUpon>formKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLoginMain.cs">
+    <Compile Include="formNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLoginMain.Designer.cs">
-      <DependentUpon>formLoginMain.cs</DependentUpon>
+    <Compile Include="formNV.Designer.cs">
+      <DependentUpon>formNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="formStaff.cs">
+    <Compile Include="formProgressBarNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formStaff.Designer.cs">
-      <DependentUpon>formStaff.cs</DependentUpon>
+    <Compile Include="formProgressBarNV.Designer.cs">
+      <DependentUpon>formProgressBarNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="ftableManager.cs">
+    <Compile Include="formQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ftableManager.Designer.cs">
-      <DependentUpon>ftableManager.cs</DependentUpon>
+    <Compile Include="formQuanLy.Designer.cs">
+      <DependentUpon>formQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="formManager.cs">
+    <Compile Include="formTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formManager.Designer.cs">
-      <DependentUpon>formManager.cs</DependentUpon>
+    <Compile Include="formTaiKhoan.Designer.cs">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fromHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fromHoaDon.Designer.cs">
+      <DependentUpon>fromHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAHOA\PasswordEncryption.cs" />
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="formProgressbarQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formProgressbarQL.Designer.cs">
+      <DependentUpon>formProgressbarQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="form.resx">
-      <DependentUpon>form.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLY_BEAUTY_HEALTHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="formDangNhap.resx">
+      <DependentUpon>formDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLogin.resx">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <EmbeddedResource Include="formKhachHang.resx">
+      <DependentUpon>formKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLoginMain.resx">
-      <DependentUpon>formLoginMain.cs</DependentUpon>
+    <EmbeddedResource Include="formNV.resx">
+      <DependentUpon>formNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formStaff.resx">
-      <DependentUpon>formStaff.cs</DependentUpon>
+    <EmbeddedResource Include="formProgressBarNV.resx">
+      <DependentUpon>formProgressBarNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ftableManager.resx">
-      <DependentUpon>ftableManager.cs</DependentUpon>
+    <EmbeddedResource Include="formQuanLy.resx">
+      <DependentUpon>formQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formManager.resx">
-      <DependentUpon>formManager.cs</DependentUpon>
+    <EmbeddedResource Include="formTaiKhoan.resx">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fromHoaDon.resx">
+      <DependentUpon>fromHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formProgressbarQL.resx">
+      <DependentUpon>formProgressbarQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -128,6 +172,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet.xsc">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLY_BEAUTY_HEALTHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet.xss">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
@@ -135,9 +190,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\slack.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\graph.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />
@@ -149,55 +201,13 @@
     <None Include="Resources\slack %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\admin %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\supplier.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\supplier %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\warehouse.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\receipt1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\satisfaction.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\receipt2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\slack %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\man.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cleaning-staff %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cleaning-staff %282%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager %283%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.png" />
@@ -215,16 +225,118 @@
     <None Include="Resources\undraw_Coding_re_iv62 %281%291.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\16691578_5778883.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cleaning-staff %282%292.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%292.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undraw_Coding_re_iv62 %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%294.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Coding_re_iv62 %281%295.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UX-UI-Design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UX-UI-Design1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UX-UI-Design2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext419750556792680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-macos-maximize-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-undo-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-billing-machine-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-invoice-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lovepik_com-450127848-Get a glimpse of design studio flat illustration2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-billing-machine-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-undo-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-invoice-243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-show-non-hidden-views-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
