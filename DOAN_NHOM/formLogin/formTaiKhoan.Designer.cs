@@ -216,7 +216,7 @@
             // txtCustomersPhoneNumber
             // 
             this.txtCustomersPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(381, 121);
+            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(380, 121);
             this.txtCustomersPhoneNumber.Name = "txtCustomersPhoneNumber";
             this.txtCustomersPhoneNumber.Size = new System.Drawing.Size(142, 20);
             this.txtCustomersPhoneNumber.TabIndex = 20;
@@ -234,7 +234,7 @@
             this.panel2.Controls.Add(this.lb_Ten_KH);
             this.panel2.Location = new System.Drawing.Point(0, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(583, 208);
+            this.panel2.Size = new System.Drawing.Size(580, 208);
             this.panel2.TabIndex = 40;
             // 
             // lb_DiaChi_KH
@@ -242,7 +242,7 @@
             this.lb_DiaChi_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DiaChi_KH.AutoSize = true;
             this.lb_DiaChi_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DiaChi_KH.Location = new System.Drawing.Point(280, 80);
+            this.lb_DiaChi_KH.Location = new System.Drawing.Point(279, 80);
             this.lb_DiaChi_KH.Name = "lb_DiaChi_KH";
             this.lb_DiaChi_KH.Size = new System.Drawing.Size(95, 17);
             this.lb_DiaChi_KH.TabIndex = 14;
@@ -251,7 +251,7 @@
             // txt_AccountsID
             // 
             this.txt_AccountsID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_AccountsID.Location = new System.Drawing.Point(110, 80);
+            this.txt_AccountsID.Location = new System.Drawing.Point(109, 80);
             this.txt_AccountsID.Name = "txt_AccountsID";
             this.txt_AccountsID.Size = new System.Drawing.Size(156, 20);
             this.txt_AccountsID.TabIndex = 19;
@@ -259,7 +259,7 @@
             // txt_AccountName
             // 
             this.txt_AccountName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_AccountName.Location = new System.Drawing.Point(381, 80);
+            this.txt_AccountName.Location = new System.Drawing.Point(380, 80);
             this.txt_AccountName.Name = "txt_AccountName";
             this.txt_AccountName.Size = new System.Drawing.Size(142, 20);
             this.txt_AccountName.TabIndex = 17;
@@ -267,7 +267,7 @@
             // txt_Password
             // 
             this.txt_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Password.Location = new System.Drawing.Point(110, 121);
+            this.txt_Password.Location = new System.Drawing.Point(109, 121);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(156, 20);
             this.txt_Password.TabIndex = 16;
@@ -277,7 +277,7 @@
             this.lb_DienThoai_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DienThoai_KH.AutoSize = true;
             this.lb_DienThoai_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DienThoai_KH.Location = new System.Drawing.Point(280, 121);
+            this.lb_DienThoai_KH.Location = new System.Drawing.Point(279, 121);
             this.lb_DienThoai_KH.Name = "lb_DienThoai_KH";
             this.lb_DienThoai_KH.Size = new System.Drawing.Size(57, 17);
             this.lb_DienThoai_KH.TabIndex = 15;
@@ -288,7 +288,7 @@
             this.lb_Ma_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ma_KH.AutoSize = true;
             this.lb_Ma_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ma_KH.Location = new System.Drawing.Point(30, 80);
+            this.lb_Ma_KH.Location = new System.Drawing.Point(29, 80);
             this.lb_Ma_KH.Name = "lb_Ma_KH";
             this.lb_Ma_KH.Size = new System.Drawing.Size(69, 17);
             this.lb_Ma_KH.TabIndex = 12;
@@ -299,7 +299,7 @@
             this.lb_Ten_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ten_KH.AutoSize = true;
             this.lb_Ten_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ten_KH.Location = new System.Drawing.Point(30, 121);
+            this.lb_Ten_KH.Location = new System.Drawing.Point(29, 121);
             this.lb_Ten_KH.Name = "lb_Ten_KH";
             this.lb_Ten_KH.Size = new System.Drawing.Size(67, 17);
             this.lb_Ten_KH.TabIndex = 13;
@@ -349,6 +349,7 @@
             this.Name = "formTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formTaiKhoan";
+            this.Load += new System.EventHandler(this.formTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcounts)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
