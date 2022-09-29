@@ -14,73 +14,73 @@ namespace formLogin
     public partial class formKhachHang : Form
     {
 
-        //DataTable dataTable = new DataTable("KHACHHANG");
-        //// Tạo kết nối
-        //String sqlconnectstring = @"Data Source=MINATOO;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
-        //SqlConnection connection;
-        //SqlDataAdapter adapter = new SqlDataAdapter();
-        //DataSet dataSet = new DataSet();
+        DataTable dataTable = new DataTable("KHACHHANG");
+        // Tạo kết nối
+        String sqlconnectstring = @"Data Source=MINATOO;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
+        SqlConnection connection;
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        DataSet dataSet = new DataSet();
 
 
 
         public formKhachHang()
         {
-            //InitAdapter();
+            InitAdapter();
 
             InitializeComponent();
         }
 
-        //private void InitAdapter()
-        //{
-        //    connection = new SqlConnection(sqlconnectstring);
-            
-        //    try
-        //    {
-        //        connection.Open();
+        private void InitAdapter()
+        {
+            connection = new SqlConnection(sqlconnectstring);
 
-        //        // Thiết lập bảng trong DataSet ánh xạ tương ứng có tên là KHACHHANG
-        //        adapter.TableMappings.Add("Table", "KHACHHANG");
+            try
+            {
+                connection.Open();
 
-        //        // SelectCommand - Thực thi khi gọi Fill lấy dữ liệu về DataSet
-        //        adapter.SelectCommand = new SqlCommand(@"SELECT MAKH as 'Mã Khách Hàng'  , TENKH as 'Tên Khách Hàng'  , SDT as 'Số Điện Thoại' , DIACHI as 'Địa Chỉ'  FROM KHACHHANG", connection);
+                // Thiết lập bảng trong DataSet ánh xạ tương ứng có tên là KHACHHANG
+                adapter.TableMappings.Add("Table", "KHACHHANG");
 
-        //        // InsertCommand - Thực khi khi gọi Update, nếu DataSet có chèn dòng mới (vào DataTable)
-        //        // Dữ liệu lấy từ DataTable, như cột Mã Khách Hàng tương  ứng với tham số @MAKH
-        //        adapter.InsertCommand = new SqlCommand(@"INSERT INTO KHACHHANG (MAKH , TENKH , SDT , DIACHI) VALUES (@MAKH , @TENKH , @SDT , @DIACHI)", connection);
-        //        adapter.InsertCommand.Parameters.Add("@MAKH", SqlDbType.VarChar, 10, "Mã Khách Hàng");
-        //        adapter.InsertCommand.Parameters.Add("@TENKH", SqlDbType.NVarChar, 50, "Tên Khách Hàng");
-        //        adapter.InsertCommand.Parameters.Add("@SDT", SqlDbType.VarChar, 20, "Số Điện Thoại");
-        //        adapter.InsertCommand.Parameters.Add("@DIACHI", SqlDbType.NVarChar, 100, "Địa Chỉ");
+                // SelectCommand - Thực thi khi gọi Fill lấy dữ liệu về DataSet
+                adapter.SelectCommand = new SqlCommand(@"SELECT MAKH as 'Mã Khách Hàng'  , TENKH as 'Tên Khách Hàng'  , SDT as 'Số Điện Thoại' , DIACHI as 'Địa Chỉ'  FROM KHACHHANG", connection);
 
-        //        //[MAKH] VARCHAR(10)   NOT NULL,
-        //        //[TENKH]  NVARCHAR(50)  NOT NULL,
-        //        //[SDT]    VARCHAR(20)   NULL,
-        //        //[DIACHI] NVARCHAR(100) NULL,
+                // InsertCommand - Thực khi khi gọi Update, nếu DataSet có chèn dòng mới (vào DataTable)
+                // Dữ liệu lấy từ DataTable, như cột Mã Khách Hàng tương  ứng với tham số @MAKH
+                adapter.InsertCommand = new SqlCommand(@"INSERT INTO KHACHHANG (MAKH , TENKH , SDT , DIACHI) VALUES (@MAKH , @TENKH , @SDT , @DIACHI)", connection);
+                adapter.InsertCommand.Parameters.Add("@MAKH", SqlDbType.VarChar, 10, "Mã Khách Hàng");
+                adapter.InsertCommand.Parameters.Add("@TENKH", SqlDbType.NVarChar, 50, "Tên Khách Hàng");
+                adapter.InsertCommand.Parameters.Add("@SDT", SqlDbType.VarChar, 20, "Số Điện Thoại");
+                adapter.InsertCommand.Parameters.Add("@DIACHI", SqlDbType.NVarChar, 100, "Địa Chỉ");
 
-        //        // DeleteCommand  - Thực thi khi gọi Update, nếu có remove dòng nào đó của DataTable
-        //        adapter.DeleteCommand = new SqlCommand(@"DELETE FROM KHACHHANG WHERE MAKH = @MAKH", connection);
-        //        var pr1 = adapter.DeleteCommand.Parameters.Add(new SqlParameter("@MAKH", SqlDbType.VarChar));
-        //        pr1.SourceColumn = "Mã Khách Hàng";
-        //        pr1.SourceVersion = DataRowVersion.Original;  // Giá trị ban đầu
+                //[MAKH] VARCHAR(10)   NOT NULL,
+                //[TENKH]  NVARCHAR(50)  NOT NULL,
+                //[SDT]    VARCHAR(20)   NULL,
+                //[DIACHI] NVARCHAR(100) NULL,
+
+                // DeleteCommand  - Thực thi khi gọi Update, nếu có remove dòng nào đó của DataTable
+                adapter.DeleteCommand = new SqlCommand(@"DELETE FROM KHACHHANG WHERE MAKH = @MAKH", connection);
+                var pr1 = adapter.DeleteCommand.Parameters.Add(new SqlParameter("@MAKH", SqlDbType.VarChar));
+                pr1.SourceColumn = "Mã Khách Hàng";
+                pr1.SourceVersion = DataRowVersion.Original;  // Giá trị ban đầu
 
 
-        //        // UpdateCommand -  Thực thi khi gọi Update, nếu có chỉnh sửa trường dữ liệu nào đó
-        //        adapter.UpdateCommand = new SqlCommand(@"UPDATE KHACHHANG SET TENKH=@TENKH, SDT = @SDT, DIACHI = @DIACHI  WHERE MAKH = @MAKH", connection);
-        //        adapter.UpdateCommand.Parameters.Add("@TENKH", SqlDbType.NVarChar, 50, "Tên Khách Hàng");
-        //        adapter.UpdateCommand.Parameters.Add("@SDT", SqlDbType.VarChar, 20, "Số Điện Thoại");
-        //        adapter.UpdateCommand.Parameters.Add("@DIACHI", SqlDbType.NVarChar, 100, "Địa Chỉ");
-        //        var pr2 = adapter.UpdateCommand.Parameters.Add(new SqlParameter("@MAKH", SqlDbType.VarChar) { SourceColumn = "Mã Khách Hàng" });
-        //        pr2.SourceVersion = DataRowVersion.Original;
+                // UpdateCommand -  Thực thi khi gọi Update, nếu có chỉnh sửa trường dữ liệu nào đó
+                adapter.UpdateCommand = new SqlCommand(@"UPDATE KHACHHANG SET TENKH=@TENKH, SDT = @SDT, DIACHI = @DIACHI  WHERE MAKH = @MAKH", connection);
+                adapter.UpdateCommand.Parameters.Add("@TENKH", SqlDbType.NVarChar, 50, "Tên Khách Hàng");
+                adapter.UpdateCommand.Parameters.Add("@SDT", SqlDbType.VarChar, 20, "Số Điện Thoại");
+                adapter.UpdateCommand.Parameters.Add("@DIACHI", SqlDbType.NVarChar, 100, "Địa Chỉ");
+                var pr2 = adapter.UpdateCommand.Parameters.Add(new SqlParameter("@MAKH", SqlDbType.VarChar) { SourceColumn = "Mã Khách Hàng" });
+                pr2.SourceVersion = DataRowVersion.Original;
 
-        //        dataSet.Tables.Add(dataTable);
+                dataSet.Tables.Add(dataTable);
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
-        
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void LoadDataTable()
         {
             //dataTable.Rows.Clear();
