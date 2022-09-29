@@ -91,5 +91,43 @@ namespace formLogin
             LoadDataTable();
             dgvAcounts.DataSource = dataTable.DefaultView;
         }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dg = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dg == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dg = MessageBox.Show("Bạn có muốn lưu lại không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dg == DialogResult.OK)
+                {
+
+                    adapter.Update(dataSet);
+
+                    dataTable.Rows.Clear();
+
+                    adapter.Fill(dataSet);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n\n Không thêm được tài khoản, mời nhập lại.", "tài khoản bị trùng lặp !", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            }
+        }
     }
 }
