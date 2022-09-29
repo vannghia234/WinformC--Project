@@ -162,5 +162,68 @@ namespace formLogin
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public bool CheckInfo()
+        {
+            if (txt_AccountsID.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_AccountsID.Focus();
+                return false;
+            }
+            if (txt_AccountName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_AccountName.Focus();
+                return false;
+            }
+            else if (txt_Password.Text == "")
+            {
+                MessageBox.Show("Vui lòng mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_Password.Focus();
+                return false;
+            }
+            else if (txtMaLoai.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập SĐT khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaLoai.Focus();
+                return false;
+            }
+            else if (txt_AccountsID.Text == "" && txt_AccountName.Text == "" && txtMaLoai.Text == "" && txt_Password.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_Password.Focus();
+                txt_AccountsID.Focus();
+                txt_AccountName.Focus();
+                txtMaLoai.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        private void AddValue()
+        {
+            DataRow row = dataTable.NewRow();
+            row["Tài Khoản"] = txt_AccountsID.Text.ToString();
+            row["Tên Tài Khoản"] = txt_AccountName.Text.ToString();
+            row["Mã Loại"] = txtMaLoai.Text.ToString();
+            row["Mật Khẩu"] = txt_Password.Text.ToString();
+            dataTable.Rows.Add(row);
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CheckInfo())
+                {
+                    AddValue();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
