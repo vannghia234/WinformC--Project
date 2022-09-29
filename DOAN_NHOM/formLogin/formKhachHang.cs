@@ -169,68 +169,68 @@ namespace formLogin
 
         }
 
-        //public bool CheckInfo()
-        //{
-        //    if (txt_CustomerID.Text == "")
-        //    {
-        //        MessageBox.Show("Vui lòng nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        txt_CustomerID.Focus();
-        //        return false;
-        //    }
-        //    if (txt_CustomerName.Text == "")
-        //    {
-        //        MessageBox.Show("Vui lòng nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        txt_CustomerName.Focus();
-        //        return false;
-        //    }
-        //    else if (txt_CustomerAddress.Text == "")
-        //    {
-        //        MessageBox.Show("Vui lòng nhập địa chỉ khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        txt_CustomerAddress.Focus();
-        //        return false;
-        //    }
-        //    else if(txtCustomersPhoneNumber.Text == "")
-        //    {
-        //        MessageBox.Show("Vui lòng nhập SĐT khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        txtCustomersPhoneNumber.Focus();
-        //        return false;
-        //    }
-        //    else if(txt_CustomerName.Text == "" && txt_CustomerAddress.Text == "" && txtCustomersPhoneNumber.Text == "" && txt_CustomerID.Text == "")
-        //    {
-        //        MessageBox.Show("Vui lòng điền thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //        txt_CustomerID.Focus();
-        //        txt_CustomerName.Focus();
-        //        txt_CustomerAddress.Focus();
-        //        txtCustomersPhoneNumber.Focus();
-        //        return false;
-        //    }
-        //    return true;
-        //}
+        public bool CheckInfo()
+        {
+            if (txt_CustomerID.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_CustomerID.Focus();
+                return false;
+            }
+            if (txt_CustomerName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_CustomerName.Focus();
+                return false;
+            }
+            else if (txt_CustomerAddress.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_CustomerAddress.Focus();
+                return false;
+            }
+            else if (txtCustomersPhoneNumber.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập SĐT khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCustomersPhoneNumber.Focus();
+                return false;
+            }
+            else if (txt_CustomerName.Text == "" && txt_CustomerAddress.Text == "" && txtCustomersPhoneNumber.Text == "" && txt_CustomerID.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_CustomerID.Focus();
+                txt_CustomerName.Focus();
+                txt_CustomerAddress.Focus();
+                txtCustomersPhoneNumber.Focus();
+                return false;
+            }
+            return true;
+        }
 
-        //private void AddValue()
-        //{
-        //    DataRow row = dataTable.NewRow();
-        //    row["Mã Khách Hàng"] = txt_CustomerID.Text.ToString();
-        //    row["Tên Khách Hàng"] = txt_CustomerName.Text.ToString();
-        //    row["Số Điện Thoại"] = txtCustomersPhoneNumber.Text.ToString();
-        //    row["Địa Chỉ"] = txt_CustomerAddress.Text.ToString();
-        //    dataTable.Rows.Add(row);   
-        //}
+        private void AddValue()
+        {
+            DataRow row = dataTable.NewRow();
+            row["Mã Khách Hàng"] = txt_CustomerID.Text.ToString();
+            row["Tên Khách Hàng"] = txt_CustomerName.Text.ToString();
+            row["Số Điện Thoại"] = txtCustomersPhoneNumber.Text.ToString();
+            row["Địa Chỉ"] = txt_CustomerAddress.Text.ToString();
+            dataTable.Rows.Add(row);   
+        }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if(CheckInfo())
-            //    {
-            //        AddValue();
-            //    }    
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            
+            try
+            {
+                if (CheckInfo())
+                {
+                    AddValue();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void dgvCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
