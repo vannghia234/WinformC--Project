@@ -136,37 +136,37 @@ namespace formLogin
          
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    foreach (DataGridViewRow item in this.dgvCustomers.SelectedRows)
-            //    {
-            //        DialogResult dg = MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            //        if (dg == DialogResult.OK)
-            //        {
-            //            dgvCustomers.Rows.RemoveAt(item.Index);
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
+            try
+            {
+                foreach (DataGridViewRow item in this.dgvCustomers.SelectedRows)
+                {
+                    DialogResult dg = MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dg == DialogResult.OK)
+                    {
+                        dgvCustomers.Rows.RemoveAt(item.Index);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
 
-            //}
+            }
 
         }
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    LoadDataTable();
-            //    dgvCustomers.DataSource = dataTable.DefaultView;
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            
+            try
+            {
+                LoadDataTable();
+                dgvCustomers.DataSource = dataTable.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         //public bool CheckInfo()
