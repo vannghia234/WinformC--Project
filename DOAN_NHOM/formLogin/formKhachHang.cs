@@ -83,16 +83,16 @@ namespace formLogin
 
         private void LoadDataTable()
         {
-            //dataTable.Rows.Clear();
-            //adapter.Fill(dataSet);
+            dataTable.Rows.Clear();
+            adapter.Fill(dataSet);
         }
-        
+
         private void fromCustomer_Load(object sender, EventArgs e)
         {
-            //// TODO: This line of code loads data into the 'qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG' table. You can move, or remove it, as needed.
-            //this.kHACHHANGTableAdapter.Fill(this.qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG);
-            //LoadDataTable();
-            //dgvCustomers.DataSource = dataTable.DefaultView;
+            // TODO: This line of code loads data into the 'qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG' table. You can move, or remove it, as needed.
+            this.kHACHHANGTableAdapter.Fill(this.qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG);
+            LoadDataTable();
+            dgvCustomers.DataSource = dataTable.DefaultView;
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
