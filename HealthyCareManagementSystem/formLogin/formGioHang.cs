@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class formHoaDon : Form
+    public partial class formGioHang : Form
     {
         private DataTable dt = new DataTable();
         private double total = 0;
         public static string maHD = "HD03";
      
-        public formHoaDon()
+        public formGioHang()
         {
             InitializeComponent();
         }
@@ -342,6 +342,12 @@ namespace formLogin
         private void rjButton1_Click_1(object sender, EventArgs e)
         {
             reset();
+        }
+
+        private void rjButton2_Click_1(object sender, EventArgs e)
+        {
+            reportView rp = new reportView();
+            rp.ShowDialog();
         }
     }
 }

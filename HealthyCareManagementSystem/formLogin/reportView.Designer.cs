@@ -37,10 +37,10 @@
             this.reportViewer1.AutoSize = true;
             this.reportViewer1.DocumentMapCollapsed = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "formLogin.Report123.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(46, 37);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1470, 857);
+            this.reportViewer1.Size = new System.Drawing.Size(739, 562);
             this.reportViewer1.TabIndex = 0;
             // 
             // reportView

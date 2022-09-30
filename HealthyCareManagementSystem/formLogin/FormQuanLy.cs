@@ -27,12 +27,12 @@ namespace formLogin
         }
         private void addForm(Form form)
         {
-            //this.pannelHomepage.Controls.Clear();
-            //pannelHomepage.Dock = DockStyle.Fill;
-            //form.TopLevel = false;
-            //form.Dock = DockStyle.Fill;
-            //pannelHomepage.Controls.Add(form);
-            //form.Show();
+            this.panelContent.Controls.Clear();
+            panelContent.Dock = DockStyle.Fill;
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(form);
+            form.Show();
 
         }
         private struct MyColors
@@ -151,6 +151,7 @@ namespace formLogin
         {
             ActiveButton(sender, MyColors.green);
             pannelQuanLyDoiTuong.Visible = false;
+            addForm(new thongKe());
 
         }
 
@@ -199,6 +200,11 @@ namespace formLogin
             ActiveButton(sender, MyColors.yellow);
 
             pannelQuanLyDoiTuong.Visible = true;
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -105,11 +105,11 @@
     <Compile Include="formQuanLy.Designer.cs">
       <DependentUpon>formQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="formHoaDon.cs">
+    <Compile Include="formGioHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formHoaDon.Designer.cs">
-      <DependentUpon>formHoaDon.cs</DependentUpon>
+    <Compile Include="formGioHang.Designer.cs">
+      <DependentUpon>formGioHang.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>HoaDon.xsd</DependentUpon>
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="formQuanLy.resx">
       <DependentUpon>formQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formHoaDon.resx">
-      <DependentUpon>formHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="formGioHang.resx">
+      <DependentUpon>formGioHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formProgressbarQL.resx">
       <DependentUpon>formProgressbarQL.cs</DependentUpon>
@@ -364,6 +364,28 @@
     <None Include="Resources\healthy.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\graph.png" />
+    <None Include="Resources\icons8-chart-30.png" />
+    <None Include="Resources\icons8-chart-32.png" />
+    <None Include="Resources\icons8-chart-32 %281%29.png" />
+    <None Include="Resources\icons8-chart-30 %281%29.png" />
+    <None Include="Resources\Futuristic Digital Background LinkedIn Banner.png" />
+    <None Include="Resources\Futuristic Digital Background LinkedIn Banner %281%29.png" />
+    <None Include="Resources\icons8-customer-30.png" />
+    <None Include="Resources\icons8-file-invoice-dollar-64.png" />
+    <None Include="Resources\icons8-billing-machine-50 %281%29.png" />
+    <None Include="Resources\icons8-billing-machine-100.png" />
+    <None Include="Resources\icons8-indian-girl-shopping-basket-100.png" />
+    <None Include="Resources\icons8-chart-96.png" />
+    <None Include="Resources\icons8-inventory-64.png" />
+    <None Include="Resources\icons8-fast-moving-consumer-goods-96.png" />
+    <None Include="Resources\icons8-fast-moving-consumer-goods-64.png" />
+    <None Include="Resources\icons8-user-64.png" />
+    <None Include="Resources\icons8-staff-64.png" />
+    <None Include="Resources\icons8-supplier-80.png" />
+    <None Include="Resources\Natural Care Logo.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\2.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
