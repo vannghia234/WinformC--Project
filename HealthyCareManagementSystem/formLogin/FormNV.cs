@@ -183,7 +183,7 @@ namespace formLogin
         {
             if (panel_Content.Controls.Count == 0)
             {
-                addForm(new formHoaDon());
+                addForm(new formGioHang());
             }
             ActiveButton(sender, MyColors.yellow);
         }

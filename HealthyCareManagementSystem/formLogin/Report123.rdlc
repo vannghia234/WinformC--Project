@@ -33,10 +33,14 @@
           <DataField>GIABAN</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
+        <Field Name="MAHD">
+          <DataField>MAHD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>HoaDon</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Van Nghia\OneDrive\Desktop\DoAn_Winform\DOAN_MonHoc\DOAN_NHOM\formLogin\HoaDon.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Van Nghia\OneDrive\Desktop\DoAn_Winform\HealthyCareManagement\HealthyCareManagementSystem\formLogin\HoaDon.xsd</rd:SchemaPath>
         <rd:TableName>CTHoaDon</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -52,10 +56,10 @@
             <Source>Embedded</Source>
             <Value>slack1</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>1.06389in</Top>
+            <Top>0.89445in</Top>
             <Left>3.36334in</Left>
-            <Height>0.81334in</Height>
-            <Width>0.91667in</Width>
+            <Height>0.70501in</Height>
+            <Width>0.83334in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -66,7 +70,7 @@
             <Top>3.04944in</Top>
             <Left>0.23501in</Left>
             <Height>0in</Height>
-            <Width>6.71999in</Width>
+            <Width>6.87832in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -91,7 +95,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>3.08277in</Top>
+            <Top>3.1911in</Top>
             <Left>4.54667in</Left>
             <Height>0.25in</Height>
             <Width>1.13833in</Width>
@@ -124,7 +128,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>3.08277in</Top>
+            <Top>3.1911in</Top>
             <Left>5.81667in</Left>
             <Height>0.25in</Height>
             <Width>1.13833in</Width>
@@ -143,24 +147,24 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.39333in</Width>
+                  <Width>0.50125in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.085in</Width>
+                  <Width>3.04041in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96833in</Width>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.89333in</Width>
+                  <Width>0.925in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.38in</Width>
+                  <Width>1.41167in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.17083in</Height>
+                  <Height>0.27638in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -381,7 +385,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.32916in</Height>
+                  <Height>0.43471in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -567,10 +571,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet2</DataSetName>
-            <Top>2.43278in</Top>
-            <Left>0.23501in</Left>
-            <Height>0.49999in</Height>
-            <Width>6.71999in</Width>
+            <Top>2.15223in</Top>
+            <Left>0.21834in</Left>
+            <Height>0.71109in</Height>
+            <Width>6.87833in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -676,7 +680,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>3.62917in</Top>
+            <Top>3.69861in</Top>
             <Left>0.23501in</Left>
             <Height>0.24722in</Height>
             <Width>2.79665in</Width>
@@ -708,7 +712,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox17</rd:DefaultName>
-            <Top>5.025in</Top>
+            <Top>4.70833in</Top>
             <Left>0.105in</Left>
             <Height>0.25in</Height>
             <Width>1.60333in</Width>
@@ -744,9 +748,8 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.43555in</Top>
-            <Left>2.71277in</Left>
             <Height>0.30889in</Height>
-            <Width>2.36389in</Width>
+            <Width>7.49667in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -786,16 +789,54 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox37">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Số hóa đơn: </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!MAHD.Value, "DataSet2")</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox33</rd:DefaultName>
+            <Top>1.74945in</Top>
+            <Left>3.15499in</Left>
+            <Height>0.25in</Height>
+            <Width>2.01334in</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>5.275in</Height>
+        <Height>5.80833in</Height>
         <Style />
       </Body>
-      <Width>7.305in</Width>
+      <Width>7.49667in</Width>
       <Page>
         <PageHeight>11.69in</PageHeight>
         <PageWidth>8.27in</PageWidth>
-        <LeftMargin>0.5in</LeftMargin>
-        <RightMargin>0.5in</RightMargin>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
         <TopMargin>1in</TopMargin>
         <BottomMargin>1in</BottomMargin>
         <Style />

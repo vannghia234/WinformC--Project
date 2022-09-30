@@ -79,10 +79,15 @@ namespace formLogin
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có muốn in hóa đơn không?", "Hệ thống", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                reportView reportView = new reportView();
+                reportView.Show();
+            }
+            else
+            {
+                this.Close();
 
-
-
-            this.Close();
+            }
 
         }
 

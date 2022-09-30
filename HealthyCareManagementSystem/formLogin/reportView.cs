@@ -16,12 +16,18 @@ namespace formLogin
 {
     public partial class reportView : Form
     {
+        private string maHD;
+        public reportView(string maHD)
+        {
+            InitializeComponent();
+            this.maHD = maHD;
+        }
         public reportView()
         {
             InitializeComponent();
+
         }
 
-   
 
         private void reportView_Load(object sender, EventArgs e)
         {
@@ -35,16 +41,16 @@ namespace formLogin
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "GET_INF_INVOICE";
-                cmd.Parameters.Add("@MAHD", SqlDbType.VarChar).Value = formHoaDon.maHD;
+                cmd.Parameters.Add("@MAHD", SqlDbType.VarChar).Value = "HD01";
                 DataSet ds = new DataSet();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(ds, "CTHoaDon");
+                da.Fill(ds, "CTHD");
                 conn.Close();
 
                 this.reportViewer1.LocalReport.ReportEmbeddedResource = "formLogin.Report123.rdlc";
                 ReportDataSource ds2 = new ReportDataSource();
                 ds2.Name = "DataSet2";
-                ds2.Value = ds.Tables["CTHoaDon"];
+                ds2.Value = ds.Tables["CTHD"];
                 this.reportViewer1.LocalReport.DataSources.Add(ds2);
                 this.reportViewer1.RefreshReport();
 

@@ -287,6 +287,8 @@ namespace formLogin {
             
             private global::System.Data.DataColumn columnGIABAN;
             
+            private global::System.Data.DataColumn columnMAHD;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CTHoaDonDataTable() {
@@ -354,6 +356,14 @@ namespace formLogin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MAHDColumn {
+                get {
+                    return this.columnMAHD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -389,13 +399,14 @@ namespace formLogin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CTHoaDonRow AddCTHoaDonRow(string TENSP, string HANSUDUNG, int SOLUONG, double GIABAN) {
+            public CTHoaDonRow AddCTHoaDonRow(string TENSP, string HANSUDUNG, int SOLUONG, double GIABAN, string MAHD) {
                 CTHoaDonRow rowCTHoaDonRow = ((CTHoaDonRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TENSP,
                         HANSUDUNG,
                         SOLUONG,
-                        GIABAN};
+                        GIABAN,
+                        MAHD};
                 rowCTHoaDonRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCTHoaDonRow);
                 return rowCTHoaDonRow;
@@ -422,6 +433,7 @@ namespace formLogin {
                 this.columnHANSUDUNG = base.Columns["HANSUDUNG"];
                 this.columnSOLUONG = base.Columns["SOLUONG"];
                 this.columnGIABAN = base.Columns["GIABAN"];
+                this.columnMAHD = base.Columns["MAHD"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -435,6 +447,8 @@ namespace formLogin {
                 base.Columns.Add(this.columnSOLUONG);
                 this.columnGIABAN = new global::System.Data.DataColumn("GIABAN", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGIABAN);
+                this.columnMAHD = new global::System.Data.DataColumn("MAHD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMAHD);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -641,6 +655,22 @@ namespace formLogin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MAHD {
+                get {
+                    try {
+                        return ((string)(this[this.tableCTHoaDon.MAHDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MAHD\' in table \'CTHoaDon\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCTHoaDon.MAHDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsTENSPNull() {
                 return this.IsNull(this.tableCTHoaDon.TENSPColumn);
             }
@@ -685,6 +715,18 @@ namespace formLogin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetGIABANNull() {
                 this[this.tableCTHoaDon.GIABANColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMAHDNull() {
+                return this.IsNull(this.tableCTHoaDon.MAHDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMAHDNull() {
+                this[this.tableCTHoaDon.MAHDColumn] = global::System.Convert.DBNull;
             }
         }
         
