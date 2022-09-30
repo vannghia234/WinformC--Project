@@ -196,6 +196,11 @@
     <None Include="DataSet_load\GetInvoice.xss">
       <DependentUpon>GetInvoice.xsd</DependentUpon>
     </None>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="HoaDon.xsc">
       <DependentUpon>HoaDon.xsd</DependentUpon>
     </None>
@@ -360,6 +365,9 @@
     <None Include="Resources\healthy.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
