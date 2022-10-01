@@ -18,7 +18,7 @@ namespace formLogin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formQuanLy());
+            Application.Run(new formTaiKhoan());
         }
         
     }
