@@ -324,5 +324,11 @@ namespace formLogin
         {
             txt_Password.PasswordChar = '*';
         }
+
+        private void lbl_QuenPass_Click(object sender, EventArgs e)
+        {
+            formQuenMatKhau qmk = new formQuenMatKhau();
+            qmk.Show();
+        }
     }
 }

@@ -16,8 +16,8 @@ namespace formLogin
     {
         private DataTable dt = new DataTable();
         private double total = 0;
-        public static string maHD = "HD03";
-     
+        public static string maHD = "";
+
         public formGioHang()
         {
             InitializeComponent();
@@ -53,6 +53,7 @@ namespace formLogin
         // load sản phẩm lên
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
+
             dt = ClassProvider.dataProvider.Instance.GetDataTableByProcedure("GET_PRODUCT");
             //DataTable s = ClassProvider.dataProvider.Instance.GetDataTable("Select * ");
             dtgv_Product.DataSource = dt;
@@ -64,6 +65,16 @@ namespace formLogin
             cbb_NhanVien.DisplayMember = "MANV";
             // autocomplete
             loadDataToColection();
+            // combobox danh mục
+            DataTable dtDanhMuc = ClassProvider.dataProvider.Instance.GetDatatableByQuery("select * from DanhMuc");
+          
+            foreach (DataRow item in dtDanhMuc.Rows)
+            {
+                cbbDanhMuc.Items.Add(item["TENDANHMUC"].ToString());
+            }
+            cbbDanhMuc.Text = "";
+
+
         }
 
         private void loadDataToColection()
@@ -132,7 +143,7 @@ namespace formLogin
                     UpdateInsert(index);
 
                 }
-                
+
             }
             catch (Exception)
             {
@@ -161,7 +172,7 @@ namespace formLogin
             catch (Exception ex)
             {
                 MessageBox.Show("Giỏ hàng rỗng, không thể hoàn tác", "Cảnh báo");
-              
+
             }
 
 
@@ -218,7 +229,7 @@ namespace formLogin
         private void iconPicLoad_Click(object sender, EventArgs e)
         {
             dtgv_Product.DataSource = dt;
-           
+
 
         }
         // tìm kiếm datagridview dùng rowfilter dataview
@@ -251,14 +262,14 @@ namespace formLogin
             maHD = txt_HoaDon.Text;
             btn_HoanTac.Enabled = true;
         }
-        
+
 
         // xử lý thanh toán hóa đơn + form thanh toán tiền mặt
         private void rjButton2_Click(object sender, EventArgs e)
         {
             maHD = txt_HoaDon.Text;
             string ngay = dtpk_NgayLap.Value.ToString("yyyy/MM/dd");
-           
+
             try
             {
                 using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Constr))
@@ -283,13 +294,13 @@ namespace formLogin
 
                 MessageBox.Show(ex.Message);
             }
-           
+
             try
             {
                 using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Constr))
                 {
                     con.Open();
-                    for (int i = 0; i < dtgv_Cart.Rows.Count ; i++)
+                    for (int i = 0; i < dtgv_Cart.Rows.Count; i++)
                     {
                         SqlCommand sqlCommand = new SqlCommand();
                         sqlCommand.Connection = con;
@@ -298,11 +309,12 @@ namespace formLogin
                         sqlCommand.Parameters.Add("@MAHD", SqlDbType.VarChar).Value = maHD;
                         sqlCommand.Parameters.Add("@MASP", SqlDbType.VarChar).Value = dtgv_Cart.Rows[i].Cells[0].Value.ToString();
                         sqlCommand.Parameters.Add("@SOLUONG", SqlDbType.Int).Value = Convert.ToInt32(dtgv_Cart.Rows[i].Cells[2].Value.ToString());
-                        sqlCommand.Parameters.Add("@GIABAN", SqlDbType.Money).Value = Convert.ToDouble(dtgv_Cart.Rows[i].Cells[3].Value.ToString());
+
+                        //sqlCommand.Parameters.Add("@GIABAN", SqlDbType.Money).Value = rs;
 
                         sqlCommand.ExecuteNonQuery();
                     }
-                    
+
                     con.Close();
                 }
             }
@@ -313,6 +325,7 @@ namespace formLogin
             }
             Payment pm = new Payment(total, maHD, int.Parse(nmr_KhuyenMai.Value.ToString()));
             pm.ShowDialog();
+            total = 0;
             try
             {
                 using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Constr))
@@ -349,5 +362,31 @@ namespace formLogin
             reportView rp = new reportView();
             rp.ShowDialog();
         }
+
+       
+
+        private void cbbDanhMuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = cbbDanhMuc.SelectedIndex;
+            string nameDM = cbbDanhMuc.Items[i].ToString();
+
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+            {
+                DataTable dt = new DataTable();
+                conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "GET_DANHMUC";
+                cmd.Connection = conn;
+                cmd.Parameters.Add("@TENDM", SqlDbType.NVarChar).Value = nameDM;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+                dtgv_Product.DataSource = dt;
+            }
+
+        }
+
+      
     }
 }

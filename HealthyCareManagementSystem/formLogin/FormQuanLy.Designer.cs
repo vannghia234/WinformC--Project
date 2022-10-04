@@ -50,6 +50,7 @@
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconBtnMini = new FontAwesome.Sharp.IconPictureBox();
             this.iconBtnExit = new FontAwesome.Sharp.IconPictureBox();
@@ -65,7 +66,6 @@
             this.btn_QuanLyDoiTuong = new FontAwesome.Sharp.IconButton();
             this.btn_HoaDon = new FontAwesome.Sharp.IconButton();
             this.iconBtn_logo = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel_Menu.SuspendLayout();
             this.pannelQuanLyDoiTuong.SuspendLayout();
             this.panel_Logo.SuspendLayout();
@@ -74,12 +74,12 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Menu
@@ -458,6 +458,16 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::formLogin.Properties.Resources._2;
+            this.pictureBox4.Location = new System.Drawing.Point(3, -104);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(1447, 271);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -756,16 +766,7 @@
             this.iconBtn_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconBtn_logo.TabIndex = 3;
             this.iconBtn_logo.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::formLogin.Properties.Resources._2;
-            this.pictureBox4.Location = new System.Drawing.Point(3, -104);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1447, 271);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.iconBtn_logo.Click += new System.EventHandler(this.iconBtn_logo_Click);
             // 
             // formQuanLy
             // 
@@ -791,12 +792,12 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Title)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconBtn_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

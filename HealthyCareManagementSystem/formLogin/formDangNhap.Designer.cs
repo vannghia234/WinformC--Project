@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formDangNhap));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -91,7 +92,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::formLogin.Properties.Resources.bg2;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(930, 618);
@@ -155,6 +156,7 @@
             this.lbl_QuenPass.Size = new System.Drawing.Size(143, 20);
             this.lbl_QuenPass.TabIndex = 45;
             this.lbl_QuenPass.Text = "QUÊN MẬT KHẨU?";
+            this.lbl_QuenPass.Click += new System.EventHandler(this.lbl_QuenPass_Click);
             // 
             // iconPic_Hide
             // 

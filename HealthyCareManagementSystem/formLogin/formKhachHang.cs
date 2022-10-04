@@ -16,7 +16,7 @@ namespace formLogin
 
         DataTable dataTable = new DataTable("KHACHHANG");
         // Tạo kết nối
-        String sqlconnectstring = @"Data Source=MINATOO;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
+        String sqlconnectstring = @"Data Source=DAICA-ZORO\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
         SqlConnection connection;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataSet dataSet = new DataSet();
