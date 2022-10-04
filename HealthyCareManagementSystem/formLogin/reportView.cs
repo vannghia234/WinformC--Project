@@ -41,7 +41,7 @@ namespace formLogin
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "GET_INF_INVOICE";
-                cmd.Parameters.Add("@MAHD", SqlDbType.VarChar).Value = "HD01";
+                cmd.Parameters.Add("@MAHD", SqlDbType.VarChar).Value = formGioHang.maHD;
                 DataSet ds = new DataSet();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "CTHD");

@@ -22,8 +22,6 @@ namespace formLogin
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 60);
             panel_Menu.Controls.Add(leftBorderBtn);
-
-        
         }
         private void addForm(Form form)
         {
@@ -96,9 +94,13 @@ namespace formLogin
         {
             DisableButton();
             leftBorderBtn.Visible = false;
-            pic_Title.IconChar = IconChar.HomeUser;
+            pic_Title.IconChar = IconChar.Home;
             pic_Title.IconColor = Color.White;
-            lbl_Title.Text = "HOME";
+            lbl_Title.Text = "Trang chủ";
+            lbl_Title.ForeColor = Color.White;
+            iconBtn_logo.ForeColor= Color.White;
+            lbl_ChucVu.ForeColor= Color.White;
+            lbl_ShopName.ForeColor = Color.White;
 
 
 
@@ -137,6 +139,7 @@ namespace formLogin
         {
             ActiveButton(sender, MyColors.red);
             pannelQuanLyDoiTuong.Visible = false;
+            addForm(new formTaiKhoan());
 
         }
 
@@ -151,6 +154,7 @@ namespace formLogin
         {
             ActiveButton(sender, MyColors.green);
             pannelQuanLyDoiTuong.Visible = false;
+
             addForm(new thongKe());
 
         }
@@ -206,6 +210,12 @@ namespace formLogin
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconBtn_logo_Click(object sender, EventArgs e)
+        {
+            addForm(new formHome());
+            reset();
         }
     }
 }

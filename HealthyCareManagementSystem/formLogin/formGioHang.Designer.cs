@@ -38,6 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.btn_HoanTac = new CustomControls.RJControls.RJButton();
             this.btn_Cart = new CustomControls.RJControls.RJButton();
@@ -85,8 +86,7 @@
             this.btnThanhToan = new CustomControls.RJControls.RJButton();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.iconPicLoad = new FontAwesome.Sharp.IconPictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.cbbDanhMuc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -125,6 +125,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 372);
             this.panel1.TabIndex = 2;
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 19;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Image = global::formLogin.Properties.Resources.icons8_refresh_322;
+            this.rjButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rjButton2.Location = new System.Drawing.Point(221, 306);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(163, 43);
+            this.rjButton2.TabIndex = 23;
+            this.rjButton2.Text = "Print";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click_1);
             // 
             // rjButton1
             // 
@@ -479,7 +503,7 @@
             this.txt_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search.ForeColor = System.Drawing.Color.Black;
-            this.txt_Search.Location = new System.Drawing.Point(264, 12);
+            this.txt_Search.Location = new System.Drawing.Point(333, 13);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(406, 34);
             this.txt_Search.TabIndex = 11;
@@ -532,7 +556,7 @@
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(676, 9);
+            this.btn_Search.Location = new System.Drawing.Point(745, 10);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(156, 34);
             this.btn_Search.TabIndex = 18;
@@ -788,45 +812,25 @@
             this.iconPicLoad.TabStop = false;
             this.iconPicLoad.Click += new System.EventHandler(this.iconPicLoad_Click);
             // 
-            // comboBox1
+            // cbbDanhMuc
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(86, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 24);
-            this.comboBox1.TabIndex = 19;
+            this.cbbDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.cbbDanhMuc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDanhMuc.ForeColor = System.Drawing.Color.White;
+            this.cbbDanhMuc.FormattingEnabled = true;
+            this.cbbDanhMuc.Location = new System.Drawing.Point(86, 16);
+            this.cbbDanhMuc.Name = "cbbDanhMuc";
+            this.cbbDanhMuc.Size = new System.Drawing.Size(227, 31);
+            this.cbbDanhMuc.TabIndex = 19;
+            this.cbbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbbDanhMuc_SelectedIndexChanged);
             // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 19;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Image = global::formLogin.Properties.Resources.icons8_refresh_322;
-            this.rjButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjButton2.Location = new System.Drawing.Point(221, 306);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(163, 43);
-            this.rjButton2.TabIndex = 23;
-            this.rjButton2.Text = "Print";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click_1);
-            // 
-            // formHoaDon
+            // formGioHang
             // 
             this.AcceptButton = this.btn_Search;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1527, 845);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbDanhMuc);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.iconPicLoad);
             this.Controls.Add(this.panel7);
@@ -836,7 +840,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "formHoaDon";
+            this.Name = "formGioHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "hoadon1";
             this.Load += new System.EventHandler(this.FormHoaDon_Load);
@@ -914,7 +918,7 @@
         private CustomControls.RJControls.RJButton rjButton1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbDanhMuc;
         private CustomControls.RJControls.RJButton rjButton2;
     }
 }
