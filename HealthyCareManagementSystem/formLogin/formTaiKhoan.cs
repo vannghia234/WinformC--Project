@@ -13,9 +13,9 @@ namespace formLogin
 {
     public partial class formTaiKhoan : Form
     {
-        DataTable dataTable = new DataTable("TAIKHOANUSER");
+        DataTable dataTable = new DataTable("TAIKHOAN");
         // Tạo kết nối
-        String sqlconnectstring = @"Data Source=MINATOO;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
+        String sqlconnectstring = @"Data Source=DAICA-ZORO\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
         SqlConnection connection;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataSet dataSet = new DataSet();
@@ -37,14 +37,14 @@ namespace formLogin
                 connection.Open();
 
                 // Thiết lập bảng trong DataSet ánh xạ tương ứng có tên là TAIKHOANUSER
-                adapter.TableMappings.Add("Table", "TAIKHOANUSER");
+                adapter.TableMappings.Add("Table", "TAIKHOAN");
 
                 // SelectCommand - Thực thi khi gọi Fill lấy dữ liệu về DataSet
-                adapter.SelectCommand = new SqlCommand(@"SELECT TAIKHOAN as 'Tài Khoản'  , MATKHAU as 'Mật Khẩu'  , TENTAIKHOAN as 'Tên Tài Khoản' , MALOAI as 'Mã Loại'  FROM TAIKHOANUSER", connection);
+                adapter.SelectCommand = new SqlCommand(@"SELECT TAIKHOAN as 'Tài Khoản'  , MATKHAU as 'Mật Khẩu'  , TENTAIKHOAN as 'Tên Tài Khoản' , MALOAI as 'Mã Loại'  FROM TAIKHOAN", connection);
 
                 // InsertCommand - Thực khi khi gọi Update, nếu DataSet có chèn dòng mới (vào DataTable)
                 // Dữ liệu lấy từ DataTable, như cột Tài Khoản tương  ứng với tham số @TAIKHOAN
-                adapter.InsertCommand = new SqlCommand(@"INSERT INTO TAIKHOANUSER (TAIKHOAN , MATKHAU , TENTAIKHOAN , MALOAI) VALUES (@TAIKHOAN , @MATKHAU , @TENTAIKHOAN , @MALOAI)", connection);
+                adapter.InsertCommand = new SqlCommand(@"INSERT INTO TAIKHOAN (TAIKHOAN , MATKHAU , TENTAIKHOAN , MALOAI) VALUES (@TAIKHOAN , @MATKHAU , @TENTAIKHOAN , @MALOAI)", connection);
                 adapter.InsertCommand.Parameters.Add("@TAIKHOAN", SqlDbType.NVarChar, 50, "Tài Khoản");
                 adapter.InsertCommand.Parameters.Add("@MATKHAU", SqlDbType.NVarChar, 50, "Mật Khẩu");
                 adapter.InsertCommand.Parameters.Add("@TENTAIKHOAN", SqlDbType.NVarChar, 50, "Tên Tài Khoản");
@@ -57,14 +57,14 @@ namespace formLogin
 
 
                 // DeleteCommand  - Thực thi khi gọi Update, nếu có remove dòng nào đó của DataTable
-                adapter.DeleteCommand = new SqlCommand(@"DELETE FROM TAIKHOANUSER WHERE TAIKHOAN = @TAIKHOAN", connection);
+                adapter.DeleteCommand = new SqlCommand(@"DELETE FROM TAIKHOAN WHERE TAIKHOAN = @TAIKHOAN", connection);
                 var pr1 = adapter.DeleteCommand.Parameters.Add(new SqlParameter("@TAIKHOAN", SqlDbType.NVarChar));
                 pr1.SourceColumn = "Tài Khoản";
                 pr1.SourceVersion = DataRowVersion.Original;  // Giá trị ban đầu
 
 
                 // UpdateCommand -  Thực thi khi gọi Update, nếu có chỉnh sửa trường dữ liệu nào đó
-                adapter.UpdateCommand = new SqlCommand(@"UPDATE TAIKHOANUSER SET MATKHAU=@MATKHAU, TENTAKHOAN = @TENTAIKHOAN, MALOAI = @MALOAI  WHERE TAIKHOAN = @TAIKHOAN", connection);
+                adapter.UpdateCommand = new SqlCommand(@"UPDATE TAIKHOAN SET MATKHAU=@MATKHAU, TENTAKHOAN = @TENTAIKHOAN, MALOAI = @MALOAI  WHERE TAIKHOAN = @TAIKHOAN", connection);
                 adapter.UpdateCommand.Parameters.Add("@MATKHAU", SqlDbType.NVarChar, 50, "Mật Khẩu");
                 adapter.UpdateCommand.Parameters.Add("@TENTAIKHOAN", SqlDbType.NVarChar, 50, "Tên Tài Khoản");
                 adapter.UpdateCommand.Parameters.Add("@MALOAI", SqlDbType.Int, 255, "Mã Loại");

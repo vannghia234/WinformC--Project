@@ -34,7 +34,6 @@
             // reportViewer1
             // 
             this.reportViewer1.AllowDrop = true;
-            this.reportViewer1.AutoSize = true;
             this.reportViewer1.DocumentMapCollapsed = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "formLogin.Report123.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(46, 37);
@@ -45,8 +44,7 @@
             // 
             // reportView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(830, 691);
             this.Controls.Add(this.reportViewer1);
             this.Name = "reportView";
@@ -54,7 +52,6 @@
             this.Text = "reportView";
             this.Load += new System.EventHandler(this.reportView_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
