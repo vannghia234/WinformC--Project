@@ -1,0 +1,22 @@
+D:\C#\SANPHAM\SANPHAM\bin\Debug\SANPHAM.exe.config
+D:\C#\SANPHAM\SANPHAM\bin\Debug\SANPHAM.exe
+D:\C#\SANPHAM\SANPHAM\bin\Debug\SANPHAM.pdb
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.AssemblyReference.cache
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.SuggestedBindingRedirects.cache
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.Form1.resources
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.Properties.Resources.resources
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.GenerateResource.cache
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.CoreCompileInputs.cache
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.exe
+D:\C#\SANPHAM\SANPHAM\obj\Debug\SANPHAM.pdb
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\bin\Debug\SANPHAM.exe.config
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\bin\Debug\SANPHAM.exe
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\bin\Debug\SANPHAM.pdb
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.AssemblyReference.cache
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.SuggestedBindingRedirects.cache
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.Form1.resources
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.Properties.Resources.resources
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.GenerateResource.cache
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.csproj.CoreCompileInputs.cache
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.exe
+C:\Users\Vu Nghia\Desktop\DO_AN\WinformC--Project\SANPHAM\SANPHAM\obj\Debug\SANPHAM.pdb
