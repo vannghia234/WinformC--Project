@@ -117,31 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnShow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAU5JREFUWEft
-        lUFOwzAQRSP1BpQ1t6CcArGq4AisWbflBAg4RVHFLajYF25Ab9FWMv/b31KgTupOAFHJT/pSYs/8mSjO
-        pCocJM65M+gRmmVqCk2gvizswOQC2kAWPqBuTcDg3VvZGcvKBgysTx+ZysqGTLowk5UNmZDUYWvTK0R+
-        pgHdZoOUYcgsDfz3BhBwDN1CnF71Q3SjfY8P3gOk7G4Amyy+9GHb+ERd/1oDnNdNPCsmDqKeT8oE8Vch
-        rWUQYfMpxCSZK+Yt3Lo7iE+VIxafQ2Tki6XAJt91EyvoBOr6MzpSuW2wGRvg1KofwKhrxQ2gh9r6LvFA
-        j6Hm4kTBZKilvwWFzQ0ob++v4wvILw2UBvi5kEstZYH4XkhzGy3ZgEEcxS8Qp1dqqqV0D5GFrGzAoA9x
-        WllYQ+eysgMTNsGp9f133CZOxVNZFA6JqvoE3ral4Tq9AqgAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btn_Add.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAbVJREFUWEft
-        l11OwkAUhSFBeBKXZFB3YIjbQdCg+xBdhviiroJ3/3jUN+t36CUhbadzW8qDCV9ykqZz7p1h5s50aO35
-        VyRJ0kGn6BbN0JNJz3qnto7Zm4OkR+gaLVEMea5Q38K3g0QX6ANVRTFDS1Mdgttogn5RXRQ7Rm1L64cg
-        dd4Ul5bWBwGa9m1+eRbl8i0HRhWcd82f0Uv6GOUdxQsTk6rdwzfqoh760QsHE+umGAwHyLPVxNLCFOeN
-        +ULhc4LGs5XNR50BiIGF5aFRp5mXugOYWlgeGh9STyFac3W01sLCFLfItMkbYmZheWicp54cqvau2aLg
-        VWGGdsej2fLQGBqAkvXMFkVe9KrAAkoHcJ96CtFW25zmsiUo25alS3CTelzspAhPUo+LugM4trA8NOrC
-        8bmyxakzAOUuv7Bg0GXCg7aaiq3KUTy2bsJg6iN9ODxod4SqPcsbOrRuysE4RE1/js8tvQ8CdJNpipGl
-        9UOQrmQaxDYzodgRqn4lW0OwlsNbE5tozatNewgSqTB1R9T3PIa2mmbOV3BVIKnOiQGaoju0/mOiZ71T
-        W/N/TPbsjlbrD4we7EOCr4s1AAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="qUANLY_BEAUTY_HEALTHDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

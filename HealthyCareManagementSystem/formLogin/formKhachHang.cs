@@ -89,10 +89,21 @@ namespace formLogin
 
         private void fromCustomer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG' table. You can move, or remove it, as needed.
-            //this.kHACHHANGTableAdapter.Fill(this.qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG);
+            pnlNhap.Enabled = false;
+            btn_Add.Enabled = false;
+            btn_Delete.Enabled = false;
+            btnFix.Enabled = false;
+            btnSave.Enabled = false;
             LoadDataTable();
             dgvCustomers.DataSource = dataTable.DefaultView;
+        }
+
+        private void Reset()
+        {
+            txtCustomersPhoneNumber.Text = "";
+            txt_CustomerAddress.Text = "";
+            txt_CustomerID.Text = "";
+            txt_CustomerName.Text = "";
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
@@ -115,6 +126,10 @@ namespace formLogin
         {
             try
             {
+                btnSave.Enabled = false;
+                btnFix.Enabled = false;
+                btn_Delete.Enabled = false;
+                btn_Add.Enabled = false;
                 DialogResult dg = MessageBox.Show("Bạn có muốn lưu lại không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dg == DialogResult.OK)
                 {
@@ -138,6 +153,7 @@ namespace formLogin
         {
             try
             {
+                btnSave.Enabled = true;
                 foreach (DataGridViewRow item in this.dgvCustomers.SelectedRows)
                 {
                     DialogResult dg = MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -159,6 +175,11 @@ namespace formLogin
         {
             try
             {
+                pnlNhap.Enabled = true;
+                btn_Add.Enabled = true;
+                btn_Delete.Enabled = false;
+                btnFix.Enabled = false;
+                btnSave.Enabled = false;
                 LoadDataTable();
                 dgvCustomers.DataSource = dataTable.DefaultView;
             }
@@ -195,15 +216,7 @@ namespace formLogin
                 txtCustomersPhoneNumber.Focus();
                 return false;
             }
-            else if (txt_CustomerName.Text == "" && txt_CustomerAddress.Text == "" && txtCustomersPhoneNumber.Text == "" && txt_CustomerID.Text == "")
-            {
-                MessageBox.Show("Vui lòng điền thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_CustomerID.Focus();
-                txt_CustomerName.Focus();
-                txt_CustomerAddress.Focus();
-                txtCustomersPhoneNumber.Focus();
-                return false;
-            }
+
             return true;
         }
 
@@ -221,6 +234,7 @@ namespace formLogin
         {
             try
             {
+                btnSave.Enabled = true;
                 if (CheckInfo())
                 {
                     AddValue();
@@ -243,6 +257,10 @@ namespace formLogin
                 txt_CustomerName.Text = Convert.ToString(row.Cells["Tên Khách Hàng"].Value);
                 txt_CustomerAddress.Text = Convert.ToString(row.Cells["Địa Chỉ"].Value);
                 txtCustomersPhoneNumber.Text = Convert.ToString(row.Cells["Số Điện Thoại"].Value);
+
+                btn_Add.Enabled = false;
+                btnFix.Enabled = true;
+                btn_Delete.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -251,7 +269,35 @@ namespace formLogin
 
         }
 
-        
+        private void FixValue()
+        {
+            try
+            {
+
+                DialogResult dg = MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dg == DialogResult.OK)
+                {
+                    int VT = dgvCustomers.CurrentCell.RowIndex;
+                    DataRow rowedit = dataTable.Rows[VT];
+                    rowedit["Mã Khách Hàng"] = txt_CustomerID.Text;
+                    rowedit["Tên Khách Hàng"] = txt_CustomerName.Text;
+                    rowedit["Địa Chỉ"] = txt_CustomerAddress.Text;
+                    rowedit["Số Điện Thoại"] = txtCustomersPhoneNumber.Text;
+                    
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnSave.Enabled = true;
+            FixValue();
+        }
     }
 }
 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formKhachHang));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,9 +41,10 @@
             this.lb_DiaChi_KH = new System.Windows.Forms.Label();
             this.lb_Ten_KH = new System.Windows.Forms.Label();
             this.lb_Ma_KH = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlNhap = new System.Windows.Forms.Panel();
             this.txtCustomersPhoneNumber = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnFix = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.lb_TieuDe_KH = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.pnlNhap.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_BEAUTY_HEALTHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGBindingSource)).BeginInit();
@@ -68,25 +68,26 @@
             // txt_CustomerID
             // 
             this.txt_CustomerID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_CustomerID.Location = new System.Drawing.Point(98, 53);
+            this.txt_CustomerID.Enabled = false;
+            this.txt_CustomerID.Location = new System.Drawing.Point(109, 40);
             this.txt_CustomerID.Name = "txt_CustomerID";
-            this.txt_CustomerID.Size = new System.Drawing.Size(364, 20);
+            this.txt_CustomerID.Size = new System.Drawing.Size(208, 20);
             this.txt_CustomerID.TabIndex = 19;
             // 
             // txt_CustomerAddress
             // 
             this.txt_CustomerAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_CustomerAddress.Location = new System.Drawing.Point(98, 194);
+            this.txt_CustomerAddress.Location = new System.Drawing.Point(109, 170);
             this.txt_CustomerAddress.Name = "txt_CustomerAddress";
-            this.txt_CustomerAddress.Size = new System.Drawing.Size(364, 20);
+            this.txt_CustomerAddress.Size = new System.Drawing.Size(208, 20);
             this.txt_CustomerAddress.TabIndex = 17;
             // 
             // txt_CustomerName
             // 
             this.txt_CustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_CustomerName.Location = new System.Drawing.Point(98, 126);
+            this.txt_CustomerName.Location = new System.Drawing.Point(109, 102);
             this.txt_CustomerName.Name = "txt_CustomerName";
-            this.txt_CustomerName.Size = new System.Drawing.Size(364, 20);
+            this.txt_CustomerName.Size = new System.Drawing.Size(208, 20);
             this.txt_CustomerName.TabIndex = 16;
             // 
             // lb_DienThoai_KH
@@ -94,7 +95,7 @@
             this.lb_DienThoai_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DienThoai_KH.AutoSize = true;
             this.lb_DienThoai_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DienThoai_KH.Location = new System.Drawing.Point(22, 258);
+            this.lb_DienThoai_KH.Location = new System.Drawing.Point(33, 234);
             this.lb_DienThoai_KH.Name = "lb_DienThoai_KH";
             this.lb_DienThoai_KH.Size = new System.Drawing.Size(73, 17);
             this.lb_DienThoai_KH.TabIndex = 15;
@@ -105,7 +106,7 @@
             this.lb_DiaChi_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_DiaChi_KH.AutoSize = true;
             this.lb_DiaChi_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_DiaChi_KH.Location = new System.Drawing.Point(22, 194);
+            this.lb_DiaChi_KH.Location = new System.Drawing.Point(33, 170);
             this.lb_DiaChi_KH.Name = "lb_DiaChi_KH";
             this.lb_DiaChi_KH.Size = new System.Drawing.Size(51, 17);
             this.lb_DiaChi_KH.TabIndex = 14;
@@ -116,7 +117,7 @@
             this.lb_Ten_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ten_KH.AutoSize = true;
             this.lb_Ten_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ten_KH.Location = new System.Drawing.Point(18, 126);
+            this.lb_Ten_KH.Location = new System.Drawing.Point(29, 102);
             this.lb_Ten_KH.Name = "lb_Ten_KH";
             this.lb_Ten_KH.Size = new System.Drawing.Size(74, 17);
             this.lb_Ten_KH.TabIndex = 13;
@@ -127,65 +128,79 @@
             this.lb_Ma_KH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Ma_KH.AutoSize = true;
             this.lb_Ma_KH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Ma_KH.Location = new System.Drawing.Point(18, 53);
+            this.lb_Ma_KH.Location = new System.Drawing.Point(29, 40);
             this.lb_Ma_KH.Name = "lb_Ma_KH";
             this.lb_Ma_KH.Size = new System.Drawing.Size(71, 17);
             this.lb_Ma_KH.TabIndex = 12;
             this.lb_Ma_KH.Text = "Mã khách ";
             // 
-            // panel2
+            // pnlNhap
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.lb_DiaChi_KH);
-            this.panel2.Controls.Add(this.txt_CustomerID);
-            this.panel2.Controls.Add(this.lb_Ma_KH);
-            this.panel2.Controls.Add(this.txtCustomersPhoneNumber);
-            this.panel2.Controls.Add(this.lb_Ten_KH);
-            this.panel2.Controls.Add(this.lb_DienThoai_KH);
-            this.panel2.Controls.Add(this.txt_CustomerName);
-            this.panel2.Controls.Add(this.txt_CustomerAddress);
-            this.panel2.Location = new System.Drawing.Point(603, 97);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(520, 317);
-            this.panel2.TabIndex = 36;
+            this.pnlNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.pnlNhap.Controls.Add(this.lb_DiaChi_KH);
+            this.pnlNhap.Controls.Add(this.txt_CustomerID);
+            this.pnlNhap.Controls.Add(this.lb_Ma_KH);
+            this.pnlNhap.Controls.Add(this.txtCustomersPhoneNumber);
+            this.pnlNhap.Controls.Add(this.lb_Ten_KH);
+            this.pnlNhap.Controls.Add(this.lb_DienThoai_KH);
+            this.pnlNhap.Controls.Add(this.txt_CustomerName);
+            this.pnlNhap.Controls.Add(this.txt_CustomerAddress);
+            this.pnlNhap.Location = new System.Drawing.Point(777, 97);
+            this.pnlNhap.Name = "pnlNhap";
+            this.pnlNhap.Size = new System.Drawing.Size(346, 297);
+            this.pnlNhap.TabIndex = 36;
             // 
             // txtCustomersPhoneNumber
             // 
             this.txtCustomersPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(98, 258);
+            this.txtCustomersPhoneNumber.Location = new System.Drawing.Point(109, 234);
             this.txtCustomersPhoneNumber.Name = "txtCustomersPhoneNumber";
-            this.txtCustomersPhoneNumber.Size = new System.Drawing.Size(364, 20);
+            this.txtCustomersPhoneNumber.Size = new System.Drawing.Size(208, 20);
             this.txtCustomersPhoneNumber.TabIndex = 20;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.btnFix);
             this.panel3.Controls.Add(this.btnShow);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.btn_Close);
             this.panel3.Controls.Add(this.btn_Delete);
             this.panel3.Controls.Add(this.btn_Add);
-            this.panel3.Location = new System.Drawing.Point(600, 450);
+            this.panel3.Location = new System.Drawing.Point(777, 411);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(520, 279);
+            this.panel3.Size = new System.Drawing.Size(346, 317);
             this.panel3.TabIndex = 37;
+            // 
+            // btnFix
+            // 
+            this.btnFix.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.btnFix.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFix.ForeColor = System.Drawing.Color.White;
+            this.btnFix.Location = new System.Drawing.Point(189, 139);
+            this.btnFix.Name = "btnFix";
+            this.btnFix.Size = new System.Drawing.Size(128, 51);
+            this.btnFix.TabIndex = 38;
+            this.btnFix.Text = "Sửa";
+            this.btnFix.UseVisualStyleBackColor = false;
+            this.btnFix.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnShow
             // 
             this.btnShow.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShow.AutoSize = true;
-            this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.btnShow.FlatAppearance.BorderSize = 5;
             this.btnShow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.ForeColor = System.Drawing.Color.White;
-            this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
             this.btnShow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShow.Location = new System.Drawing.Point(44, 55);
+            this.btnShow.Location = new System.Drawing.Point(52, 76);
             this.btnShow.Name = "btnShow";
             this.btnShow.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnShow.Size = new System.Drawing.Size(128, 51);
             this.btnShow.TabIndex = 37;
-            this.btnShow.Text = "Xem";
+            this.btnShow.Text = "Tải lại";
             this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
@@ -193,11 +208,11 @@
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.AutoSize = true;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(353, 55);
+            this.btnSave.Location = new System.Drawing.Point(55, 196);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(128, 51);
@@ -211,11 +226,11 @@
             // 
             this.btn_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Close.AutoSize = true;
-            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Close.ForeColor = System.Drawing.Color.White;
             this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Close.Location = new System.Drawing.Point(353, 161);
+            this.btn_Close.Location = new System.Drawing.Point(189, 196);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Close.Size = new System.Drawing.Size(128, 51);
@@ -229,11 +244,11 @@
             // 
             this.btn_Delete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Delete.AutoSize = true;
-            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.Color.White;
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(44, 161);
+            this.btn_Delete.Location = new System.Drawing.Point(52, 139);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Delete.Size = new System.Drawing.Size(128, 51);
@@ -246,12 +261,11 @@
             // 
             this.btn_Add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Add.AutoSize = true;
-            this.btn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Add.Location = new System.Drawing.Point(199, 110);
+            this.btn_Add.Location = new System.Drawing.Point(186, 76);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn_Add.Size = new System.Drawing.Size(128, 51);
@@ -276,10 +290,10 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panel4.Location = new System.Drawing.Point(603, 421);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
+            this.panel4.Location = new System.Drawing.Point(777, 390);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(520, 23);
+            this.panel4.Size = new System.Drawing.Size(346, 23);
             this.panel4.TabIndex = 21;
             // 
             // dgvCustomers
@@ -318,6 +332,7 @@
             this.dgvCustomers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
             this.dgvCustomers.Location = new System.Drawing.Point(0, 97);
             this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,12 +343,11 @@
             this.dgvCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCustomers.RowHeadersVisible = false;
             this.dgvCustomers.RowHeadersWidth = 51;
-            this.dgvCustomers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvCustomers.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCustomers.RowTemplate.Height = 24;
             this.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomers.Size = new System.Drawing.Size(602, 631);
+            this.dgvCustomers.Size = new System.Drawing.Size(778, 631);
             this.dgvCustomers.TabIndex = 38;
             this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
@@ -351,7 +365,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
             this.panel1.Controls.Add(this.lb_TieuDe_KH);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -369,7 +383,7 @@
             this.Controls.Add(this.dgvCustomers);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlNhap);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -377,8 +391,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách Hàng ";
             this.Load += new System.EventHandler(this.fromCustomer_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlNhap.ResumeLayout(false);
+            this.pnlNhap.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_BEAUTY_HEALTHDataSet)).EndInit();
@@ -398,7 +412,7 @@
         private System.Windows.Forms.Label lb_DiaChi_KH;
         private System.Windows.Forms.Label lb_Ten_KH;
         private System.Windows.Forms.Label lb_Ma_KH;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlNhap;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button btnSave;
@@ -413,6 +427,7 @@
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Label lb_TieuDe_KH;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnFix;
     }
 }
 

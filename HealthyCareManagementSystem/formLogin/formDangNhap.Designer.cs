@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 618);
+            this.panel1.Size = new System.Drawing.Size(904, 618);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -73,7 +73,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(31, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(297, 38);
+            this.label2.Size = new System.Drawing.Size(230, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "QUẢN LÝ BÁN HÀNG";
             // 
@@ -84,7 +84,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 38);
+            this.label1.Size = new System.Drawing.Size(136, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "PHẦN MỀM";
             // 
@@ -94,7 +94,7 @@
             this.pictureBox1.Image = global::formLogin.Properties.Resources.bg2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(930, 618);
+            this.pictureBox1.Size = new System.Drawing.Size(904, 618);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -116,7 +116,7 @@
             this.panel2.Controls.Add(this.btn_Login);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(887, 0);
+            this.panel2.Location = new System.Drawing.Point(861, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(525, 618);
             this.panel2.TabIndex = 1;
@@ -127,7 +127,7 @@
             this.txt_Password.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txt_Password.Location = new System.Drawing.Point(39, 275);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(414, 34);
+            this.txt_Password.Size = new System.Drawing.Size(414, 29);
             this.txt_Password.TabIndex = 47;
             this.txt_Password.Text = "Mật khẩu";
             this.txt_Password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbpassword_MouseClick);
@@ -139,7 +139,7 @@
             this.txt_Account.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txt_Account.Location = new System.Drawing.Point(39, 206);
             this.txt_Account.Name = "txt_Account";
-            this.txt_Account.Size = new System.Drawing.Size(414, 34);
+            this.txt_Account.Size = new System.Drawing.Size(414, 29);
             this.txt_Account.TabIndex = 46;
             this.txt_Account.Text = "Tài khoản";
             this.txt_Account.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbAccount_MouseClick);
@@ -152,7 +152,7 @@
             this.lbl_QuenPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
             this.lbl_QuenPass.Location = new System.Drawing.Point(317, 464);
             this.lbl_QuenPass.Name = "lbl_QuenPass";
-            this.lbl_QuenPass.Size = new System.Drawing.Size(143, 20);
+            this.lbl_QuenPass.Size = new System.Drawing.Size(111, 15);
             this.lbl_QuenPass.TabIndex = 45;
             this.lbl_QuenPass.Text = "QUÊN MẬT KHẨU?";
             // 
@@ -192,7 +192,7 @@
             this.lbl_ErrorPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbl_ErrorPass.Location = new System.Drawing.Point(35, 312);
             this.lbl_ErrorPass.Name = "lbl_ErrorPass";
-            this.lbl_ErrorPass.Size = new System.Drawing.Size(0, 19);
+            this.lbl_ErrorPass.Size = new System.Drawing.Size(0, 13);
             this.lbl_ErrorPass.TabIndex = 40;
             this.lbl_ErrorPass.Visible = false;
             // 
@@ -205,7 +205,7 @@
             this.lbl_Error.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lbl_Error.Location = new System.Drawing.Point(35, 243);
             this.lbl_Error.Name = "lbl_Error";
-            this.lbl_Error.Size = new System.Drawing.Size(0, 19);
+            this.lbl_Error.Size = new System.Drawing.Size(0, 13);
             this.lbl_Error.TabIndex = 42;
             this.lbl_Error.Visible = false;
             // 
@@ -217,7 +217,7 @@
             this.cb_SavePassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_SavePassword.Location = new System.Drawing.Point(329, 340);
             this.cb_SavePassword.Name = "cb_SavePassword";
-            this.cb_SavePassword.Size = new System.Drawing.Size(130, 24);
+            this.cb_SavePassword.Size = new System.Drawing.Size(106, 19);
             this.cb_SavePassword.TabIndex = 38;
             this.cb_SavePassword.Text = "Lưu đăng nhập";
             this.cb_SavePassword.UseVisualStyleBackColor = true;
@@ -231,7 +231,7 @@
             this.cb_ShowPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_ShowPass.Location = new System.Drawing.Point(38, 340);
             this.cb_ShowPass.Name = "cb_ShowPass";
-            this.cb_ShowPass.Size = new System.Drawing.Size(148, 24);
+            this.cb_ShowPass.Size = new System.Drawing.Size(121, 19);
             this.cb_ShowPass.TabIndex = 37;
             this.cb_ShowPass.Text = "Hiển thị mật khẩu";
             this.cb_ShowPass.UseVisualStyleBackColor = true;
@@ -264,7 +264,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(32, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(390, 38);
+            this.label4.Size = new System.Drawing.Size(305, 30);
             this.label4.TabIndex = 1;
             this.label4.Text = "TRỞ LẠI VỚI HEALTHY CARE";
             // 
@@ -275,7 +275,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
             this.label3.Location = new System.Drawing.Point(31, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 38);
+            this.label3.Size = new System.Drawing.Size(153, 30);
             this.label3.TabIndex = 0;
             this.label3.Text = "CHÀO MỪNG";
             // 
@@ -283,7 +283,7 @@
             // 
             this.AcceptButton = this.btn_Login;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1412, 618);
+            this.ClientSize = new System.Drawing.Size(1386, 618);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

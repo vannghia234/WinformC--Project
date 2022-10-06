@@ -74,34 +74,34 @@ SELECT MAKH, TENKH, SDT, DIACHI FROM KHACHHANG WHERE (MAKH = @MAKH)</CommandText
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="QUANLY_BEAUTY_HEALTHDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="QUANLY_BEAUTY_HEALTHDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QUANLY_BEAUTY_HEALTHDataSet">
+  <xs:element name="QUANLY_BEAUTY_HEALTHDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QUANLY_BEAUTY_HEALTHDataSet" msprop:Generator_DataSetName="QUANLY_BEAUTY_HEALTHDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="KHACHHANG" msprop:Generator_RowClassName="KHACHHANGRow" msprop:Generator_RowEvHandlerName="KHACHHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="KHACHHANGRowDeleted" msprop:Generator_RowDeletingName="KHACHHANGRowDeleting" msprop:Generator_RowEvArgName="KHACHHANGRowChangeEvent" msprop:Generator_TablePropName="KHACHHANG" msprop:Generator_RowChangedName="KHACHHANGRowChanged" msprop:Generator_UserTableName="KHACHHANG" msprop:Generator_RowChangingName="KHACHHANGRowChanging" msprop:Generator_TableClassName="KHACHHANGDataTable" msprop:Generator_TableVarName="tableKHACHHANG">
+        <xs:element name="KHACHHANG" msprop:Generator_RowEvHandlerName="KHACHHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="KHACHHANGRowDeleted" msprop:Generator_RowDeletingName="KHACHHANGRowDeleting" msprop:Generator_RowEvArgName="KHACHHANGRowChangeEvent" msprop:Generator_TablePropName="KHACHHANG" msprop:Generator_RowChangedName="KHACHHANGRowChanged" msprop:Generator_RowChangingName="KHACHHANGRowChanging" msprop:Generator_TableClassName="KHACHHANGDataTable" msprop:Generator_RowClassName="KHACHHANGRow" msprop:Generator_TableVarName="tableKHACHHANG" msprop:Generator_UserTableName="KHACHHANG">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MAKH" msprop:Generator_UserColumnName="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnVarNameInTable="columnMAKH">
+              <xs:element name="MAKH" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_ColumnVarNameInTable="columnMAKH" msprop:Generator_UserColumnName="MAKH">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TENKH" msprop:Generator_UserColumnName="TENKH" msprop:Generator_ColumnPropNameInTable="TENKHColumn" msprop:Generator_ColumnPropNameInRow="TENKH" msprop:Generator_ColumnVarNameInTable="columnTENKH">
+              <xs:element name="TENKH" msprop:Generator_ColumnPropNameInRow="TENKH" msprop:Generator_ColumnPropNameInTable="TENKHColumn" msprop:Generator_ColumnVarNameInTable="columnTENKH" msprop:Generator_UserColumnName="TENKH">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SDT" msprop:Generator_UserColumnName="SDT" msprop:Generator_ColumnPropNameInTable="SDTColumn" msprop:Generator_ColumnPropNameInRow="SDT" msprop:Generator_ColumnVarNameInTable="columnSDT" minOccurs="0">
+              <xs:element name="SDT" msprop:Generator_ColumnPropNameInRow="SDT" msprop:Generator_ColumnPropNameInTable="SDTColumn" msprop:Generator_ColumnVarNameInTable="columnSDT" msprop:Generator_UserColumnName="SDT" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DIACHI" msprop:Generator_UserColumnName="DIACHI" msprop:Generator_ColumnPropNameInTable="DIACHIColumn" msprop:Generator_ColumnPropNameInRow="DIACHI" msprop:Generator_ColumnVarNameInTable="columnDIACHI" minOccurs="0">
+              <xs:element name="DIACHI" msprop:Generator_ColumnPropNameInRow="DIACHI" msprop:Generator_ColumnPropNameInTable="DIACHIColumn" msprop:Generator_ColumnVarNameInTable="columnDIACHI" msprop:Generator_UserColumnName="DIACHI" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
