@@ -56,40 +56,81 @@ namespace formLogin
             }
             return true;
         }
-     
+        private Boolean kiemTraChuoiMatKhau(string s)
+        {
+            int demThuong = 0;
+            int demHoa = 0;
+            int demSo = 0;
+            if (s.Length < 8)
+            {
+                return false;
+            }
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] >= 'a' && s[i] <= 'z')
+                {
+                    demThuong++;
+                }
+                if (s[i] >= 'A' && s[i] <= 'Z')
+                {
+                    demHoa++;
+                }
+                if (s[i] > '0' && s[i] < '9')
+                {
+                    demSo++;
+                }
+            }
+            if (demThuong > 0 && demSo > 0 && demHoa > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void rjButton2_Click(object sender, EventArgs e)
         {
             if (checkRong())
             {
-                if (txtcode.Text.Trim() == formQuenMatKhau.randomCode)
+                if (kiemTraChuoiMatKhau(txtNewPass.Text))
                 {
-                    if (checkReEnterPass())
+                    if (txtcode.Text.Trim() == formQuenMatKhau.randomCode)
                     {
-                        using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+                        if (checkReEnterPass())
                         {
-                            conn.Open();
-                            SqlCommand cmd = new SqlCommand("Update_MK", conn);
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.Add("@MATKHAUMOI", SqlDbType.NVarChar).Value = txtNewPass.Text.Trim();
-                            cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = formQuenMatKhau.email;
+                            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Constr))
+                            {
+                                conn.Open();
+                                SqlCommand cmd = new SqlCommand("Update_MK", conn);
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.Add("@MATKHAUMOI", SqlDbType.NVarChar).Value = txtNewPass.Text.Trim();
+                                cmd.Parameters.Add("@EMAIL", SqlDbType.VarChar).Value = formQuenMatKhau.email;
 
-                            cmd.ExecuteNonQuery();
-                            conn.Close();
-                            MessageBox.Show("Thay đổi mật khẩu thành công");
+                                cmd.ExecuteNonQuery();
+                                conn.Close();
+                                MessageBox.Show("Thay đổi mật khẩu thành công");
+                            }
                         }
                     }
+                    else
+                    {
+                        lblError.Text = "Mã xác nhận không chính xác";
+                    }
+
                 }
                 else
                 {
-                    lblError.Text = "Mã xác nhận không chính xác";
+                    lblError.Text = "Mật khẩu của bạn phải có ít nhất 8 ký tự bao gồm 1 ký tự Hoa, 1 thường, 1 số";
                 }
+
             }
             
         }
 
         private void iconPic_Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
 
         }
 

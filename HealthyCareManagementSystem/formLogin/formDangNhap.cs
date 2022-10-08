@@ -267,7 +267,7 @@ namespace formLogin
                 }
                 else
                 {
-                    lbl_ErrorPass.Text = "Mật khẩu của bạn phải có ít nhất 8 ký tự bao gồm 1 ký tự Hoa, 1 thường, 1 số !";
+                    lbl_ErrorPass.Text = "Mật khẩu của bạn phải có ít nhất 8 ký tự bao gồm 1 ký tự Hoa, 1 thường, 1 số";
                 }
 
 

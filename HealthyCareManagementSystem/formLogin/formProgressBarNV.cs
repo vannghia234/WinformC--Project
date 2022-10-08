@@ -45,7 +45,7 @@ namespace formLogin
             progressBar1.Value = progressBar1.Value + 5;
             if (progressBar1.Value > 99)
             {
-                formNV ql = new formNV();
+                formTaiKhoanNV ql = new formTaiKhoanNV();
                 this.Hide();
                 ql.Show();
                 timer1.Enabled = false;

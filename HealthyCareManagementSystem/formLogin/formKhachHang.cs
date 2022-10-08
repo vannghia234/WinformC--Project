@@ -20,6 +20,7 @@ namespace formLogin
         SqlConnection connection;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataSet dataSet = new DataSet();
+        DataTable dtb = new DataTable();
 
 
 
@@ -85,6 +86,7 @@ namespace formLogin
         {
             dataTable.Rows.Clear();
             adapter.Fill(dataSet);
+            adapter.Fill(dtb);
         }
 
         private void fromCustomer_Load(object sender, EventArgs e)
@@ -251,7 +253,17 @@ namespace formLogin
 
         }
 
-        
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {       
+            //DataView dv = new DataView(dtb);
+            //dv.RowFilter = String.Format("MaKH like '%{0}%'", txt_Search.Text);
+            //dgvCustomers.DataSource = dv;
+        }
     }
 }
 

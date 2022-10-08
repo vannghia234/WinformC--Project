@@ -261,6 +261,7 @@ namespace formLogin
             btn_Cart.Enabled = true;
             maHD = txt_HoaDon.Text;
             btn_HoanTac.Enabled = true;
+            btnThanhToan.Visible = true;
         }
 
 
@@ -277,7 +278,7 @@ namespace formLogin
                     con.Open();
                     SqlCommand sqlCommand = new SqlCommand();
                     sqlCommand.Connection = con;
-                    sqlCommand.CommandText = "INSERT_HOADON";
+                    sqlCommand.CommandText = "INSERT_HOADONByGioHang";
                     sqlCommand.CommandType = CommandType.StoredProcedure;
                     sqlCommand.Parameters.Add("@MAHD", SqlDbType.VarChar).Value = maHD;
                     sqlCommand.Parameters.Add("@MANV", SqlDbType.VarChar).Value = cbb_NhanVien.Text;
@@ -387,6 +388,9 @@ namespace formLogin
 
         }
 
-      
+
+       
+
+       
     }
 }

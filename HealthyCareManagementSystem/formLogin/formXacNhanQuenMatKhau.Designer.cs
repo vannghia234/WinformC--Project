@@ -50,7 +50,7 @@
             this.lblTilte.AutoSize = true;
             this.lblTilte.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTilte.ForeColor = System.Drawing.Color.White;
-            this.lblTilte.Location = new System.Drawing.Point(231, 18);
+            this.lblTilte.Location = new System.Drawing.Point(238, 5);
             this.lblTilte.Name = "lblTilte";
             this.lblTilte.Size = new System.Drawing.Size(225, 41);
             this.lblTilte.TabIndex = 7;
@@ -70,11 +70,11 @@
             // txtcode
             // 
             this.txtcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcode.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcode.ForeColor = System.Drawing.Color.Black;
             this.txtcode.Location = new System.Drawing.Point(186, 146);
             this.txtcode.Name = "txtcode";
-            this.txtcode.Size = new System.Drawing.Size(302, 30);
+            this.txtcode.Size = new System.Drawing.Size(302, 31);
             this.txtcode.TabIndex = 4;
             // 
             // panel1
@@ -85,7 +85,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(655, 69);
+            this.panel1.Size = new System.Drawing.Size(672, 54);
             this.panel1.TabIndex = 8;
             // 
             // iconPic_Exit
@@ -95,9 +95,10 @@
             this.iconPic_Exit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.iconPic_Exit.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPic_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPic_Exit.Location = new System.Drawing.Point(623, 0);
+            this.iconPic_Exit.IconSize = 44;
+            this.iconPic_Exit.Location = new System.Drawing.Point(624, 2);
             this.iconPic_Exit.Name = "iconPic_Exit";
-            this.iconPic_Exit.Size = new System.Drawing.Size(32, 32);
+            this.iconPic_Exit.Size = new System.Drawing.Size(45, 44);
             this.iconPic_Exit.TabIndex = 44;
             this.iconPic_Exit.TabStop = false;
             this.iconPic_Exit.Click += new System.EventHandler(this.iconPic_Exit_Click);
@@ -116,12 +117,12 @@
             // txtNewPass
             // 
             this.txtNewPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass.ForeColor = System.Drawing.Color.Black;
             this.txtNewPass.Location = new System.Drawing.Point(186, 227);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.PasswordChar = '*';
-            this.txtNewPass.Size = new System.Drawing.Size(302, 30);
+            this.txtNewPass.Size = new System.Drawing.Size(302, 31);
             this.txtNewPass.TabIndex = 9;
             this.txtNewPass.TextChanged += new System.EventHandler(this.txtNewPass_TextChanged);
             // 
@@ -139,12 +140,12 @@
             // txtReEnterPass
             // 
             this.txtReEnterPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtReEnterPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReEnterPass.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReEnterPass.ForeColor = System.Drawing.Color.Black;
             this.txtReEnterPass.Location = new System.Drawing.Point(186, 310);
             this.txtReEnterPass.Name = "txtReEnterPass";
             this.txtReEnterPass.PasswordChar = '*';
-            this.txtReEnterPass.Size = new System.Drawing.Size(302, 30);
+            this.txtReEnterPass.Size = new System.Drawing.Size(302, 31);
             this.txtReEnterPass.TabIndex = 12;
             // 
             // lblError
@@ -152,10 +153,11 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(269, 345);
+            this.lblError.Location = new System.Drawing.Point(180, 343);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 16;
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // checkBox1
             // 
@@ -210,10 +212,9 @@
             // 
             // formXacNhanQuenMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(655, 486);
+            this.ClientSize = new System.Drawing.Size(672, 499);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.rjButton2);

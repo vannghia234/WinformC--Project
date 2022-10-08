@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class formQuanLy : Form
+    public partial class formTaiKhoanQL : Form
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-        public formQuanLy()
+        public formTaiKhoanQL()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -36,10 +36,10 @@ namespace formLogin
         private struct MyColors
         {
             public static Color primary = Color.FromArgb(31, 30, 68);
-            public static Color red = Color.FromArgb(255, 67, 64);
-            public static Color yellow = Color.FromArgb(253, 203, 2);
-            public static Color blue = Color.FromArgb(54, 198, 255);
-            public static Color green = Color.FromArgb(13, 196, 110);
+            public static Color red = Color.FromArgb(255, 123, 137);
+            public static Color yellow = Color.FromArgb(249, 225, 129);
+            public static Color blue = Color.FromArgb(125, 214, 246);
+            public static Color green = Color.FromArgb(102, 205, 170);
         }
         private void ActiveButton(object sender, Color color)
         {
@@ -54,7 +54,7 @@ namespace formLogin
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage; // text trước image
                 // viền trái button
                 leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Location = new Point(currentBtn.Location.X, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
                 // PictureBox title
@@ -116,37 +116,43 @@ namespace formLogin
 
         private void btn_Products_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, MyColors.yellow);
-            pannelQuanLyDoiTuong.Visible = false;
+            ActiveButton(sender, MyColors.green);
+            addForm(new formSanPham());
+            leftBorderBtn.Visible = false;
+
         }
 
         private void btn_Staff_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, MyColors.green);
-            pannelQuanLyDoiTuong.Visible = false;
+            ActiveButton(sender, MyColors.blue);
 
+            leftBorderBtn.Visible = false;
 
         }
 
         private void btn_Customer_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, MyColors.blue);
-            pannelQuanLyDoiTuong.Visible = false;
+            ActiveButton(sender, MyColors.red);
+            addForm(new formKhachHang());
+            leftBorderBtn.Visible = false;
+
 
         }
 
         private void btn_Account_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, MyColors.red);
-            pannelQuanLyDoiTuong.Visible = false;
+            ActiveButton(sender, MyColors.yellow);
             addForm(new formTaiKhoan());
+            leftBorderBtn.Visible = false;
+
 
         }
 
         private void btn_NCC_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, MyColors.green);
-            pannelQuanLyDoiTuong.Visible = false;
+            ActiveButton(sender, MyColors.yellow);
+            leftBorderBtn.Visible = false;
+            addForm(new formNCC());
 
         }
 
@@ -161,7 +167,7 @@ namespace formLogin
 
         private void btn_Kho_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, MyColors.blue);
+            ActiveButton(sender, MyColors.yellow);
             pannelQuanLyDoiTuong.Visible = false;
 
         }
@@ -169,9 +175,13 @@ namespace formLogin
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.red);
-            this.Hide();
-            formDangNhap fl = new formDangNhap();
-            fl.Show();
+            if(MessageBox.Show("Đăng xuất ứng dụng ?", "Cảnh báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Hide();
+                formDangNhap fl = new formDangNhap();
+                fl.Show();
+            }
+            
 
 
         }
@@ -195,6 +205,7 @@ namespace formLogin
         {
             ActiveButton(sender, MyColors.blue);
             pannelQuanLyDoiTuong.Visible = false;
+            addForm(new formHoaDon());
 
 
         }

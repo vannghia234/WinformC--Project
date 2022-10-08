@@ -47,18 +47,19 @@ namespace formLogin
                 da.Fill(ds, "CTHD");
                 conn.Close();
 
-                this.reportViewer1.LocalReport.ReportEmbeddedResource = "formLogin.Report123.rdlc";
+                this.rp1.LocalReport.ReportEmbeddedResource = "formLogin.Report123.rdlc";
                 ReportDataSource ds2 = new ReportDataSource();
                 ds2.Name = "DataSet2";
                 ds2.Value = ds.Tables["CTHD"];
-                this.reportViewer1.LocalReport.DataSources.Add(ds2);
-                this.reportViewer1.RefreshReport();
+                this.rp1.LocalReport.DataSources.Add(ds2);
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            this.rp1.RefreshReport();
+
         }
     }
 }

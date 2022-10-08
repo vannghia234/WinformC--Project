@@ -38,7 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.btn_HoanTac = new CustomControls.RJControls.RJButton();
             this.btn_Cart = new CustomControls.RJControls.RJButton();
@@ -85,8 +84,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnThanhToan = new CustomControls.RJControls.RJButton();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
-            this.iconPicLoad = new FontAwesome.Sharp.IconPictureBox();
             this.cbbDanhMuc = new System.Windows.Forms.ComboBox();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -101,13 +100,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_KhuyenMai)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicLoad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.rjButton2);
             this.panel1.Controls.Add(this.rjButton1);
             this.panel1.Controls.Add(this.btn_HoanTac);
             this.panel1.Controls.Add(this.btn_Cart);
@@ -123,32 +120,8 @@
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(915, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 372);
+            this.panel1.Size = new System.Drawing.Size(600, 393);
             this.panel1.TabIndex = 2;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 19;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Image = global::formLogin.Properties.Resources.icons8_refresh_322;
-            this.rjButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjButton2.Location = new System.Drawing.Point(221, 306);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(163, 43);
-            this.rjButton2.TabIndex = 23;
-            this.rjButton2.Text = "Print";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click_1);
             // 
             // rjButton1
             // 
@@ -355,7 +328,7 @@
             this.dtgv_Product.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgv_Product.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgv_Product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -419,7 +392,7 @@
             this.dtgv_Cart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgv_Cart.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dtgv_Cart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -734,9 +707,9 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txt_HoaDon);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(915, 376);
+            this.panel3.Location = new System.Drawing.Point(915, 395);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(600, 481);
+            this.panel3.Size = new System.Drawing.Size(600, 462);
             this.panel3.TabIndex = 4;
             // 
             // label14
@@ -763,7 +736,7 @@
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
             this.btnThanhToan.Image = global::formLogin.Properties.Resources.icons8_payment_321;
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThanhToan.Location = new System.Drawing.Point(39, 408);
+            this.btnThanhToan.Location = new System.Drawing.Point(39, 394);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(523, 43);
             this.btnThanhToan.TabIndex = 22;
@@ -771,6 +744,7 @@
             this.btnThanhToan.TextColor = System.Drawing.Color.White;
             this.btnThanhToan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Visible = false;
             this.btnThanhToan.Click += new System.EventHandler(this.rjButton2_Click);
             // 
             // rjButton3
@@ -787,7 +761,7 @@
             this.rjButton3.ForeColor = System.Drawing.Color.White;
             this.rjButton3.Image = global::formLogin.Properties.Resources.icons8_invoice_242;
             this.rjButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjButton3.Location = new System.Drawing.Point(39, 345);
+            this.rjButton3.Location = new System.Drawing.Point(39, 338);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(523, 43);
             this.rjButton3.TabIndex = 23;
@@ -797,24 +771,10 @@
             this.rjButton3.UseVisualStyleBackColor = false;
             this.rjButton3.Click += new System.EventHandler(this.iconBtn_HoaDon_Click);
             // 
-            // iconPicLoad
-            // 
-            this.iconPicLoad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPicLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.iconPicLoad.IconChar = FontAwesome.Sharp.IconChar.Sync;
-            this.iconPicLoad.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.iconPicLoad.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPicLoad.Location = new System.Drawing.Point(12, 16);
-            this.iconPicLoad.Name = "iconPicLoad";
-            this.iconPicLoad.Size = new System.Drawing.Size(49, 32);
-            this.iconPicLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconPicLoad.TabIndex = 17;
-            this.iconPicLoad.TabStop = false;
-            this.iconPicLoad.Click += new System.EventHandler(this.iconPicLoad_Click);
-            // 
             // cbbDanhMuc
             // 
             this.cbbDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.cbbDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbbDanhMuc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbDanhMuc.ForeColor = System.Drawing.Color.White;
             this.cbbDanhMuc.FormattingEnabled = true;
@@ -824,15 +784,39 @@
             this.cbbDanhMuc.TabIndex = 19;
             this.cbbDanhMuc.SelectedIndexChanged += new System.EventHandler(this.cbbDanhMuc_SelectedIndexChanged);
             // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 19;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.rjButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Image = global::formLogin.Properties.Resources.icons8_refresh_30;
+            this.rjButton2.Location = new System.Drawing.Point(18, 10);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(53, 37);
+            this.rjButton2.TabIndex = 44;
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.iconPicLoad_Click);
+            // 
             // formGioHang
             // 
             this.AcceptButton = this.btn_Search;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1527, 845);
+            this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.cbbDanhMuc);
             this.Controls.Add(this.btn_Search);
-            this.Controls.Add(this.iconPicLoad);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.panel1);
@@ -863,7 +847,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmr_KhuyenMai)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicLoad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -892,7 +875,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaBan;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconPictureBox iconPicLoad;
         private CustomControls.RJControls.RJButton btn_Search;
         private System.Windows.Forms.Label label13;
         private CustomControls.RJControls.RJButton btn_HoanTac;

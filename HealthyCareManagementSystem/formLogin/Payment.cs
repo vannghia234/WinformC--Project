@@ -32,7 +32,7 @@ namespace formLogin
         private double customerMoney = 0;
         private void iconPic_Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
 
         }
 
@@ -91,6 +91,13 @@ namespace formLogin
 
         }
 
-       
+        private void Payment_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr =  MessageBox.Show("bạn có muốn thoát không?", "thông báo", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

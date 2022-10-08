@@ -22,7 +22,7 @@ namespace formLogin
             progressBar1.Value = progressBar1.Value + 5;
             if(progressBar1.Value > 99)
             {
-                formQuanLy ql = new formQuanLy();
+                formTaiKhoanQL ql = new formTaiKhoanQL();
                 this.Hide();
                 ql.Show();
                 timer1.Enabled = false;

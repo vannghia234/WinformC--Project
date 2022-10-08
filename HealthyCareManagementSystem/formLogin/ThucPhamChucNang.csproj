@@ -73,6 +73,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassProvider\DataProvider.cs" />
+    <Compile Include="FormQLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLNV.designer.cs">
+      <DependentUpon>FormQLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNCC.designer.cs">
+      <DependentUpon>formNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCTHD.designer.cs">
+      <DependentUpon>formCTHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet_load\GetInvoice.cs">
       <DependentUpon>GetInvoice.xsd</DependentUpon>
     </Compile>
@@ -80,6 +98,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GetInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formHoaDon.Designer.cs">
+      <DependentUpon>formHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSanPham.designer.cs">
+      <DependentUpon>formSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="formDangNhap.cs">
       <SubType>Form</SubType>
@@ -99,11 +129,11 @@
     <Compile Include="formKhachHang.designer.cs">
       <DependentUpon>formKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="formNV.cs">
+    <Compile Include="formTaiKhoanNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formNV.Designer.cs">
-      <DependentUpon>formNV.cs</DependentUpon>
+    <Compile Include="formTaiKhoanNV.Designer.cs">
+      <DependentUpon>formTaiKhoanNV.cs</DependentUpon>
     </Compile>
     <Compile Include="formProgressBarNV.cs">
       <SubType>Form</SubType>
@@ -111,11 +141,11 @@
     <Compile Include="formProgressBarNV.Designer.cs">
       <DependentUpon>formProgressBarNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="formQuanLy.cs">
+    <Compile Include="formTaiKhoanQL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formQuanLy.Designer.cs">
-      <DependentUpon>formQuanLy.cs</DependentUpon>
+    <Compile Include="formTaiKhoanQL.Designer.cs">
+      <DependentUpon>formTaiKhoanQL.cs</DependentUpon>
     </Compile>
     <Compile Include="formGioHang.cs">
       <SubType>Form</SubType>
@@ -189,6 +219,21 @@
     <Compile Include="thongKe.Designer.cs">
       <DependentUpon>thongKe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormQLNV.resx">
+      <DependentUpon>FormQLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNCC.resx">
+      <DependentUpon>formNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCTHD.resx">
+      <DependentUpon>formCTHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formHoaDon.resx">
+      <DependentUpon>formHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSanPham.resx">
+      <DependentUpon>formSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formDangNhap.resx">
       <DependentUpon>formDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,14 +243,14 @@
     <EmbeddedResource Include="formKhachHang.resx">
       <DependentUpon>formKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formNV.resx">
-      <DependentUpon>formNV.cs</DependentUpon>
+    <EmbeddedResource Include="formTaiKhoanNV.resx">
+      <DependentUpon>formTaiKhoanNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formProgressBarNV.resx">
       <DependentUpon>formProgressBarNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formQuanLy.resx">
-      <DependentUpon>formQuanLy.cs</DependentUpon>
+    <EmbeddedResource Include="formTaiKhoanQL.resx">
+      <DependentUpon>formTaiKhoanQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formGioHang.resx">
       <DependentUpon>formGioHang.cs</DependentUpon>
@@ -231,7 +276,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report123.rdlc" />
-    <EmbeddedResource Include="ReportHD.rdlc" />
     <EmbeddedResource Include="reportView.resx">
       <DependentUpon>reportView.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +471,8 @@
     <None Include="Resources\healthy.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-view-30.png" />
+    <None Include="Resources\icons8-uninstalling-updates-30.png" />
     <None Include="Resources\graph.png" />
     <None Include="Resources\icons8-chart-30.png" />
     <None Include="Resources\icons8-chart-32.png" />
@@ -449,10 +495,19 @@
     <None Include="Resources\Natural Care Logo.png" />
     <None Include="Resources\1.png" />
     <None Include="Resources\2.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\icons8-add-30.png" />
+    <None Include="Resources\icons8-add-301.png" />
+    <None Include="Resources\22.png" />
     <Content Include="Resources\icons8-add-32.png" />
     <Content Include="Resources\icons8-close-32.png" />
+    <None Include="Resources\icons8-delete-30.png" />
     <Content Include="Resources\icons8-delete-32.png" />
+    <None Include="Resources\icons8-refresh-30.png" />
+    <None Include="Resources\icons8-save-30.png" />
     <Content Include="Resources\icons8-save-32.png" />
+    <None Include="Resources\icons8-search-48.png" />
+    <None Include="Resources\icons8-search-30.png" />
     <Content Include="Resources\icons8-show-non-hidden-views-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -31,10 +31,10 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblAnnount = new System.Windows.Forms.Label();
             this.lblTilte = new System.Windows.Forms.Label();
-            this.btnTimkiem = new CustomControls.RJControls.RJButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPic_Exit = new FontAwesome.Sharp.IconPictureBox();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnTimkiem = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPic_Exit)).BeginInit();
             this.SuspendLayout();
@@ -62,13 +62,49 @@
             // 
             this.lblTilte.AutoSize = true;
             this.lblTilte.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTilte.ForeColor = System.Drawing.Color.White;
-            this.lblTilte.Location = new System.Drawing.Point(144, 7);
+            this.lblTilte.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTilte.Location = new System.Drawing.Point(136, 5);
             this.lblTilte.Name = "lblTilte";
             this.lblTilte.Size = new System.Drawing.Size(251, 31);
             this.lblTilte.TabIndex = 3;
             this.lblTilte.Text = "Tìm tài khoản của bạn";
             this.lblTilte.Click += new System.EventHandler(this.lblTilte_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.iconPic_Exit);
+            this.panel1.Controls.Add(this.lblTilte);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(503, 43);
+            this.panel1.TabIndex = 4;
+            // 
+            // iconPic_Exit
+            // 
+            this.iconPic_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.iconPic_Exit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPic_Exit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
+            this.iconPic_Exit.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPic_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPic_Exit.IconSize = 35;
+            this.iconPic_Exit.Location = new System.Drawing.Point(468, 0);
+            this.iconPic_Exit.Name = "iconPic_Exit";
+            this.iconPic_Exit.Size = new System.Drawing.Size(35, 43);
+            this.iconPic_Exit.TabIndex = 45;
+            this.iconPic_Exit.TabStop = false;
+            this.iconPic_Exit.Click += new System.EventHandler(this.iconPic_Exit_Click);
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(202, 147);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 17);
+            this.lblError.TabIndex = 5;
             // 
             // btnTimkiem
             // 
@@ -89,41 +125,6 @@
             this.btnTimkiem.TextColor = System.Drawing.Color.White;
             this.btnTimkiem.UseVisualStyleBackColor = false;
             this.btnTimkiem.Click += new System.EventHandler(this.rjButton1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.iconPic_Exit);
-            this.panel1.Controls.Add(this.lblTilte);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 43);
-            this.panel1.TabIndex = 4;
-            // 
-            // iconPic_Exit
-            // 
-            this.iconPic_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.iconPic_Exit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPic_Exit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
-            this.iconPic_Exit.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconPic_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPic_Exit.Location = new System.Drawing.Point(471, 0);
-            this.iconPic_Exit.Name = "iconPic_Exit";
-            this.iconPic_Exit.Size = new System.Drawing.Size(32, 32);
-            this.iconPic_Exit.TabIndex = 45;
-            this.iconPic_Exit.TabStop = false;
-            this.iconPic_Exit.Click += new System.EventHandler(this.iconPic_Exit_Click);
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(183, 147);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 17);
-            this.lblError.TabIndex = 5;
             // 
             // formQuenMatKhau
             // 

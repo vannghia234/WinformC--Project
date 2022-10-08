@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class formNV : Form
+    public partial class formTaiKhoanNV : Form
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
-        public formNV()
+        public formTaiKhoanNV()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();

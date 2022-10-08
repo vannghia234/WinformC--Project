@@ -1,6 +1,6 @@
 ﻿namespace formLogin
 {
-    partial class formNV
+    partial class formTaiKhoanNV
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formNV));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formTaiKhoanNV));
             this.lbl_ShopName = new System.Windows.Forms.Label();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();

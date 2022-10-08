@@ -94,7 +94,7 @@ namespace formLogin
 
         private void iconPic_Exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }
