@@ -435,7 +435,7 @@
             // 
             // iconPic_Hide
             // 
-            this.iconPic_Hide.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.iconPic_Hide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
             this.iconPic_Hide.ForeColor = System.Drawing.Color.Black;
             this.iconPic_Hide.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.iconPic_Hide.IconColor = System.Drawing.Color.Black;
@@ -449,7 +449,7 @@
             // 
             // iconPic_Exit
             // 
-            this.iconPic_Exit.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.iconPic_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
             this.iconPic_Exit.ForeColor = System.Drawing.Color.Black;
             this.iconPic_Exit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.iconPic_Exit.IconColor = System.Drawing.Color.Black;

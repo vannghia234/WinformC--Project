@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace formLogin
 {
-    public partial class thongKe : Form
+    public partial class formThongKe : Form
     {
-        public thongKe()
+        public formThongKe()
         {
             InitializeComponent();
         }
@@ -20,19 +20,22 @@ namespace formLogin
         private void thongKe_Load(object sender, EventArgs e)
         {
             DataTable dt = ClassProvider.dataProvider.Instance.GetDataTableByProcedure("TKDT_NAM");
-            chart1.DataSource = dt;
             chart1.Series["DoanhThu"].XValueMember = "THANG";
             chart1.Series["DoanhThu"].YValueMembers = "DOANHTHU";
-            //
+            chart1.DataSource = dt;
+
+
             DataTable dtb = ClassProvider.dataProvider.Instance.GetDataTableByProcedure("TKSLHD");
-            chart2.DataSource = dtb;
             chart2.Series["SoHoaDon"].XValueMember = "THANG";
             chart2.Series["SoHoaDon"].YValueMembers = "SOLUONGHD";
-            //
-            DataTable c3 = ClassProvider.dataProvider.Instance.GetDataTableByProcedure("TKDT_NAM");
-            chart3.DataSource = dt;
-            chart3.Series["DoanhThu"].XValueMember = "THANG";
-            chart3.Series["DoanhThu"].YValueMembers = "DOANHTHU";
+            chart2.DataSource = dtb;
+
+
+            DataTable c3 = ClassProvider.dataProvider.Instance.GetDataTableByProcedure("GET_TOP5KH");
+            chart3.DataSource = c3;
+            chart3.Series["KhachHang"].XValueMember = "MAKH";
+            chart3.Series["KhachHang"].YValueMembers = "DoanhThu";
+
             DataTable doanhthudata = ClassProvider.dataProvider.Instance.GetDataTableByProcedure("doanhThuData");
             dtgvDoanhThu.DataSource = doanhthudata;
         }

@@ -16,7 +16,8 @@ namespace formLogin
     {
         private DataTable dt = new DataTable();
         private double total = 0;
-        public static string maHD = "";
+        public static string maHD;
+        public static float tongtien;
 
         public formGioHang()
         {
@@ -51,6 +52,7 @@ namespace formLogin
             nmr_Amount.Value = 1;
         }
         // load sản phẩm lên
+
         private void FormHoaDon_Load(object sender, EventArgs e)
         {
 
@@ -76,7 +78,11 @@ namespace formLogin
 
 
         }
-
+        private void loadProduct()
+        {
+            DataTable dtble =  ClassProvider.dataProvider.Instance.GetDataTableByProcedure("GET_PRODUCT");
+            dtgv_Product.DataSource = dtble;
+        }
         private void loadDataToColection()
         {
             AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
@@ -223,21 +229,30 @@ namespace formLogin
             txt_HoaDon.Clear();
             txt_TotalPrice.Text = "0";
             nmr_KhuyenMai.Value = 0;
+            nmr_Amount.Value = 0;
             // clear dtgv cart
             dtgv_Cart.Rows.Clear();
         }
         private void iconPicLoad_Click(object sender, EventArgs e)
         {
-            dtgv_Product.DataSource = dt;
+            //dtgv_Product.DataSource = dt;
+            loadProduct();
 
 
         }
         // tìm kiếm datagridview dùng rowfilter dataview
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            DataView data = new DataView(dt);
-            data.RowFilter = String.Format("TENSP like '%{0}%' or MASP like '%{1}%'", txt_Search.Text, txt_Search.Text);
-            dtgv_Product.DataSource = data;
+            try
+            {
+                DataView data = new DataView(dt);
+                data.RowFilter = String.Format("TENSP like '%{0}%' or MASP like '%{1}%'", txt_Search.Text, txt_Search.Text);
+                dtgv_Product.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
 
@@ -268,6 +283,7 @@ namespace formLogin
         // xử lý thanh toán hóa đơn + form thanh toán tiền mặt
         private void rjButton2_Click(object sender, EventArgs e)
         {
+            tongtien = float.Parse(txt_TotalPrice.Text);
             maHD = txt_HoaDon.Text;
             string ngay = dtpk_NgayLap.Value.ToString("yyyy/MM/dd");
 
@@ -324,8 +340,10 @@ namespace formLogin
 
                 MessageBox.Show(ex.Message);
             }
-            Payment pm = new Payment(total, maHD, int.Parse(nmr_KhuyenMai.Value.ToString()));
-            pm.ShowDialog();
+            //Payment pm = new Payment(total, maHD, int.Parse(nmr_KhuyenMai.Value.ToString()));
+            //pm.ShowDialog();
+            formLoaiThanhToan loaiThanhToan = new formLoaiThanhToan();
+            loaiThanhToan.ShowDialog();
             total = 0;
             try
             {
@@ -388,9 +406,9 @@ namespace formLogin
 
         }
 
+        private void dtgv_Product_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-       
-
-       
+        }
     }
 }

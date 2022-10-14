@@ -366,6 +366,7 @@
             this.dtgv_Product.Size = new System.Drawing.Size(888, 335);
             this.dtgv_Product.TabIndex = 0;
             this.dtgv_Product.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_Product_CellClick);
+            this.dtgv_Product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_Product_CellContentClick);
             // 
             // panel4
             // 
@@ -773,10 +774,11 @@
             // 
             // cbbDanhMuc
             // 
-            this.cbbDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.cbbDanhMuc.BackColor = System.Drawing.Color.White;
+            this.cbbDanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbbDanhMuc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbDanhMuc.ForeColor = System.Drawing.Color.White;
+            this.cbbDanhMuc.ForeColor = System.Drawing.Color.Black;
             this.cbbDanhMuc.FormattingEnabled = true;
             this.cbbDanhMuc.Location = new System.Drawing.Point(86, 16);
             this.cbbDanhMuc.Name = "cbbDanhMuc";

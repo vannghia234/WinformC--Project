@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QUANLY_BEAUTY_HEALTHDataSet1" targetNamespace="http://tempuri.org/QUANLY_BEAUTY_HEALTHDataSet1.xsd" xmlns:mstns="http://tempuri.org/QUANLY_BEAUTY_HEALTHDataSet1.xsd" xmlns="http://tempuri.org/QUANLY_BEAUTY_HEALTHDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QUANLY_BEAUTY_HEALTHConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QUANLY_BEAUTY_HEALTHConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.formLogin.Properties.Settings.GlobalReference.Default.QUANLY_BEAUTY_HEALTHConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TAIKHOANTableAdapter" GeneratorDataComponentClassName="TAIKHOANTableAdapter" Name="TAIKHOAN" UserDataComponentName="TAIKHOANTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QUANLY_BEAUTY_HEALTHConnectionString (Settings)" DbObjectName="QUANLY_BEAUTY_HEALTH.dbo.TAIKHOAN" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MALOAI FROM dbo.TAIKHOAN</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MALOAI" DataSetColumn="MALOAI" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QUANLY_BEAUTY_HEALTHDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QUANLY_BEAUTY_HEALTHDataSet1" msprop:Generator_DataSetName="QUANLY_BEAUTY_HEALTHDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TAIKHOAN" msprop:Generator_RowEvHandlerName="TAIKHOANRowChangeEventHandler" msprop:Generator_RowDeletedName="TAIKHOANRowDeleted" msprop:Generator_RowDeletingName="TAIKHOANRowDeleting" msprop:Generator_RowEvArgName="TAIKHOANRowChangeEvent" msprop:Generator_TablePropName="TAIKHOAN" msprop:Generator_RowChangedName="TAIKHOANRowChanged" msprop:Generator_RowChangingName="TAIKHOANRowChanging" msprop:Generator_TableClassName="TAIKHOANDataTable" msprop:Generator_RowClassName="TAIKHOANRow" msprop:Generator_TableVarName="tableTAIKHOAN" msprop:Generator_UserTableName="TAIKHOAN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MALOAI" msprop:Generator_ColumnPropNameInRow="MALOAI" msprop:Generator_ColumnPropNameInTable="MALOAIColumn" msprop:Generator_ColumnVarNameInTable="columnMALOAI" msprop:Generator_UserColumnName="MALOAI" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

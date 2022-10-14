@@ -70,9 +70,45 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassProvider\DataProvider.cs" />
+    <Compile Include="formLoaiThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLoaiThanhToan.Designer.cs">
+      <DependentUpon>formLoaiThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNhapKho.designer.cs">
+      <DependentUpon>formNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTaiKhoan.designer.cs">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formThanhToanMomo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formThanhToanMomo.Designer.cs">
+      <DependentUpon>formThanhToanMomo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formThongTinTaiKhoan.designer.cs">
+      <DependentUpon>formThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,17 +195,17 @@
     <Compile Include="formQuenMatKhau.Designer.cs">
       <DependentUpon>formQuenMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="formTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formTaiKhoan.designer.cs">
-      <DependentUpon>formTaiKhoan.cs</DependentUpon>
-    </Compile>
     <Compile Include="formXacNhanQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formXacNhanQuenMatKhau.Designer.cs">
       <DependentUpon>formXacNhanQuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formKho.designer.cs">
+      <DependentUpon>formKho.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>HoaDon.xsd</DependentUpon>
@@ -204,6 +240,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QUANLY_BEAUTY_HEALTHDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLY_BEAUTY_HEALTHDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLY_BEAUTY_HEALTHDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="reportView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,12 +264,27 @@
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="thongKe.cs">
+    <Compile Include="formThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="thongKe.Designer.cs">
-      <DependentUpon>thongKe.cs</DependentUpon>
+    <Compile Include="formThongKe.Designer.cs">
+      <DependentUpon>formThongKe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="formLoaiThanhToan.resx">
+      <DependentUpon>formLoaiThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNhapKho.resx">
+      <DependentUpon>formNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTaiKhoan.resx">
+      <DependentUpon>formTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formThanhToanMomo.resx">
+      <DependentUpon>formThanhToanMomo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formThongTinTaiKhoan.resx">
+      <DependentUpon>formThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLNV.resx">
       <DependentUpon>FormQLNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,11 +327,11 @@
     <EmbeddedResource Include="formQuenMatKhau.resx">
       <DependentUpon>formQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formTaiKhoan.resx">
-      <DependentUpon>formTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formXacNhanQuenMatKhau.resx">
       <DependentUpon>formXacNhanQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formKho.resx">
+      <DependentUpon>formKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
@@ -279,8 +345,8 @@
     <EmbeddedResource Include="reportView.resx">
       <DependentUpon>reportView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="thongKe.resx">
-      <DependentUpon>thongKe.cs</DependentUpon>
+    <EmbeddedResource Include="formThongKe.resx">
+      <DependentUpon>formThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -332,6 +398,39 @@
     </None>
     <None Include="QUANLY_BEAUTY_HEALTHDataSet.xss">
       <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet1.xsc">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLY_BEAUTY_HEALTHDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet1.xss">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet2.xsc">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLY_BEAUTY_HEALTHDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet2.xss">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet3.xsc">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLY_BEAUTY_HEALTHDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLY_BEAUTY_HEALTHDataSet3.xss">
+      <DependentUpon>QUANLY_BEAUTY_HEALTHDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Resources\user.png" />
   </ItemGroup>
@@ -471,6 +570,13 @@
     <None Include="Resources\healthy.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\MoMo_Logo1.png" />
+    <None Include="Resources\MoMo_Logo.png" />
+    <None Include="Resources\momo.ico" />
+    <None Include="Resources\MoMo_Logo.bmp" />
+    <None Include="Resources\square-8c08a00f550e40a2efafea4a005b1232.png" />
+    <None Include="Resources\icons8-uninstalling-updates-301.png" />
+    <None Include="Resources\icons8-warehouse-30.png" />
     <None Include="Resources\icons8-view-30.png" />
     <None Include="Resources\icons8-uninstalling-updates-30.png" />
     <None Include="Resources\graph.png" />
@@ -499,15 +605,24 @@
     <None Include="Resources\icons8-add-30.png" />
     <None Include="Resources\icons8-add-301.png" />
     <None Include="Resources\22.png" />
+    <None Include="Resources\icons8-add-302.png" />
+    <None Include="Resources\111-1111300_computer-icons-money-vector-graphics-clip-art-payment.png" />
+    <None Include="Resources\cash-payment-icon-5.png" />
     <Content Include="Resources\icons8-add-32.png" />
+    <None Include="Resources\icons8-change-user-30.png" />
+    <None Include="Resources\icons8-change-user-301.png" />
     <Content Include="Resources\icons8-close-32.png" />
     <None Include="Resources\icons8-delete-30.png" />
+    <None Include="Resources\icons8-customer-301.png" />
     <Content Include="Resources\icons8-delete-32.png" />
     <None Include="Resources\icons8-refresh-30.png" />
     <None Include="Resources\icons8-save-30.png" />
+    <None Include="Resources\icons8-features-list-30.png" />
+    <None Include="Resources\icons8-save-301.png" />
     <Content Include="Resources\icons8-save-32.png" />
     <None Include="Resources\icons8-search-48.png" />
     <None Include="Resources\icons8-search-30.png" />
+    <None Include="Resources\icons8-search-301.png" />
     <Content Include="Resources\icons8-show-non-hidden-views-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

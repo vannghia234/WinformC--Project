@@ -52,7 +52,7 @@
             this.Controls.Add(this.rp1);
             this.Name = "reportView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "reportView";
+            this.Text = "Thông tin hóa đơn";
             this.Load += new System.EventHandler(this.reportView_Load);
             this.ResumeLayout(false);
 

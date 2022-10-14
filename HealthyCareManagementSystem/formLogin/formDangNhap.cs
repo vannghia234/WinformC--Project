@@ -13,10 +13,13 @@ namespace formLogin
 {
     public partial class formDangNhap : Form
     {
+        public static string userName;
+        public static string password;
         public formDangNhap()
         {
             InitializeComponent();
         }
+
 
         private void tbAccount_MouseClick(object sender, MouseEventArgs e)
         {
@@ -216,6 +219,8 @@ namespace formLogin
         }
         private void bt_Login_Click(object sender, EventArgs e)
         {
+            userName = txt_Account.Text;
+            password = txt_Password.Text;
             lbl_Error.Text = "";
             lbl_ErrorPass.Text = "";
 

@@ -127,6 +127,7 @@ namespace formLogin
             ActiveButton(sender, MyColors.blue);
 
             leftBorderBtn.Visible = false;
+            addForm(new FormQLNV());
 
         }
 
@@ -142,9 +143,8 @@ namespace formLogin
         private void btn_Account_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.yellow);
-            addForm(new formTaiKhoan());
             leftBorderBtn.Visible = false;
-
+            addForm(new formTaiKhoan());
 
         }
 
@@ -161,7 +161,7 @@ namespace formLogin
             ActiveButton(sender, MyColors.green);
             pannelQuanLyDoiTuong.Visible = false;
 
-            addForm(new thongKe());
+            addForm(new formThongKe());
 
         }
 
@@ -169,6 +169,7 @@ namespace formLogin
         {
             ActiveButton(sender, MyColors.yellow);
             pannelQuanLyDoiTuong.Visible = false;
+            addForm(new formNhapKho());
 
         }
 
@@ -227,6 +228,14 @@ namespace formLogin
         {
             addForm(new formHome());
             reset();
+        }
+
+        private void btnKhoHang_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, MyColors.green);
+
+            pannelQuanLyDoiTuong.Visible = true;
+            addForm(new formKho());
         }
     }
 }

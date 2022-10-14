@@ -117,12 +117,14 @@ namespace formLogin
         }
         private void btnadd_Click(object sender, EventArgs e)
         {
+            txtmahd.Enabled = false;
+            panel1.Enabled = true;
             try
             {
 
                 if (cbbmanv.Text == "")
                 {
-                    MessageBox.Show("Bạn cần nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Bạn cần nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cbbmanv.Focus();
 
                 }
@@ -266,6 +268,7 @@ namespace formLogin
 
         private void btnreset_Click(object sender, EventArgs e)
         {
+            panel1.Enabled = false;
             btnadd.Enabled = true;
             btnxoa.Enabled = false;
             btnsua.Enabled = false;

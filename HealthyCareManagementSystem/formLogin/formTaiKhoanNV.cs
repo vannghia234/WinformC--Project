@@ -91,17 +91,18 @@ namespace formLogin
 
 
         }
-       
+
 
         private void btn_HomePage_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.red);
-         
+
         }
 
         private void btn_Products_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.yellow);
+            addForm(new formSanPham());
 
         }
 
@@ -114,18 +115,20 @@ namespace formLogin
         private void btn_Customer_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.blue);
-
+            addForm(new formKhachHang());
         }
 
         private void btn_Account_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.red);
+            addForm(new formThongTinTaiKhoan());
 
         }
 
         private void btn_NCC_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.yellow);
+            addForm(new formNCC());
 
         }
 
@@ -138,13 +141,17 @@ namespace formLogin
         private void btn_Kho_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.blue);
+            addForm(new formNhapKho());
 
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, MyColors.red);
-            this.Hide();
+            if(MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
             //FormLogin fl = new FormLogin();
             //fl.Show();
 
@@ -154,6 +161,8 @@ namespace formLogin
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             reset();
+            addForm(new formHome());
+
         }
 
         private void iconBtnExit_Click(object sender, EventArgs e)
@@ -171,7 +180,7 @@ namespace formLogin
             ActiveButton(sender, MyColors.blue);
 
         }
-         private void addForm(Form form)
+        private void addForm(Form form)
         {
             this.panel_Content.Controls.Clear();
             form.TopLevel = false;
@@ -181,11 +190,13 @@ namespace formLogin
         }
         private void btn_Cart_Click(object sender, EventArgs e)
         {
-            if (panel_Content.Controls.Count == 0)
-            {
-                addForm(new formGioHang());
-            }
+            addForm(new formGioHang());
             ActiveButton(sender, MyColors.yellow);
+        }
+
+        private void formTaiKhoanNV_Load(object sender, EventArgs e)
+        {
+            addForm(new formHome());
         }
     }
 }

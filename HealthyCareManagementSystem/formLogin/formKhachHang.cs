@@ -16,11 +16,10 @@ namespace formLogin
 
         DataTable dataTable = new DataTable("KHACHHANG");
         // Tạo kết nối
-        String sqlconnectstring = @"Data Source=DAICA-ZORO\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
+        String sqlconnectstring = "Data Source=DAICA-ZORO\\MSSQLSERVER01;Initial Catalog=QUANLY_BEAUTY_HEALTH;Integrated Security=True";
         SqlConnection connection;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataSet dataSet = new DataSet();
-        DataTable dtb = new DataTable();
 
 
 
@@ -86,15 +85,25 @@ namespace formLogin
         {
             dataTable.Rows.Clear();
             adapter.Fill(dataSet);
-            adapter.Fill(dtb);
         }
 
         private void fromCustomer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG' table. You can move, or remove it, as needed.
-            //this.kHACHHANGTableAdapter.Fill(this.qUANLY_BEAUTY_HEALTHDataSet.KHACHHANG);
+            pnlNhap.Enabled = false;
+            btn_Add.Enabled = true;
+            btn_Delete.Enabled = false;
+            btnFix.Enabled = false;
+            btnSave.Enabled = false;
             LoadDataTable();
             dgvCustomers.DataSource = dataTable.DefaultView;
+        }
+
+        private void Reset()
+        {
+            txtCustomersPhoneNumber.Text = "";
+            txt_CustomerAddress.Text = "";
+            txt_CustomerID.Text = "";
+            txt_CustomerName.Text = "";
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
@@ -117,17 +126,31 @@ namespace formLogin
         {
             try
             {
-                DialogResult dg = MessageBox.Show("Bạn có muốn lưu lại không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (dg == DialogResult.OK)
+                if (txtCustomersPhoneNumber.Text.Length == 10)
                 {
+                    btnSave.Enabled = false;
+                    btnFix.Enabled = false;
+                    btn_Delete.Enabled = false;
+                    btn_Add.Enabled = false;
+                    DialogResult dg = MessageBox.Show("Bạn có muốn lưu lại không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dg == DialogResult.OK)
+                    {
 
-                    adapter.Update(dataSet);
+                        adapter.Update(dataSet);
 
-                    dataTable.Rows.Clear();
+                        dataTable.Rows.Clear();
 
-                    adapter.Fill(dataSet);
+                        adapter.Fill(dataSet);
+                        MessageBox.Show("Lưu thành công", "Thông báo");
+
+                    }
 
                 }
+                else
+                    MessageBox.Show("Bạn cần nhập SĐT lớn hơn 10");
+                
+
+                
             }
             catch (Exception ex)
             {
@@ -140,6 +163,7 @@ namespace formLogin
         {
             try
             {
+                btnSave.Enabled = true;
                 foreach (DataGridViewRow item in this.dgvCustomers.SelectedRows)
                 {
                     DialogResult dg = MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -161,6 +185,12 @@ namespace formLogin
         {
             try
             {
+                Reset();
+                pnlNhap.Enabled = false;
+                btn_Add.Enabled = true;
+                btn_Delete.Enabled = false;
+                btnFix.Enabled = false;
+                btnSave.Enabled = false;
                 LoadDataTable();
                 dgvCustomers.DataSource = dataTable.DefaultView;
             }
@@ -197,15 +227,7 @@ namespace formLogin
                 txtCustomersPhoneNumber.Focus();
                 return false;
             }
-            else if (txt_CustomerName.Text == "" && txt_CustomerAddress.Text == "" && txtCustomersPhoneNumber.Text == "" && txt_CustomerID.Text == "")
-            {
-                MessageBox.Show("Vui lòng điền thông tin khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_CustomerID.Focus();
-                txt_CustomerName.Focus();
-                txt_CustomerAddress.Focus();
-                txtCustomersPhoneNumber.Focus();
-                return false;
-            }
+
             return true;
         }
 
@@ -221,12 +243,25 @@ namespace formLogin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            btnSave.Enabled = false;
             try
             {
-                if (CheckInfo())
+                if (pnlNhap.Enabled == false)
                 {
-                    AddValue();
+                    pnlNhap.Enabled = true;
+                    return;
                 }
+                else
+                {
+                    if (CheckInfo())
+                    {
+                        AddValue();
+                        btn_Add.Enabled = false;
+                        btnSave.Enabled = true;
+
+                    }
+                }
+                
             }
             catch (Exception ex)
             {
@@ -245,6 +280,10 @@ namespace formLogin
                 txt_CustomerName.Text = Convert.ToString(row.Cells["Tên Khách Hàng"].Value);
                 txt_CustomerAddress.Text = Convert.ToString(row.Cells["Địa Chỉ"].Value);
                 txtCustomersPhoneNumber.Text = Convert.ToString(row.Cells["Số Điện Thoại"].Value);
+
+                btn_Add.Enabled = false;
+                btnFix.Enabled = true;
+                btn_Delete.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -253,16 +292,72 @@ namespace formLogin
 
         }
 
-        private void txt_Search_TextChanged(object sender, EventArgs e)
+        private void FixValue()
         {
-            
+            try
+            {
+
+
+                pannel1.Enabled = true;
+                int VT = dgvCustomers.CurrentCell.RowIndex;
+                DataRow rowedit = dataTable.Rows[VT];
+                rowedit["Mã Khách Hàng"] = txt_CustomerID.Text;
+                rowedit["Tên Khách Hàng"] = txt_CustomerName.Text;
+                rowedit["Địa Chỉ"] = txt_CustomerAddress.Text;
+                rowedit["Số Điện Thoại"] = txtCustomersPhoneNumber.Text;
+                    
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            btnSave.Enabled = true;
+            pnlNhap.Enabled = true;
+            FixValue();
+        }
+
+        private void txtCustomersPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
-        {       
-            //DataView dv = new DataView(dtb);
-            //dv.RowFilter = String.Format("MaKH like '%{0}%'", txt_Search.Text);
-            //dgvCustomers.DataSource = dv;
+        {
+            try
+            {
+                DataView data = new DataView(dataTable);
+                data.RowFilter = String.Format("[Mã Khách Hàng] like '%{0}%' or [Tên Khách Hàng] like '%{1}%'", txt_Search.Text, txt_Search.Text);
+                dgvCustomers.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            dgvCustomers.DataSource = dataTable.DefaultView;
+
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

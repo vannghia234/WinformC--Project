@@ -377,14 +377,14 @@
             // 
             // panel_Content
             // 
-            this.panel_Content.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel_Content.BackColor = System.Drawing.Color.White;
             this.panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Content.Location = new System.Drawing.Point(263, 60);
             this.panel_Content.Name = "panel_Content";
             this.panel_Content.Size = new System.Drawing.Size(1512, 843);
             this.panel_Content.TabIndex = 5;
             // 
-            // formNV
+            // formTaiKhoanNV
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1775, 903);
@@ -393,9 +393,10 @@
             this.Controls.Add(this.panel_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "formNV";
+            this.Name = "formTaiKhoanNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNV";
+            this.Load += new System.EventHandler(this.formTaiKhoanNV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

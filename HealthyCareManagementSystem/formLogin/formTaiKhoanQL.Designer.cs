@@ -34,6 +34,7 @@
             this.btn_Kho = new FontAwesome.Sharp.IconButton();
             this.btn_Chart = new FontAwesome.Sharp.IconButton();
             this.pannelQuanLyDoiTuong = new System.Windows.Forms.Panel();
+            this.btnKhoHang = new FontAwesome.Sharp.IconButton();
             this.btn_Account = new FontAwesome.Sharp.IconButton();
             this.btn_Product = new FontAwesome.Sharp.IconButton();
             this.btn_NCC = new FontAwesome.Sharp.IconButton();
@@ -113,7 +114,7 @@
             this.btn_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Exit.IconSize = 32;
             this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Exit.Location = new System.Drawing.Point(0, 680);
+            this.btn_Exit.Location = new System.Drawing.Point(0, 738);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Exit.Size = new System.Drawing.Size(263, 60);
@@ -137,7 +138,7 @@
             this.btn_Kho.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Kho.IconSize = 32;
             this.btn_Kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Kho.Location = new System.Drawing.Point(0, 620);
+            this.btn_Kho.Location = new System.Drawing.Point(0, 678);
             this.btn_Kho.Name = "btn_Kho";
             this.btn_Kho.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Kho.Size = new System.Drawing.Size(263, 60);
@@ -161,7 +162,7 @@
             this.btn_Chart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Chart.IconSize = 32;
             this.btn_Chart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Chart.Location = new System.Drawing.Point(0, 560);
+            this.btn_Chart.Location = new System.Drawing.Point(0, 618);
             this.btn_Chart.Name = "btn_Chart";
             this.btn_Chart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btn_Chart.Size = new System.Drawing.Size(263, 60);
@@ -175,6 +176,7 @@
             // pannelQuanLyDoiTuong
             // 
             this.pannelQuanLyDoiTuong.BackColor = System.Drawing.Color.DarkGray;
+            this.pannelQuanLyDoiTuong.Controls.Add(this.btnKhoHang);
             this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Account);
             this.pannelQuanLyDoiTuong.Controls.Add(this.btn_Product);
             this.pannelQuanLyDoiTuong.Controls.Add(this.btn_NCC);
@@ -183,20 +185,44 @@
             this.pannelQuanLyDoiTuong.Dock = System.Windows.Forms.DockStyle.Top;
             this.pannelQuanLyDoiTuong.Location = new System.Drawing.Point(0, 260);
             this.pannelQuanLyDoiTuong.Name = "pannelQuanLyDoiTuong";
-            this.pannelQuanLyDoiTuong.Size = new System.Drawing.Size(263, 300);
+            this.pannelQuanLyDoiTuong.Size = new System.Drawing.Size(263, 358);
             this.pannelQuanLyDoiTuong.TabIndex = 3;
             this.pannelQuanLyDoiTuong.Visible = false;
             // 
+            // btnKhoHang
+            // 
+            this.btnKhoHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnKhoHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKhoHang.FlatAppearance.BorderSize = 0;
+            this.btnKhoHang.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btnKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhoHang.ForeColor = System.Drawing.Color.White;
+            this.btnKhoHang.IconChar = FontAwesome.Sharp.IconChar.Shopware;
+            this.btnKhoHang.IconColor = System.Drawing.Color.White;
+            this.btnKhoHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKhoHang.IconSize = 32;
+            this.btnKhoHang.Location = new System.Drawing.Point(0, 300);
+            this.btnKhoHang.Name = "btnKhoHang";
+            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnKhoHang.Size = new System.Drawing.Size(263, 60);
+            this.btnKhoHang.TabIndex = 25;
+            this.btnKhoHang.Text = "KHO HÀNG";
+            this.btnKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhoHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKhoHang.UseVisualStyleBackColor = false;
+            this.btnKhoHang.Click += new System.EventHandler(this.btnKhoHang_Click);
+            // 
             // btn_Account
             // 
-            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btn_Account.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Account.FlatAppearance.BorderSize = 0;
             this.btn_Account.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
             this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Account.ForeColor = System.Drawing.Color.White;
-            this.btn_Account.IconChar = FontAwesome.Sharp.IconChar.UserPen;
+            this.btn_Account.IconChar = FontAwesome.Sharp.IconChar.UserTie;
             this.btn_Account.IconColor = System.Drawing.Color.White;
             this.btn_Account.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Account.IconSize = 32;
@@ -213,14 +239,14 @@
             // 
             // btn_Product
             // 
-            this.btn_Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btn_Product.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Product.FlatAppearance.BorderSize = 0;
             this.btn_Product.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
             this.btn_Product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Product.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Product.ForeColor = System.Drawing.Color.White;
-            this.btn_Product.IconChar = FontAwesome.Sharp.IconChar.UserPen;
+            this.btn_Product.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
             this.btn_Product.IconColor = System.Drawing.Color.White;
             this.btn_Product.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Product.IconSize = 32;
@@ -237,7 +263,7 @@
             // 
             // btn_NCC
             // 
-            this.btn_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_NCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btn_NCC.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_NCC.FlatAppearance.BorderSize = 0;
             this.btn_NCC.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
@@ -261,7 +287,7 @@
             // 
             // btn_Staff
             // 
-            this.btn_Staff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_Staff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btn_Staff.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Staff.FlatAppearance.BorderSize = 0;
             this.btn_Staff.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
@@ -285,7 +311,7 @@
             // 
             // btn_Customer
             // 
-            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
+            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btn_Customer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Customer.FlatAppearance.BorderSize = 0;
             this.btn_Customer.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(100)))));
@@ -773,7 +799,7 @@
             this.rjButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // formQuanLy
+            // formTaiKhoanQL
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -784,7 +810,7 @@
             this.Controls.Add(this.panel_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "formQuanLy";
+            this.Name = "formTaiKhoanQL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
             this.panel_Menu.ResumeLayout(false);
@@ -846,5 +872,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private FontAwesome.Sharp.IconButton btnKhoHang;
     }
 }

@@ -51,7 +51,7 @@ namespace formLogin
         {
             con = new SqlConnection(ketnoi);
             con.Open();
-            string sanpham = "SELECT * FROM SANPHAM";
+            string sanpham = "SELECT MASP [MÃ SẢN PHẨM], TENSP [TÊN SẢN PHẨM], GIATIEN [GIÁ], DONVITINH [ĐƠN VỊ TÍNH], HANSUDUNG [HSD], SOLUONGTON [SỐ LƯỢNG TỒN], MAKHO [MÃ KHO], MALOAI [MÃ LOẠI] FROM SANPHAM";
             SqlCommand command = new SqlCommand(sanpham, con);
             SqlDataAdapter data = new SqlDataAdapter(command);
             data.Fill(datagb);
@@ -60,7 +60,7 @@ namespace formLogin
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            btnAdd.Enabled = false;
+            btnSave.Enabled = false;
             
             SQL();
             ///
@@ -123,9 +123,11 @@ namespace formLogin
         }
         private void btnreset_Click(object sender, EventArgs e)
         {
+            panel1.Enabled = false;
+            btnSave.Enabled = false;
             btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
-            btnSave.Enabled = true;
+            btnFix.Enabled = false;
+            btn_Add.Enabled = true;
             txtmasp.Enabled = true;
             reset();
         }
@@ -182,41 +184,47 @@ namespace formLogin
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            btnSave.Enabled = true;
+            txtmasp.Text = RandomSP(8);
+
             try
             {
+                if (panel1.Enabled == false)
+                {
+                    panel1.Enabled=true;
+                    return;
+                }
+                else
+                {
+                    if (Kiemtra())
+                    {
+                        btnFix.Enabled = false;
+                        btnDelete.Enabled = false;
+                        con = new SqlConnection(ketnoi);
+                        con.Open();
+                        SqlCommand command = new SqlCommand();
+                        command.CommandText = "INSERT_SANPHAM";
+                        command.Connection = con;
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@MASP", SqlDbType.VarChar).Value = txtmasp.Text;
+                        command.Parameters.Add("@TENSP", SqlDbType.NVarChar).Value = txttensp.Text;
+                        command.Parameters.Add("@GIATIEN", SqlDbType.Money).Value = txtgia.Text;
+                        command.Parameters.Add("@DONVITINH", SqlDbType.NVarChar).Value = txtdvt.Text;
+                        command.Parameters.Add("@HANSUDUNG", SqlDbType.Date).Value = txthsd.Text;
+                        command.Parameters.Add("@SOLUONGTON", SqlDbType.Int).Value = Convert.ToInt32(txtsoluong.Text);
+                        command.Parameters.Add("@MAKHO", SqlDbType.VarChar).Value = cbbmakho.Text;
+                        command.Parameters.Add("@MALOAI", SqlDbType.VarChar).Value = cbbmaloai.Text;
+                        command.ExecuteNonQuery();
+                        con.Close();
+                        loadProduct();
+                        //dtgv_Product.DataSource = datagb;
+                        reset();
+                        MessageBox.Show("thêm thành công", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (txttensp.Text == "")
-                {
-                    MessageBox.Show("Bạn cần nhập tên sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txttensp.Focus();
+                    }
                 }
-                else if (Kiemtra())
-                {
-                    txtmasp.Text = RandomSP(8);
-                    btnUpdate.Enabled = false;
-                    btnDelete.Enabled = false;
-                    con = new SqlConnection(ketnoi);
-                    con.Open();
-                    SqlCommand command = new SqlCommand();
-                    command.CommandText = "INSERT_SANPHAM";
-                    command.Connection = con;
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.Add("@MASP", SqlDbType.VarChar).Value = txtmasp.Text;
-                    command.Parameters.Add("@TENSP", SqlDbType.NVarChar).Value = txttensp.Text;
-                    command.Parameters.Add("@GIATIEN", SqlDbType.Money).Value = txtgia.Text;
-                    command.Parameters.Add("@DONVITINH", SqlDbType.NVarChar).Value = txtdvt.Text;
-                    command.Parameters.Add("@HANSUDUNG", SqlDbType.Date).Value = txthsd.Text;
-                    command.Parameters.Add("@SOLUONGTON", SqlDbType.Int).Value = Convert.ToInt32(txtsoluong.Text);
-                    command.Parameters.Add("@MAKHO", SqlDbType.VarChar).Value = cbbmakho.Text;
-                    command.Parameters.Add("@MALOAI", SqlDbType.VarChar).Value = cbbmaloai.Text;
-                    command.ExecuteNonQuery();
-                    con.Close();
-                    loadProduct();
-                    //dtgv_Product.DataSource = datagb;
-                    reset();
-                    MessageBox.Show("thêm thành công", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
-                }
+                
+                
 
             }
             catch (Exception ex)
@@ -227,10 +235,10 @@ namespace formLogin
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            btnUpdate.Enabled = false;
+            btnFix.Enabled = false;
             txtmasp.Enabled = true;
-            btnSave.Enabled = true;
-            btnAdd.Enabled = false;
+            btn_Add.Enabled = true;
+            btnSave.Enabled = false;
             try
             {
 
@@ -253,6 +261,7 @@ namespace formLogin
                     reset();
                     con.Close();
                     MessageBox.Show("xóa thành công", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    panel1.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -263,10 +272,17 @@ namespace formLogin
 
         private void btntimkiem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DataView dataView = new DataView(datagb);
+                dataView.RowFilter = String.Format("TENSP like '%{0}%' or MASP like '%{1}%'", txt_Search.Text, txt_Search.Text);
+                dtgv_Product.DataSource = dataView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             
-            DataView dataView = new DataView(datagb);
-            dataView.RowFilter = String.Format("TENSP like '%{0}%' or MASP like '%{1}%'", txt_Search.Text, txt_Search.Text);
-            dtgv_Product.DataSource = dataView;
 
 
         }
@@ -335,10 +351,10 @@ namespace formLogin
         {
             try
             {
-                btnAdd.Enabled = true;
-                btnUpdate.Enabled = false;
+                btnSave.Enabled = true;
+                btnFix.Enabled = false;
                 btnDelete.Enabled = false;
-                btnAdd.Enabled = true;
+                btnSave.Enabled = true;
                 DataTable dataTable = (DataTable)dtgv_Product.DataSource;
                 DataRow dataRow = dataTable.NewRow();
                 dataRow[0] = txtmasp.Text;
@@ -375,21 +391,21 @@ namespace formLogin
         {
             try
             {
-                btnAdd.Enabled = false;
                 btnSave.Enabled = false;
+                btn_Add.Enabled = false;
                 txtmasp.Enabled = false;
-                btnUpdate.Enabled = true;
+                btnFix.Enabled = true;
                 btnDelete.Enabled = true;
                 DataGridViewRow row = new DataGridViewRow();
                 row = dtgv_Product.Rows[e.RowIndex];
-                txtmasp.Text = Convert.ToString(row.Cells["MASP"].Value);
-                txttensp.Text = Convert.ToString(row.Cells["TENSP"].Value);
-                txtgia.Text = Convert.ToString(row.Cells["giatien"].Value);
-                txtdvt.Text = Convert.ToString(row.Cells["DONVITINH"].Value);
-                txthsd.Text = Convert.ToString(row.Cells["HANSUDUNG"].Value);
-                txtsoluong.Text = Convert.ToString(row.Cells["SOLUONGTON"].Value);
-                cbbmakho.Text = Convert.ToString(row.Cells["MAKHO"].Value);
-                cbbmaloai.Text = Convert.ToString(row.Cells["MALOAI"].Value);
+                txtmasp.Text = Convert.ToString(row.Cells[0].Value);
+                txttensp.Text = Convert.ToString(row.Cells[1].Value);
+                txtgia.Text = Convert.ToString(row.Cells[2].Value);
+                txtdvt.Text = Convert.ToString(row.Cells[3].Value);
+                txthsd.Text = Convert.ToString(row.Cells[4].Value);
+                txtsoluong.Text = Convert.ToString(row.Cells[5].Value);
+                cbbmakho.Text = Convert.ToString(row.Cells[6].Value);
+                cbbmaloai.Text = Convert.ToString(row.Cells[7].Value);
                 //cbbdanhmuc.Text = Convert.ToString(row.Cells["TENDM"].Value);
             }
             catch (Exception ex)

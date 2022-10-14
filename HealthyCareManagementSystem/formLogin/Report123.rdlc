@@ -139,6 +139,12 @@
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
+                  <TextRun>
+                    <Value> VNĐ</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
@@ -147,7 +153,7 @@
             <Top>3.76888in</Top>
             <Left>5.8in</Left>
             <Height>0.25in</Height>
-            <Width>1.13833in</Width>
+            <Width>1.28in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -851,7 +857,13 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Fields!KHUYENMAI.Value * Sum(Fields!GIABAN.Value, "DataSet2")</Value>
+                    <Value>=First(Fields!KHUYENMAI.Value, "DataSet2") * 0.01 * Sum(Fields!GIABAN.Value, "DataSet2")</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>00 VNĐ</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -864,7 +876,7 @@
             <Top>4.06055in</Top>
             <Left>5.80833in</Left>
             <Height>0.25in</Height>
-            <Width>1.13833in</Width>
+            <Width>1.27167in</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -948,7 +960,13 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
+                    <Value>=Fields!THANHTIEN.Value - (First(Fields!KHUYENMAI.Value, "DataSet2") * 0.01 * Sum(Fields!GIABAN.Value, "DataSet2"))</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>00 VNĐ</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -958,10 +976,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox33</rd:DefaultName>
-            <Top>4.35221in</Top>
+            <Top>4.33833in</Top>
             <Left>5.8in</Left>
             <Height>0.25in</Height>
-            <Width>1.13833in</Width>
+            <Width>1.29666in</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>

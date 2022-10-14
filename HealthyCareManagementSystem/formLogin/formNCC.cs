@@ -68,7 +68,7 @@ namespace formLogin
            
             return true;
         }
-        private string RandomSP(int k)
+        private string RandomNCC(int k)
         {
             string result = "";
             Random random = new Random();
@@ -93,18 +93,21 @@ namespace formLogin
         }
         private void btnadd_Click(object sender, EventArgs e)
         {
+            txtNCC.Enabled = false;
+            panel2.Enabled = true;
             try
             {
+
                 if (txtTenNcc.Text == "" )
                 {
-                    MessageBox.Show("Bạn cần nhập đủ số điện thoại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Bạn cần nhập đủ số điện thoại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtTenNcc.Focus();
                    
                 }else if (Kiemtrathongtin())
                 {
 
-                
-                    txtNCC.Text = RandomSP(8);
+                    
+                    txtNCC.Text = RandomNCC(8);
                     btnxoa.Enabled = false;
                     con = new SqlConnection(sql);
                     con.Open();
@@ -252,6 +255,7 @@ namespace formLogin
         }
         private void btnlammoi_Click(object sender, EventArgs e)
         {
+            panel2.Enabled = false;
             btnsua.Enabled = false;
             btnxoa.Enabled = false;
             btnadd.Enabled = true;
@@ -288,5 +292,7 @@ namespace formLogin
             sqlproc();
 
         }
+
+      
     }
 }
