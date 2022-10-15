@@ -37,7 +37,7 @@
             this.iconBtnExit = new FontAwesome.Sharp.IconPictureBox();
             this.pic_Title = new FontAwesome.Sharp.IconPictureBox();
             this.lbl_ChucVu = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
             this.panel_Logo = new System.Windows.Forms.Panel();
             this.iconBtn_logo = new FontAwesome.Sharp.IconPictureBox();
             this.panel_Menu = new System.Windows.Forms.Panel();
@@ -160,21 +160,21 @@
             this.lbl_ChucVu.TabIndex = 4;
             this.lbl_ChucVu.Text = "Nhân Viên";
             // 
-            // label1
+            // lblFullName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nguyễn Văn Nghĩa";
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(115, 40);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(132, 20);
+            this.lblFullName.TabIndex = 3;
+            this.lblFullName.Text = "Nguyễn Văn Nghĩa";
             // 
             // panel_Logo
             // 
             this.panel_Logo.Controls.Add(this.iconBtn_logo);
             this.panel_Logo.Controls.Add(this.lbl_ChucVu);
-            this.panel_Logo.Controls.Add(this.label1);
+            this.panel_Logo.Controls.Add(this.lblFullName);
             this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Logo.Location = new System.Drawing.Point(0, 0);
             this.panel_Logo.Name = "panel_Logo";
@@ -426,7 +426,7 @@
         private FontAwesome.Sharp.IconPictureBox pic_Title;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_ChucVu;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFullName;
         private FontAwesome.Sharp.IconButton btn_Kho;
         private System.Windows.Forms.Panel panel_Logo;
         private System.Windows.Forms.Panel panel_Menu;

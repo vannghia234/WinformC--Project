@@ -145,7 +145,7 @@ namespace formLogin
             // 
             this.lblKH.AutoSize = true;
             this.lblKH.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKH.Location = new System.Drawing.Point(64, 97);
+            this.lblKH.Location = new System.Drawing.Point(38, 97);
             this.lblKH.Name = "lblKH";
             this.lblKH.Size = new System.Drawing.Size(151, 25);
             this.lblKH.TabIndex = 30;
@@ -155,7 +155,7 @@ namespace formLogin
             // 
             this.lblNV.AutoSize = true;
             this.lblNV.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNV.Location = new System.Drawing.Point(64, 145);
+            this.lblNV.Location = new System.Drawing.Point(38, 145);
             this.lblNV.Name = "lblNV";
             this.lblNV.Size = new System.Drawing.Size(136, 25);
             this.lblNV.TabIndex = 31;

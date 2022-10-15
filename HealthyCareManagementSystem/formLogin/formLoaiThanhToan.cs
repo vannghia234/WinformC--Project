@@ -19,7 +19,7 @@ namespace formLogin
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Payment payment = new Payment();
+            formpayCash payment = new formpayCash();
             payment.ShowDialog();
         }
 

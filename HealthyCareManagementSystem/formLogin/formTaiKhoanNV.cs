@@ -16,12 +16,14 @@ namespace formLogin
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        public static Panel panel;
         public formTaiKhoanNV()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 60);
             panel_Menu.Controls.Add(leftBorderBtn);
+            panel = this.panel_Content;
         }
         private struct MyColors
         {
@@ -150,7 +152,9 @@ namespace formLogin
             ActiveButton(sender, MyColors.red);
             if(MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.Close();
+                formDangNhap form = new formDangNhap();
+                this.Hide();    
+                form.Show();
             }
             //FormLogin fl = new FormLogin();
             //fl.Show();
@@ -197,6 +201,17 @@ namespace formLogin
         private void formTaiKhoanNV_Load(object sender, EventArgs e)
         {
             addForm(new formHome());
+            lblFullName.Text = formDangNhap.fullName;
+            if (formDangNhap.Permit == 1)
+            {
+                lbl_ChucVu.Text = "Quản lý";
+
+            }
+            else
+            {
+                lbl_ChucVu.Text = "Nhân viên";
+
+            }
         }
     }
 }

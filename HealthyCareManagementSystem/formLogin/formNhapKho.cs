@@ -49,14 +49,14 @@ namespace formLogin
         {
             if (cbbMaPhieuGiaoHang.Text == "")
             {
-                MessageBox.Show("Bạn cần nhập tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn cần nhập phiếu giao hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cbbMaPhieuGiaoHang.Focus();
                 return false;
             }
 
             if (cbbMaSanPham.Text == "")
             {
-                MessageBox.Show("Bạn cần nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bạn cần nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cbbMaSanPham.Focus();
                 return false;
             }

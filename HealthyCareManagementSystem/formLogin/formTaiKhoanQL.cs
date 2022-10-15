@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,12 +17,14 @@ namespace formLogin
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        public static Panel panel;
         public formTaiKhoanQL()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 60);
             panel_Menu.Controls.Add(leftBorderBtn);
+            panel = this.panelContent;
         }
         private void addForm(Form form)
         {
@@ -236,6 +239,25 @@ namespace formLogin
 
             pannelQuanLyDoiTuong.Visible = true;
             addForm(new formKho());
+        }
+
+        
+
+        private void formTaiKhoanQL_Load_1(object sender, EventArgs e)
+        {
+            addForm(new formHome());
+            lblNameAcc.Text = formDangNhap.fullName;
+            if(formDangNhap.Permit == 1)
+            {
+                lbl_ChucVu.Text = "Quản lý";
+
+            }
+            else
+            {
+                lbl_ChucVu.Text = "Nhân viên";
+
+            }
+
         }
     }
 }

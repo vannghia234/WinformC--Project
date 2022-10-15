@@ -46,7 +46,7 @@ namespace formLogin
             chart2.DataSource = DSP;
             chart2.Series["SoHoaDon"].XValueMember = "MASP";
             chart2.Series["SoHoaDon"].YValueMembers = "TONGSOLUONG";
-            chart2.Titles[0].Text = "Doanh thu hóa đơn";
+            chart2.Titles[0].Text = "Doanh thu sản phẩm";
 
 
         }
@@ -59,13 +59,21 @@ namespace formLogin
             chart2.DataSource = dtb;
             chart2.Series["SoHoaDon"].XValueMember = "THANG";
             chart2.Series["SoHoaDon"].YValueMembers = "SOLUONGHD";
-            chart2.Titles[0].Text = "Doanh thu sản phẩm";
+            chart2.Titles[0].Text = "Doanh thu hóa đơn";
 
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            DataTable dt = ClassProvider.dataProvider.Instance.GetDataTableByProcedure("TKDT_NAM");
+            chart1.Series["DoanhThu"].XValueMember = "THANG";
+            chart1.Series["DoanhThu"].YValueMembers = "DOANHTHU";
+            chart1.DataSource = dt;
         }
     }
 }

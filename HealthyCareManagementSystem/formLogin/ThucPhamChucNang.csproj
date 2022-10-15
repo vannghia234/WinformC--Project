@@ -216,11 +216,11 @@
       <DependentUpon>HoaDon.xsd</DependentUpon>
     </Compile>
     <Compile Include="MAHOA\PasswordEncryption.cs" />
-    <Compile Include="Payment.cs">
+    <Compile Include="formpayCash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Payment.Designer.cs">
-      <DependentUpon>Payment.cs</DependentUpon>
+    <Compile Include="formpayCash.Designer.cs">
+      <DependentUpon>formpayCash.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="formProgressbarQL.cs">
@@ -333,8 +333,8 @@
     <EmbeddedResource Include="formKho.resx">
       <DependentUpon>formKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payment.resx">
-      <DependentUpon>Payment.cs</DependentUpon>
+    <EmbeddedResource Include="formpayCash.resx">
+      <DependentUpon>formpayCash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -623,6 +623,9 @@
     <None Include="Resources\icons8-search-48.png" />
     <None Include="Resources\icons8-search-30.png" />
     <None Include="Resources\icons8-search-301.png" />
+    <None Include="Resources\icons8-shopping-cart-48.png" />
+    <None Include="Resources\icons8-shopping-cart-48 %281%29.png" />
+    <None Include="Resources\icons8-shopping-cart-64.png" />
     <Content Include="Resources\icons8-show-non-hidden-views-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

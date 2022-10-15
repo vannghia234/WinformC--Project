@@ -15,6 +15,9 @@ namespace formLogin
     {
         public static string userName;
         public static string password;
+        public static string fullName;
+
+        public static int Permit;
         public formDangNhap()
         {
             InitializeComponent();
@@ -237,11 +240,19 @@ namespace formLogin
                         cmd.Parameters.AddWithValue("@username", txt_Account.Text);
                         cmd.Parameters.AddWithValue("@pass", txt_Password.Text);
                         cmd.Connection = conn;
-
                         object kq = cmd.ExecuteScalar();
+                        // get name account
+                        SqlCommand cmd1 = new SqlCommand();
+                        cmd1.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd1.CommandText = "getNameAccount";
+                        cmd1.Parameters.AddWithValue("@username", txt_Account.Text);
+                        cmd1.Connection = conn;
+                        object s = cmd1.ExecuteScalar();
+                        fullName = s.ToString();
                         int code = Convert.ToInt32(kq);
                         if (code == 1)
                         {
+                            Permit = 1;
                             formProgressbarQL p = new formProgressbarQL();
                             this.Hide();
                             p.Show();
@@ -251,6 +262,7 @@ namespace formLogin
                         }
                         else if (code == 2)
                         {
+                            Permit = 2;
                             formProgressBarNV pgnv = new formProgressBarNV();
                             this.Hide();
                             pgnv.Show();
@@ -300,7 +312,7 @@ namespace formLogin
 
         private void formDangNhap_Load(object sender, EventArgs e)
         {
-            
+
             if (Properties.Settings.Default.username == "" || Properties.Settings.Default.password == "")
             {
                 txt_Account.Text = "Tài khoản";

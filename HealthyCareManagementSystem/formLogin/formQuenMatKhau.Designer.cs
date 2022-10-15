@@ -42,19 +42,19 @@
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(112, 114);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(302, 30);
+            this.txtEmail.Size = new System.Drawing.Size(302, 31);
             this.txtEmail.TabIndex = 0;
             // 
             // lblAnnount
             // 
             this.lblAnnount.AutoSize = true;
-            this.lblAnnount.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnnount.Location = new System.Drawing.Point(109, 94);
+            this.lblAnnount.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnnount.Location = new System.Drawing.Point(114, 89);
             this.lblAnnount.Name = "lblAnnount";
-            this.lblAnnount.Size = new System.Drawing.Size(231, 17);
+            this.lblAnnount.Size = new System.Drawing.Size(263, 20);
             this.lblAnnount.TabIndex = 1;
             this.lblAnnount.Text = "Vui lòng nhập email tài khoản của bạn";
             // 
@@ -78,7 +78,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 43);
+            this.panel1.Size = new System.Drawing.Size(539, 43);
             this.panel1.TabIndex = 4;
             // 
             // iconPic_Exit
@@ -89,7 +89,7 @@
             this.iconPic_Exit.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPic_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPic_Exit.IconSize = 35;
-            this.iconPic_Exit.Location = new System.Drawing.Point(468, 0);
+            this.iconPic_Exit.Location = new System.Drawing.Point(504, 0);
             this.iconPic_Exit.Name = "iconPic_Exit";
             this.iconPic_Exit.Size = new System.Drawing.Size(35, 43);
             this.iconPic_Exit.TabIndex = 45;
@@ -129,7 +129,7 @@
             // formQuenMatKhau
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(503, 269);
+            this.ClientSize = new System.Drawing.Size(539, 300);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTimkiem);

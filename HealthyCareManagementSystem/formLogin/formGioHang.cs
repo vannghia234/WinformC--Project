@@ -18,6 +18,7 @@ namespace formLogin
         private double total = 0;
         public static string maHD;
         public static float tongtien;
+        public static int khuyenmai;
 
         public formGioHang()
         {
@@ -285,6 +286,7 @@ namespace formLogin
         {
             tongtien = float.Parse(txt_TotalPrice.Text);
             maHD = txt_HoaDon.Text;
+            khuyenmai = int.Parse(nmr_KhuyenMai.Value.ToString());
             string ngay = dtpk_NgayLap.Value.ToString("yyyy/MM/dd");
 
             try
