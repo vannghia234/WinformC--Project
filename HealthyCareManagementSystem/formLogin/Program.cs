@@ -18,9 +18,8 @@ namespace formLogin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formGioHang());
+            //Application.Run(new formGioHang());
             
-
         }
         
     }
