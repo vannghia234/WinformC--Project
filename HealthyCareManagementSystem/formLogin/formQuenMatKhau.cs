@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace formLogin
 {
@@ -36,6 +37,7 @@ namespace formLogin
             }
             return false;
         }
+    
         private void rjButton1_Click(object sender, EventArgs e)
         {
             if (checkExistEmail(txtEmail.Text.Trim()) && txtEmail.Text != "")
@@ -95,6 +97,30 @@ namespace formLogin
         private void iconPic_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private bool checkMailValid(string email)
+        {
+            //return Regex.IsMatch(email, @"^[a-zA-Z0-9_.]{3,20}@gmail.com(.vn|)$");
+            return Regex.IsMatch(email, @"^\w{3,20}@gmail.com$");
+
+
+        }
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (!checkMailValid(txtEmail.Text))
+            {
+
+                lblConfirm.ForeColor = Color.Black;
+                lblConfirm.Text = "✅ invalid";
+            }
+            else
+            {
+                lblConfirm.ForeColor = Color.Green;
+                lblConfirm.Text = "✅ valid";
+            }
+                    
+
         }
     }
 }

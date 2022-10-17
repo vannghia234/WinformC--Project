@@ -131,6 +131,7 @@
             this.txt_Password.Size = new System.Drawing.Size(414, 34);
             this.txt_Password.TabIndex = 47;
             this.txt_Password.Text = "Mật khẩu";
+            this.txt_Password.UseSystemPasswordChar = true;
             this.txt_Password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbpassword_MouseClick);
             this.txt_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Password_KeyDown);
             // 

@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblConfirm = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnDelete = new CustomControls.RJControls.RJButton();
+            this.btnUpdate = new CustomControls.RJControls.RJButton();
             this.checkboxHienThi = new System.Windows.Forms.CheckBox();
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,12 +53,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblConfirm);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtFullName);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.checkboxHienThi);
             this.panel1.Controls.Add(this.txtConfirmPass);
             this.panel1.Controls.Add(this.label4);
@@ -74,6 +76,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1512, 843);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblConfirm
+            // 
+            this.lblConfirm.AutoSize = true;
+            this.lblConfirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirm.Location = new System.Drawing.Point(1052, 492);
+            this.lblConfirm.Name = "lblConfirm";
+            this.lblConfirm.Size = new System.Drawing.Size(33, 23);
+            this.lblConfirm.TabIndex = 52;
+            this.lblConfirm.Text = "✅";
             // 
             // panel2
             // 
@@ -121,7 +134,7 @@
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(414, 34);
-            this.txtFullName.TabIndex = 47;
+            this.txtFullName.TabIndex = 1;
             // 
             // label5
             // 
@@ -133,30 +146,30 @@
             this.label5.TabIndex = 46;
             this.label5.Text = "FullName";
             // 
-            // btnDelete
+            // btnUpdate
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 19;
-            this.btnDelete.BorderSize = 0;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = global::formLogin.Properties.Resources.icons8_uninstalling_updates_301;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.Location = new System.Drawing.Point(706, 566);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(219, 44);
-            this.btnDelete.TabIndex = 45;
-            this.btnDelete.Text = "Update";
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(67)))), ((int)(((byte)(106)))));
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 19;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::formLogin.Properties.Resources.icons8_uninstalling_updates_301;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.Location = new System.Drawing.Point(706, 566);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(219, 44);
+            this.btnUpdate.TabIndex = 45;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
             // 
             // checkboxHienThi
             // 
@@ -166,7 +179,8 @@
             this.checkboxHienThi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkboxHienThi.Name = "checkboxHienThi";
             this.checkboxHienThi.Size = new System.Drawing.Size(141, 27);
-            this.checkboxHienThi.TabIndex = 2;
+            this.checkboxHienThi.TabIndex = 0;
+            this.checkboxHienThi.TabStop = false;
             this.checkboxHienThi.Text = "hide password";
             this.checkboxHienThi.UseVisualStyleBackColor = true;
             this.checkboxHienThi.CheckedChanged += new System.EventHandler(this.checkboxHienThi_CheckedChanged);
@@ -178,7 +192,8 @@
             this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(414, 34);
-            this.txtConfirmPass.TabIndex = 1;
+            this.txtConfirmPass.TabIndex = 4;
+            this.txtConfirmPass.UseSystemPasswordChar = true;
             this.txtConfirmPass.TextChanged += new System.EventHandler(this.txtXacNhanMatKhau_TextChanged);
             // 
             // label4
@@ -198,7 +213,8 @@
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Size = new System.Drawing.Size(414, 34);
-            this.txtNewPass.TabIndex = 1;
+            this.txtNewPass.TabIndex = 3;
+            this.txtNewPass.UseSystemPasswordChar = true;
             this.txtNewPass.TextChanged += new System.EventHandler(this.txtMatKhauMoi_TextChanged);
             // 
             // lblNew
@@ -218,7 +234,8 @@
             this.txtCurrentPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCurrentPass.Name = "txtCurrentPass";
             this.txtCurrentPass.Size = new System.Drawing.Size(414, 34);
-            this.txtCurrentPass.TabIndex = 1;
+            this.txtCurrentPass.TabIndex = 2;
+            this.txtCurrentPass.UseSystemPasswordChar = true;
             this.txtCurrentPass.TextChanged += new System.EventHandler(this.txtMatKhauHienTai_TextChanged);
             // 
             // lblcu
@@ -253,6 +270,7 @@
             // 
             // formThongTinTaiKhoan
             // 
+            this.AcceptButton = this.btnUpdate;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1512, 843);
@@ -282,13 +300,14 @@
         private System.Windows.Forms.Label lblcu;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblUssn;
-        private CustomControls.RJControls.RJButton btnDelete;
+        private CustomControls.RJControls.RJButton btnUpdate;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblConfirm;
     }
 }
 

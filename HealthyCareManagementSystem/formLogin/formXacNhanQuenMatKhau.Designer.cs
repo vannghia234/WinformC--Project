@@ -39,6 +39,7 @@
             this.txtReEnterPass = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.lblConfirm = new System.Windows.Forms.Label();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.rjButton2 = new CustomControls.RJControls.RJButton();
             this.panel1.SuspendLayout();
@@ -147,13 +148,14 @@
             this.txtReEnterPass.PasswordChar = '*';
             this.txtReEnterPass.Size = new System.Drawing.Size(302, 31);
             this.txtReEnterPass.TabIndex = 12;
+            this.txtReEnterPass.TextChanged += new System.EventHandler(this.txtReEnterPass_TextChanged);
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(180, 343);
+            this.lblError.Location = new System.Drawing.Point(140, 346);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 16;
@@ -169,6 +171,16 @@
             this.checkBox1.Text = "Hiển thị mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // lblConfirm
+            // 
+            this.lblConfirm.AutoSize = true;
+            this.lblConfirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirm.Location = new System.Drawing.Point(494, 314);
+            this.lblConfirm.Name = "lblConfirm";
+            this.lblConfirm.Size = new System.Drawing.Size(33, 23);
+            this.lblConfirm.TabIndex = 53;
+            this.lblConfirm.Text = "✅";
             // 
             // rjButton1
             // 
@@ -215,6 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(672, 499);
+            this.Controls.Add(this.lblConfirm);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.rjButton2);
@@ -253,5 +266,6 @@
         private System.Windows.Forms.Label lblError;
         private FontAwesome.Sharp.IconPictureBox iconPic_Exit;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label lblConfirm;
     }
 }

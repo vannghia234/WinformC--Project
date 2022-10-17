@@ -26,31 +26,33 @@ namespace formLogin
 
         private void tbAccount_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_Account.Text = "";
-
-            if (txt_Password.Text == "" || txt_Password.Text == "Mật khẩu")
+            if (txt_Account.Text == "" || txt_Account.Text == "Tài khoản")
             {
-                txt_Password.Text = "";
+                txt_Account.Text = "";
                 txt_Account.ForeColor = Color.Black;
             }
+          
         }
 
         private void tbpassword_MouseClick(object sender, MouseEventArgs e)
         {
-            txt_Password.Text = null;
-            txt_Password.ForeColor = Color.Black;
+            if (txt_Password.Text == "" || txt_Password.Text == "Mật khẩu")
+            {
+                txt_Password.Text = "";
+                txt_Password.ForeColor = Color.Black;
+            }
 
         }
 
         private void cbShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (cb_ShowPass.Checked == true)
+            if (cb_ShowPass.Checked)
             {
-                txt_Password.PasswordChar = (char)0;
+                txt_Password.UseSystemPasswordChar = false;
             }
             else
             {
-                txt_Password.PasswordChar = '*';
+                txt_Password.UseSystemPasswordChar = true;
 
             }
         }
@@ -339,7 +341,7 @@ namespace formLogin
 
         private void txt_Password_KeyDown(object sender, KeyEventArgs e)
         {
-            txt_Password.PasswordChar = '*';
+            txt_Password.UseSystemPasswordChar = true;
         }
 
         private void lbl_QuenPass_Click(object sender, EventArgs e)

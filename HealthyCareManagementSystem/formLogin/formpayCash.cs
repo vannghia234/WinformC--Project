@@ -18,6 +18,8 @@ namespace formLogin
         //private int khuyenMai;
         public float tongTien = formGioHang.tongtien;
         public int Khuyenmai = formGioHang.khuyenmai;
+        public static bool confirm = false;
+
 
 
         public formpayCash()
@@ -55,7 +57,6 @@ namespace formLogin
         {
             txtTotalPrice.Text = String.Format("{0:0.000}", (tongTien - ((Khuyenmai * tongTien) / 100)));
             txtDiscount.Text = String.Format("{0:0.000}", (Khuyenmai * tongTien) / 100);
-            MessageBox.Show(formGioHang.khuyenmai.ToString());
         }
 
         private void rjButton1_Click(object sender, EventArgs e)
@@ -81,6 +82,7 @@ namespace formLogin
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+            confirm = true;
             if (MessageBox.Show("Bạn có muốn in hóa đơn không?", "Hệ thống", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
                 reportView reportView = new reportView();
                 reportView.Show();

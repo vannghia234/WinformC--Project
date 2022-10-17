@@ -35,6 +35,7 @@
             this.iconPic_Exit = new FontAwesome.Sharp.IconPictureBox();
             this.lblError = new System.Windows.Forms.Label();
             this.btnTimkiem = new CustomControls.RJControls.RJButton();
+            this.lblConfirm = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPic_Exit)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(302, 31);
             this.txtEmail.TabIndex = 0;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblAnnount
             // 
@@ -78,18 +80,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 43);
+            this.panel1.Size = new System.Drawing.Size(542, 43);
             this.panel1.TabIndex = 4;
             // 
             // iconPic_Exit
             // 
             this.iconPic_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(181)))), ((int)(((byte)(192)))));
+            this.iconPic_Exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconPic_Exit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPic_Exit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.iconPic_Exit.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconPic_Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPic_Exit.IconSize = 35;
-            this.iconPic_Exit.Location = new System.Drawing.Point(504, 0);
+            this.iconPic_Exit.Location = new System.Drawing.Point(507, 0);
             this.iconPic_Exit.Name = "iconPic_Exit";
             this.iconPic_Exit.Size = new System.Drawing.Size(35, 43);
             this.iconPic_Exit.TabIndex = 45;
@@ -126,10 +129,21 @@
             this.btnTimkiem.UseVisualStyleBackColor = false;
             this.btnTimkiem.Click += new System.EventHandler(this.rjButton1_Click);
             // 
+            // lblConfirm
+            // 
+            this.lblConfirm.AutoSize = true;
+            this.lblConfirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirm.Location = new System.Drawing.Point(420, 118);
+            this.lblConfirm.Name = "lblConfirm";
+            this.lblConfirm.Size = new System.Drawing.Size(33, 23);
+            this.lblConfirm.TabIndex = 53;
+            this.lblConfirm.Text = "✅";
+            // 
             // formQuenMatKhau
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(539, 300);
+            this.ClientSize = new System.Drawing.Size(542, 302);
+            this.Controls.Add(this.lblConfirm);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnTimkiem);
@@ -157,5 +171,6 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPic_Exit;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblConfirm;
     }
 }

@@ -158,6 +158,21 @@ namespace formLogin
                 txtReEnterPass.PasswordChar = '*';
             }
         }
-        
+
+        private void txtReEnterPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNewPass.Text != txtReEnterPass.Text)
+            {
+                lblConfirm.ForeColor = Color.Black;
+                lblConfirm.Text = "✅ invalid";
+            }
+            else
+            {
+                lblConfirm.ForeColor = Color.Green;
+                lblConfirm.Text = "✅ valid";
+
+
+            }
+        }
     }
 }

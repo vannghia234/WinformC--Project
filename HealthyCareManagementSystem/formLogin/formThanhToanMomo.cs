@@ -20,7 +20,9 @@ namespace formLogin
         {
             InitializeComponent();
         }
-
+        private int kmai = formGioHang.khuyenmai;
+        private float tongTien = formGioHang.tongtien;
+        public static bool confirm = false;
         private void bt_Payment_Click(object sender, EventArgs e)
         {
             var qrCode = $"2|99|{tb_SDT.Text.Trim()}|{tb_Name.Text.Trim()}|Nghiazorovn2304@gmail.com|0|0|{tb_Money.Text.Trim()}";
@@ -50,15 +52,21 @@ namespace formLogin
 
         private void formThanhToanMomo_Load(object sender, EventArgs e)
         {
-            tb_Money.Text = formGioHang.tongtien.ToString() + "000";
+            tb_Money.Text = ((tongTien) - (kmai * 0.01* tongTien)).ToString() + "000";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Xác nhận thanh toán?", "Thông báo") == DialogResult.Yes)
+            confirm = true;
+            if(MessageBox.Show("bạn có muốn in hóa đơn?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                reportView reportView = new reportView();
+                reportView.Show();
+            }
+            else
             {
                 this.Close();
-
             }
         }
     }

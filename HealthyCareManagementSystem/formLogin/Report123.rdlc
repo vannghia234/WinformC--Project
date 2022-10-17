@@ -966,7 +966,7 @@
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>00 VNĐ</Value>
+                    <Value>000 VNĐ</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>

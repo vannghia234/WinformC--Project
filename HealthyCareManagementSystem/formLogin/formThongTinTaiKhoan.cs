@@ -32,30 +32,80 @@ namespace formLogin
             SqlCon.Close();
             
         }
-
+        private Boolean kiemTraChuoiMatKhau(string s)
+        {
+            int demThuong = 0;
+            int demHoa = 0;
+            int demSo = 0;
+            if (s.Length < 8)
+            {
+                return false;
+            }
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] >= 'a' && s[i] <= 'z')
+                {
+                    demThuong++;
+                }
+                if (s[i] >= 'A' && s[i] <= 'Z')
+                {
+                    demHoa++;
+                }
+                if (s[i] > '0' && s[i] < '9')
+                {
+                    demSo++;
+                }
+            }
+            if (demThuong > 0 && demSo > 0 && demHoa > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text == "")
-            {
-                MessageBox.Show("Bạn cần nhập tên tài khoản", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtUserName.Focus();
-            } else if(Kiemtra())
+            if(Kiemtra())
             {
 
+                if(kiemTraChuoiMatKhau(txtNewPass.Text) && txtNewPass.Text == txtConfirmPass.Text)
+                {
+                    SqlCon = new SqlConnection(strCon);
+                    SqlCon.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = SqlCon;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "SP_Update_Pass";
+                    cmd.Parameters.Add("@TAIKHOAN", SqlDbType.NVarChar).Value = txtUserName.Text;
+                    cmd.Parameters.Add("@MATKHAUCU", SqlDbType.NVarChar).Value = txtCurrentPass.Text;
+                    cmd.Parameters.Add("@MATKHAUMOI", SqlDbType.NVarChar).Value = txtNewPass.Text;
+                    cmd.Parameters.Add("@TENTAIKHOAN", SqlDbType.NVarChar).Value = txtFullName.Text;
+                    int result = cmd.ExecuteNonQuery();
+                    SqlCon.Close();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("thay đổi thành công", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                SqlCon = new SqlConnection(strCon);
-                SqlCon.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = SqlCon;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SP_Update_Pass";
-                cmd.Parameters.Add("@TAIKHOAN", SqlDbType.NVarChar).Value = txtUserName.Text;
-                cmd.Parameters.Add("@MATKHAUCU", SqlDbType.NVarChar).Value = txtCurrentPass.Text;
-                cmd.Parameters.Add("@MATKHAUMOI", SqlDbType.NVarChar).Value = txtNewPass.Text;
-                cmd.Parameters.Add("@TENTAIKHOAN", SqlDbType.NVarChar).Value = txtFullName.Text;
-                cmd.ExecuteNonQuery();
-                SqlCon.Close();
-                MessageBox.Show("thay đổi thành công", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mật khẩu cũ không tồn tại", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+                else if (txtNewPass.Text != txtConfirmPass.Text)
+                {
+                    MessageBox.Show("Xác nhận mật khẩu mới chưa chính xác", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Mật khẩu phải có ít nhất 8 kí tự bao gồm 1 chữ Hoa, 1 chữ thường, 1 chữ số", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
             }
 
         }
@@ -64,18 +114,27 @@ namespace formLogin
         {
             if (checkboxHienThi.Checked)
             {
-               txtNewPass.PasswordChar = (char)0;
-               txtConfirmPass.PasswordChar = (char)0;
+               txtNewPass.UseSystemPasswordChar = false;
+               txtConfirmPass.UseSystemPasswordChar = false;
+                txtCurrentPass.UseSystemPasswordChar = false;
+
             }
             else
             {
-                txtNewPass.PasswordChar = '*';
-                txtConfirmPass.PasswordChar = '*';
+                txtNewPass.UseSystemPasswordChar = true;
+                txtConfirmPass.UseSystemPasswordChar = true;
+                txtCurrentPass.UseSystemPasswordChar = true;
             }
         }
 
         public bool Kiemtra()
         {
+            if (txtUserName.Text == "")
+            {
+                MessageBox.Show("Bạn cần nhập tên tài khoản", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtUserName.Focus();
+                return false;
+            }
             if (txtCurrentPass.Text == "")
             {
                 MessageBox.Show("Bạn cần nhập mật khẩu cũ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,17 +160,26 @@ namespace formLogin
  
         private void txtMatKhauHienTai_TextChanged(object sender, EventArgs e)
         {
-           txtCurrentPass.PasswordChar = '*';
         }
 
         private void txtMatKhauMoi_TextChanged(object sender, EventArgs e)
         {
-           txtNewPass.PasswordChar = '*';
         }
 
         private void txtXacNhanMatKhau_TextChanged(object sender, EventArgs e)
         {
-            txtConfirmPass.PasswordChar = '*';
+            if(txtConfirmPass.Text != txtNewPass.Text)
+            {
+                lblConfirm.ForeColor = Color.Black;
+                lblConfirm.Text = "✅ invalid";
+            }
+            else
+            {
+                lblConfirm.ForeColor = Color.Green;
+                lblConfirm.Text = "✅ valid";
+
+
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -149,6 +217,11 @@ namespace formLogin
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
